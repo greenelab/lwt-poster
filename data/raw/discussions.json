@@ -1,0 +1,1751 @@
+[
+  {
+    "title": "Build failing on fork of a generated repo",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/328",
+    "author": {
+      "login": "MartinKjunior"
+    },
+    "createdAt": "2025-06-24T15:25:34Z",
+    "answerChosenAt": null,
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2025-06-24T15:58:39Z",
+            "author": {
+              "login": "MartinKjunior"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "adjust image sizing in feature",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/326",
+    "author": {
+      "login": "ptitle"
+    },
+    "createdAt": "2025-06-03T13:59:59Z",
+    "answerChosenAt": "2025-06-03T15:21:57Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2025-06-03T15:21:50Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Issue with buttons on publications?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/325",
+    "author": {
+      "login": "eastonwhite"
+    },
+    "createdAt": "2025-05-24T13:09:50Z",
+    "answerChosenAt": "2025-05-26T03:59:02Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2025-05-26T03:58:51Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Why my  lab website is not findable by google search? Only accessible by using the link.",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/318",
+    "author": {
+      "login": "LupianezLab"
+    },
+    "createdAt": "2025-04-24T14:54:44Z",
+    "answerChosenAt": "2025-04-24T17:53:08Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2025-04-24T17:53:05Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Bluesky \"Font awesome\" icons in new website \"types\" not showing up",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/314",
+    "author": {
+      "login": "mdhumphries"
+    },
+    "createdAt": "2025-03-19T10:47:40Z",
+    "answerChosenAt": "2025-03-19T15:06:35Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2025-03-19T15:06:32Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Background images (with overlay) show locally but disappear when pushing to GitHub pages",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/296",
+    "author": {
+      "login": "Llannelongue"
+    },
+    "createdAt": "2025-01-06T14:31:03Z",
+    "answerChosenAt": "2025-01-06T17:01:28Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2025-01-06T16:30:18Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2025-01-06T17:01:25Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Merge cells in table",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/291",
+    "author": {
+      "login": "hyeokhyen"
+    },
+    "createdAt": "2024-11-19T23:06:24Z",
+    "answerChosenAt": "2024-11-20T15:47:02Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-11-19T23:14:45Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Alt Text",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/290",
+    "author": {
+      "login": "nickader"
+    },
+    "createdAt": "2024-11-11T16:37:49Z",
+    "answerChosenAt": "2024-11-11T17:24:55Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-11-11T17:21:13Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Run failed: on-push - main",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/286",
+    "author": {
+      "login": "MJDelas"
+    },
+    "createdAt": "2024-10-14T09:10:15Z",
+    "answerChosenAt": "2024-10-14T14:55:02Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-10-14T14:54:59Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "update-citations errors \"on push to main\"",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/284",
+    "author": {
+      "login": "imnanxu"
+    },
+    "createdAt": "2024-10-12T16:42:58Z",
+    "answerChosenAt": "2024-10-14T16:05:12Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-10-12T23:32:43Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Bluesky logo not displaying",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/282",
+    "author": {
+      "login": "nickader"
+    },
+    "createdAt": "2024-09-29T01:00:00Z",
+    "answerChosenAt": "2024-09-29T14:49:09Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-09-29T14:48:37Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2024-09-29T16:40:00Z",
+            "author": {
+              "login": "nickader"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Issue when trying to implement Multiple Language plugin",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/281",
+    "author": {
+      "login": "SergioAlias"
+    },
+    "createdAt": "2024-09-25T09:30:57Z",
+    "answerChosenAt": "2024-09-25T15:57:40Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-09-25T14:31:10Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "some fontawesome icons cannot be displayed",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/279",
+    "author": {
+      "login": "imnanxu"
+    },
+    "createdAt": "2024-09-03T22:44:42Z",
+    "answerChosenAt": "2024-09-04T23:58:50Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-09-04T22:00:09Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Add the function to switch languages",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/280",
+    "author": {
+      "login": "muzier9"
+    },
+    "createdAt": "2024-09-11T09:58:07Z",
+    "answerChosenAt": "2024-09-11T18:15:41Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-09-11T18:15:36Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Changing number of columns in members",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/276",
+    "author": {
+      "login": "hyeokhyen"
+    },
+    "createdAt": "2024-08-18T14:34:03Z",
+    "answerChosenAt": "2024-08-18T19:08:32Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-08-18T19:06:51Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Reduce a gap occupied by the logo",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/277",
+    "author": {
+      "login": "ipoom-jeong"
+    },
+    "createdAt": "2024-08-19T08:57:35Z",
+    "answerChosenAt": "2024-08-19T17:47:56Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-08-19T17:47:53Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2024-08-20T00:30:34Z",
+            "author": {
+              "login": "ipoom-jeong"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to publish paper items with customed IDs (e.g., no doi, pmd, etc)?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/270",
+    "author": {
+      "login": "imnanxu"
+    },
+    "createdAt": "2024-07-25T22:32:49Z",
+    "answerChosenAt": "2024-07-26T00:40:58Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-07-26T00:40:02Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to make the publication type visible and filterable",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/268",
+    "author": {
+      "login": "imnanxu"
+    },
+    "createdAt": "2024-07-24T15:00:10Z",
+    "answerChosenAt": "2024-07-24T17:53:15Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-07-24T17:34:38Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2024-07-25T22:34:51Z",
+            "author": {
+              "login": "imnanxu"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Couldn't parse Manubot response",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/267",
+    "author": {
+      "login": "sterding"
+    },
+    "createdAt": "2024-07-12T04:27:11Z",
+    "answerChosenAt": "2024-07-12T14:39:56Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-07-12T14:34:10Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "URL naming",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/265",
+    "author": {
+      "login": "Jimmy291"
+    },
+    "createdAt": "2024-06-06T07:32:37Z",
+    "answerChosenAt": "2024-06-06T14:27:05Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-06-06T14:27:02Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Is there a way to change the size of the logo, specifically on the main page?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/264",
+    "author": {
+      "login": "nickader"
+    },
+    "createdAt": "2024-05-20T22:00:17Z",
+    "answerChosenAt": "2024-05-20T22:09:00Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-05-20T22:08:58Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Trying to add PMID and PMCID to citations",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/262",
+    "author": {
+      "login": "andrewsu"
+    },
+    "createdAt": "2024-05-07T18:18:52Z",
+    "answerChosenAt": "2024-05-07T18:37:35Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-05-07T18:36:56Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2024-05-07T19:17:25Z",
+            "author": {
+              "login": "andrewsu"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Changing button color",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/261",
+    "author": {
+      "login": "hyeokhyen"
+    },
+    "createdAt": "2024-04-29T11:52:44Z",
+    "answerChosenAt": "2024-04-29T13:50:30Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-04-29T13:50:26Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Changing the global text alignment",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/253",
+    "author": {
+      "login": "mcgregorian1"
+    },
+    "createdAt": "2024-04-16T19:56:48Z",
+    "answerChosenAt": "2024-04-17T13:42:28Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-04-16T20:13:25Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Having Two Background Images.",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/254",
+    "author": {
+      "login": "sbbe2024"
+    },
+    "createdAt": "2024-04-17T12:28:21Z",
+    "answerChosenAt": "2024-04-17T13:29:16Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-04-17T13:12:32Z",
+            "author": {
+              "login": "sbbe2024"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2024-04-17T13:29:12Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Remove citation at source.yaml",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/248",
+    "author": {
+      "login": "ecamacho90"
+    },
+    "createdAt": "2024-03-24T18:25:04Z",
+    "answerChosenAt": "2024-03-25T04:16:42Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-03-24T18:47:31Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "image tag in sources.yaml (local path)",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/242",
+    "author": {
+      "login": "bvoightlab"
+    },
+    "createdAt": "2024-02-27T16:39:37Z",
+    "answerChosenAt": "2024-04-17T13:31:08Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-02-27T18:13:57Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2024-02-27T18:27:10Z",
+            "author": {
+              "login": "bvoightlab"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to add citations (followed the instructions but failed)",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/239",
+    "author": {
+      "login": "XIYANG1018"
+    },
+    "createdAt": "2024-02-03T04:06:05Z",
+    "answerChosenAt": "2024-02-22T01:43:45Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-02-03T07:37:07Z",
+            "author": {
+              "login": "XIYANG1018"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Accessing URL keywords from HTML",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/240",
+    "author": {
+      "login": "miltondp"
+    },
+    "createdAt": "2024-02-07T19:24:03Z",
+    "answerChosenAt": "2024-02-12T21:48:42Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-02-07T23:11:25Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Remove subtitle from header in mobile",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/237",
+    "author": {
+      "login": "snaqvi1990"
+    },
+    "createdAt": "2024-01-31T01:07:33Z",
+    "answerChosenAt": "2024-02-07T19:32:11Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-01-31T02:15:19Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Add text to footer",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/236",
+    "author": {
+      "login": "snaqvi1990"
+    },
+    "createdAt": "2024-01-31T00:34:36Z",
+    "answerChosenAt": "2024-01-31T00:50:49Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-01-31T00:36:28Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2024-01-31T00:50:55Z",
+            "author": {
+              "login": "snaqvi1990"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Mobile view removes images from features",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/235",
+    "author": {
+      "login": "snaqvi1990"
+    },
+    "createdAt": "2024-01-30T23:18:13Z",
+    "answerChosenAt": "2024-01-31T00:29:31Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-01-30T23:32:38Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2024-01-30T23:52:21Z",
+            "author": {
+              "login": "snaqvi1990"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Fail to build the page on my github",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/233",
+    "author": {
+      "login": "XIYANG1018"
+    },
+    "createdAt": "2024-01-18T23:23:07Z",
+    "answerChosenAt": "2024-01-19T06:16:22Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-01-18T23:44:58Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "using include tag.html and where site.tags actually lives",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/231",
+    "author": {
+      "login": "bvoightlab"
+    },
+    "createdAt": "2024-01-10T17:28:28Z",
+    "answerChosenAt": "2024-01-10T18:27:14Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2024-01-10T18:21:34Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Question on lab icon/logo/preview",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/225",
+    "author": {
+      "login": "sterding"
+    },
+    "createdAt": "2023-11-16T15:53:10Z",
+    "answerChosenAt": "2023-11-16T16:32:01Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-11-16T16:31:12Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Adding link to a portrait",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/224",
+    "author": {
+      "login": "hyeokhyen"
+    },
+    "createdAt": "2023-11-12T01:01:01Z",
+    "answerChosenAt": "2023-11-13T15:35:03Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-11-12T01:15:51Z",
+            "author": {
+              "login": "hyeokhyen"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to remove blank line for sublist?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/223",
+    "author": {
+      "login": "hyeokhyen"
+    },
+    "createdAt": "2023-11-10T01:22:15Z",
+    "answerChosenAt": "2023-11-10T15:24:59Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-11-10T01:40:54Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Page showing up as raw markdown instead of HTML",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/222",
+    "author": {
+      "login": "hyeokhyen"
+    },
+    "createdAt": "2023-11-08T15:24:35Z",
+    "answerChosenAt": "2023-11-08T17:02:10Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-11-08T16:05:26Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Error when building update citations",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/221",
+    "author": {
+      "login": "sterding"
+    },
+    "createdAt": "2023-10-29T07:37:40Z",
+    "answerChosenAt": "2023-10-29T15:18:20Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-10-29T15:17:54Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-10-29T22:10:18Z",
+            "author": {
+              "login": "sterding"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-10-29T22:19:20Z",
+            "author": {
+              "login": "sterding"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-10-29T23:32:46Z",
+            "author": {
+              "login": "sterding"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-10-30T01:37:05Z",
+            "author": {
+              "login": "sterding"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to set a dark theme for the whole website?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/220",
+    "author": {
+      "login": "sterding"
+    },
+    "createdAt": "2023-10-27T16:17:44Z",
+    "answerChosenAt": "2023-10-27T16:30:56Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-10-27T16:29:19Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-10-29T23:43:02Z",
+            "author": {
+              "login": "sterding"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "how to use new twitter icon?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/215",
+    "author": {
+      "login": "hyeokhyen"
+    },
+    "createdAt": "2023-10-15T15:21:47Z",
+    "answerChosenAt": "2023-10-19T04:29:03Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-10-16T15:08:58Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Is it possible to add images to post list appearance?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/213",
+    "author": {
+      "login": "hiiiyilingzhang"
+    },
+    "createdAt": "2023-10-13T08:38:20Z",
+    "answerChosenAt": "2023-10-25T17:45:07Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-10-13T14:13:05Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Error with Manubot generating citations from sources.yaml",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/211",
+    "author": {
+      "login": "mrittika-dey"
+    },
+    "createdAt": "2023-10-02T14:12:08Z",
+    "answerChosenAt": "2023-10-06T21:52:52Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-10-02T15:57:04Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "orcid.py pull duplicate publication when orchid api have both doi and eid record",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/200",
+    "author": {
+      "login": "hiiiyilingzhang"
+    },
+    "createdAt": "2023-06-27T03:18:52Z",
+    "answerChosenAt": "2023-06-28T14:00:14Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-06-27T16:13:43Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to change font size?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/208",
+    "author": {
+      "login": "SakaizaRajery"
+    },
+    "createdAt": "2023-08-22T17:46:13Z",
+    "answerChosenAt": "2023-08-22T17:55:19Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-08-22T17:54:04Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Gallery not showing despite using template?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/207",
+    "author": {
+      "login": "mcgregorian1"
+    },
+    "createdAt": "2023-08-15T18:24:23Z",
+    "answerChosenAt": "2023-08-15T19:41:13Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-08-15T18:32:25Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "transparency of header and footer images",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/206",
+    "author": {
+      "login": "bhattacharya-a-bt"
+    },
+    "createdAt": "2023-07-18T16:00:13Z",
+    "answerChosenAt": "2023-07-21T02:47:51Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-07-18T16:22:05Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Book chapter citations not displaying correctly",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/205",
+    "author": {
+      "login": "aaronjnewman"
+    },
+    "createdAt": "2023-07-13T14:33:18Z",
+    "answerChosenAt": "2023-07-13T16:05:51Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-07-13T15:37:52Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to remove the card from the research page",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/204",
+    "author": {
+      "login": "Srihitha-l"
+    },
+    "createdAt": "2023-07-10T19:59:07Z",
+    "answerChosenAt": "2023-07-11T15:12:05Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-07-10T20:11:29Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-07-11T15:12:13Z",
+            "author": {
+              "login": "Srihitha-l"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "The citations are not showing up",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/203",
+    "author": {
+      "login": "Srihitha-l"
+    },
+    "createdAt": "2023-07-07T18:08:42Z",
+    "answerChosenAt": "2023-07-07T20:17:36Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-07-07T19:08:03Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Change layout of the cards for research page",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/202",
+    "author": {
+      "login": "Srihitha-l"
+    },
+    "createdAt": "2023-07-06T19:33:17Z",
+    "answerChosenAt": "2023-07-06T20:12:34Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-07-06T19:59:52Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-07-06T20:12:13Z",
+            "author": {
+              "login": "Srihitha-l"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "pages build and deployment problem",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/201",
+    "author": null,
+    "createdAt": "2023-06-29T05:37:50Z",
+    "answerChosenAt": "2023-07-06T20:00:10Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-06-30T02:34:05Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Image and label for sharing website link",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/147",
+    "author": {
+      "login": "ksw9"
+    },
+    "createdAt": "2022-12-20T03:13:01Z",
+    "answerChosenAt": "2022-12-21T00:12:50Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2022-12-20T16:00:48Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2022-12-20T18:00:02Z",
+            "author": {
+              "login": "ksw9"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Is Firebase Cloud Firestore integration possible ?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/196",
+    "author": {
+      "login": "labjte"
+    },
+    "createdAt": "2023-05-06T03:23:04Z",
+    "answerChosenAt": "2023-05-10T06:28:18Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-05-08T14:59:53Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "New blog posts not appearing",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/195",
+    "author": {
+      "login": "ICArmenian-Mycologists"
+    },
+    "createdAt": "2023-05-05T19:10:50Z",
+    "answerChosenAt": "2023-06-30T02:34:21Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-05-05T21:37:17Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Twitter feed at the right side of the main page",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/194",
+    "author": {
+      "login": "ManuThomasen"
+    },
+    "createdAt": "2023-05-01T14:30:05Z",
+    "answerChosenAt": "2023-05-02T18:47:22Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-05-01T14:49:27Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Index.md changed and merged, but changes not reflected on website",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/193",
+    "author": {
+      "login": "rebullm"
+    },
+    "createdAt": "2023-04-27T19:28:36Z",
+    "answerChosenAt": "2023-04-27T19:40:16Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-04-27T19:37:59Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "run failed on pull request",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/190",
+    "author": {
+      "login": "rebullm"
+    },
+    "createdAt": "2023-04-27T15:54:31Z",
+    "answerChosenAt": "2023-04-27T17:24:40Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-04-27T16:49:23Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Setup step 3 help: wait for 1st build of site",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/189",
+    "author": {
+      "login": "rebullm"
+    },
+    "createdAt": "2023-04-25T14:47:05Z",
+    "answerChosenAt": "2023-04-25T19:14:47Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-04-25T18:34:12Z",
+            "author": {
+              "login": "rebullm"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-04-25T19:05:27Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-04-25T19:10:57Z",
+            "author": {
+              "login": "rebullm"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-04-25T19:12:04Z",
+            "author": {
+              "login": "rebullm"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Copy new repo failed",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/187",
+    "author": {
+      "login": "rebullm"
+    },
+    "createdAt": "2023-04-24T18:34:28Z",
+    "answerChosenAt": "2023-04-25T19:14:58Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-04-24T19:31:34Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "What version of template am I using?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/184",
+    "author": {
+      "login": "rebullm"
+    },
+    "createdAt": "2023-04-17T15:28:07Z",
+    "answerChosenAt": "2023-04-17T16:04:59Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-04-17T16:03:37Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "first-time-setup.yaml problem",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/177",
+    "author": {
+      "login": "w0016"
+    },
+    "createdAt": "2023-04-11T05:14:42Z",
+    "answerChosenAt": "2023-04-11T15:33:22Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-04-11T15:27:28Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "how does the template work with ORCID ids?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/176",
+    "author": {
+      "login": "rebullm"
+    },
+    "createdAt": "2023-04-06T14:59:46Z",
+    "answerChosenAt": "2023-04-11T15:33:12Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-04-06T16:19:32Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Navbar height&style change in homepage",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/175",
+    "author": {
+      "login": "hiiiyilingzhang"
+    },
+    "createdAt": "2023-04-03T05:39:56Z",
+    "answerChosenAt": "2023-04-04T06:23:11Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-04-03T14:50:16Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Is it possible to add individual project pages?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/163",
+    "author": {
+      "login": "jxchen01"
+    },
+    "createdAt": "2023-03-09T22:05:40Z",
+    "answerChosenAt": "2023-03-09T23:37:35Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-03-09T22:21:26Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to change vertical alignment of portraits",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/161",
+    "author": {
+      "login": "bvoightlab"
+    },
+    "createdAt": "2023-03-04T00:43:10Z",
+    "answerChosenAt": "2023-03-06T17:29:35Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-03-04T00:51:55Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2023-03-06T17:24:14Z",
+            "author": {
+              "login": "bvoightlab"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to make website appear on google search",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/149",
+    "author": {
+      "login": "SakaizaRajery"
+    },
+    "createdAt": "2023-01-31T15:32:23Z",
+    "answerChosenAt": "2023-02-05T18:33:26Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2023-02-02T16:13:34Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "member page: member's paper button",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/143",
+    "author": {
+      "login": "jcole150"
+    },
+    "createdAt": "2022-11-23T00:53:28Z",
+    "answerChosenAt": "2022-11-23T01:08:06Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2022-11-23T01:00:59Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Problems with manubot citing from orcid/ auto-cite.py",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/140",
+    "author": {
+      "login": "Harrisonthow"
+    },
+    "createdAt": "2022-11-04T17:53:26Z",
+    "answerChosenAt": "2023-01-05T00:14:55Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2022-11-04T18:36:39Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to add entry splash screen with animated logo",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/139",
+    "author": {
+      "login": "Harrisonthow"
+    },
+    "createdAt": "2022-11-02T03:10:49Z",
+    "answerChosenAt": "2022-11-04T17:03:49Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2022-11-02T03:33:30Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Citations showing the same name",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/132",
+    "author": {
+      "login": "goallabuci"
+    },
+    "createdAt": "2022-10-05T22:17:29Z",
+    "answerChosenAt": "2022-10-05T23:53:11Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2022-10-05T23:50:52Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Include a list without images?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/90",
+    "author": {
+      "login": "moraesfernanda"
+    },
+    "createdAt": "2021-08-04T03:42:44Z",
+    "answerChosenAt": "2022-05-12T15:20:53Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2021-08-04T16:12:29Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        },
+        {
+          "node": {
+            "createdAt": "2021-08-04T18:37:36Z",
+            "author": {
+              "login": "moraesfernanda"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to chance icon at the side of the link in link bar?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/89",
+    "author": {
+      "login": "moraesfernanda"
+    },
+    "createdAt": "2021-07-28T18:30:17Z",
+    "answerChosenAt": "2022-05-12T15:20:06Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2021-07-28T18:40:41Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "Repo in data",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/88",
+    "author": {
+      "login": "moraesfernanda"
+    },
+    "createdAt": "2021-07-28T18:18:35Z",
+    "answerChosenAt": "2022-05-12T15:21:24Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2021-07-28T18:36:27Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "title": "How to add a drop down on the Navigation Bar?",
+    "url": "https://github.com/greenelab/lab-website-template/discussions/85",
+    "author": {
+      "login": "BioMeCIS"
+    },
+    "createdAt": "2021-07-27T19:26:50Z",
+    "answerChosenAt": "2022-05-12T15:21:50Z",
+    "comments": {
+      "edges": [
+        {
+          "node": {
+            "createdAt": "2021-07-27T19:43:48Z",
+            "author": {
+              "login": "vincerubinetti"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

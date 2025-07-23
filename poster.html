@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab Website Template</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <h1>An Easy, Automatic, Flexible Website Template for Labs</h1>
+
+    <main>
+      <section class="tile" style="grid-area: 1 / 1 / span 4 / span 3">
+        <h2>Abstract</h2>
+
+        <p>
+          Research laboratories require a professional and up-to-date website to
+          showcase their work, attract collaborators, and establish a strong
+          online presence. However, developing and maintaining such a website
+          can be challenging and time consuming. We present Lab Website
+          Template, open-source website template specifically designed for the
+          unique needs of labs, allowing lab members to focus more on research
+          activities and less on web development.
+        </p>
+        <p>
+          A critical feature of our template is its ability to automatically
+          generate citations (titles, authors, publishing info, etc.) from
+          simple identifiers like DOIs, PubMed, ORCID, and thousands of other
+          types using the open-source tool Manubot. Advanced pipelines
+          automatically update citations when site content changes, on a
+          periodic schedule, or on demand. The user chooses what sources to pull
+          from and how to filter and display the resulting citations on their
+          site.
+        </p>
+        <p>
+          To reduce administrative burden and to remain accessible to
+          non-technical users, we automate everything we can, not just
+          citations. This includes: first time setup of the repository,
+          generating live previews of pull requests, configuring custom URLs,
+          and more. To the same end, though the full codebase is exposed to the
+          user, it is structured around the most common use cases and separates
+          user content from internal logic. This allows users to concentrate on
+          the content of their site without wading through implementation
+          details, but still enables advanced customization if needed.
+        </p>
+        <p>
+          A key strength is our singular commitment to user support,
+          demonstrated by consistently low issue response times and high
+          successful resolution rate. We foster an environment where user input
+          is highly valued and carefully considered, but balanced against
+          maintaining an un-bloated design. Recognizing that source code and
+          comments alone are insufficient, we also maintain a searchable,
+          comprehensive, dedicated documentation suite so users can find answers
+          immediately before needing to ask for help.
+        </p>
+        <p>
+          The success of our design and approach is evidenced by our template's
+          widespread adoption, with 450+ stars on GitHub, 350+ forks, and a
+          growing gallery of dozens of active labs using it. This work reflects
+          not just a powerful software tool, but an evolving, open, community
+          resource that effectively serves the needs of its users.
+        </p>
+      </section>
+
+      <div class="tile chart" style="grid-area: 1 / 4 / span 1 / span 2">
+        <h3>Popularity</h3>
+        <svg id="popularity" width="6in" height="3in"></svg>
+      </div>
+
+      <div class="tile chart" style="grid-area: 1 / 6 / span 1 / span 2">
+        <h3>Support</h3>
+        <svg id="support" width="6in" height="3in"></svg>
+      </div>
+
+      <div class="tile chart" style="grid-area: 1 / 8 / span 1 / span 2">
+        <h3>Activity</h3>
+        <svg id="activity" width="6in" height="3in"></svg>
+      </div>
+    </main>
+
+    <script type="module" src="./util.js"></script>
+    <script type="module" src="./charts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+* {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.35in;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1in;
+  width: 48in;
+  height: 36in;
+  margin: 0;
+  padding: 1in;
+  box-shadow: inset 0 0 0 2px black;
+}
+
+main {
+  flex-grow: 1;
+  height: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0.5in;
+}
+
+main > * {
+  min-width: 0;
+  min-height: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-size: 0.5in;
+  font-weight: 600;
+  text-align: center;
+}
+
+h1 {
+  font-size: 0.75in;
+}
+
+h2 {
+  font-size: 0.65in;
+}
+
+h3 {
+  font-size: 0.5in;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+svg {
+  overflow: visible;
+}
+
+text {
+  font-size: 0.35in;
+  paint-order: stroke fill;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5in;
+  padding: 0.5in;
+  background: #f1f5f9;
+  border-radius: 0.25in;
+}
+
+.charts {
+  display: flex;
+  gap: 0.5in;
+}
+
+.chart {
+  text-align: center;
+}
