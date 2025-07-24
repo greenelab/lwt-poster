@@ -7,7 +7,7 @@ import {
   getPullRequests,
   getStars,
 } from "./github";
-import { getOverTime } from "./time";
+import { getOverTime, getOverTimeRanges } from "./time";
 
 const stars = await cache(getStars, "./raw/stars");
 const forks = await cache(getForks, "./raw/forks");
@@ -37,14 +37,14 @@ save(
 );
 
 save(
-  getOverTime(
+  getOverTimeRanges(
     issues.map((issue) => [issue.created_at, issue.closed_at] as const)
   ),
   "./output/issues-over-time"
 );
 
 save(
-  getOverTime(
+  getOverTimeRanges(
     discussions.map(
       (discussion) => [discussion.createdAt, discussion.answerChosenAt] as const
     )
