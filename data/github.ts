@@ -2,11 +2,13 @@ import { Octokit } from "octokit";
 import { throttling } from "@octokit/plugin-throttling";
 import { paginateGraphQL } from "@octokit/plugin-paginate-graphql";
 import type { Discussion } from "@octokit/graphql-schema";
+import { differenceInHours, min } from "date-fns";
 
 const { AUTH_GITHUB } = process.env;
 
 const owner = "greenelab";
 const repo = "lab-website-template";
+const maintainer = "vincerubinetti";
 
 export const octokit = new (Octokit.plugin(throttling).plugin(paginateGraphQL))(
   {
@@ -50,7 +52,6 @@ export const getIssues = async () =>
     )
       .filter((issue) => !issue.pull_request)
       .map(async (issue) => {
-        console.log("issue", issue.number);
         const comments = await octokit.rest.issues.listComments({
           owner,
           repo,
@@ -83,12 +84,22 @@ const discussionsQuery = `
           }
           createdAt
           answerChosenAt
-          comments(first: 100) {
+          comments(first: 50) {
             edges {
               node {
                 createdAt
                 author {
                   login
+                }
+                replies(first: 50) {
+                  edges {
+                    node {
+                      createdAt
+                      author {
+                        login
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -105,3 +116,39 @@ export const getDiscussions = async () =>
       repository: { discussions: { nodes: Discussion[] } };
     }>(discussionsQuery, { owner, repo })
   ).repository.discussions.nodes;
+
+export const issueResponseTime = (
+  issue: Awaited<ReturnType<typeof getIssues>>[number]
+) => {
+  if (issue.user?.login === maintainer) return null;
+  const open = issue.created_at;
+
+  const response = issue.comments.find(
+    (comment) => comment.user?.login === maintainer
+  )?.created_at;
+
+  if (!response) return null;
+
+  return differenceInHours(response, open, { roundingMethod: "ceil" });
+};
+
+export const discussionResponseTime = (
+  discussion: Awaited<ReturnType<typeof getDiscussions>>[number]
+) => {
+  const open = discussion.createdAt;
+
+  const comments: string[] = [];
+
+  for (const comment of discussion.comments.edges ?? []) {
+    if (comment?.node?.author?.login === maintainer)
+      comments.push(comment?.node?.createdAt);
+
+    for (const reply of comment?.node?.replies.edges ?? [])
+      if (reply?.node?.author?.login === maintainer)
+        comments.push(reply?.node?.createdAt);
+  }
+
+  const response = min(comments);
+
+  return differenceInHours(response, open, { roundingMethod: "ceil" });
+};

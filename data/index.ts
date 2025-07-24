@@ -1,13 +1,16 @@
 import { cache, save } from "./file";
 import {
+  discussionResponseTime,
   getCommits,
   getDiscussions,
   getForks,
   getIssues,
   getPullRequests,
   getStars,
+  issueResponseTime,
 } from "./github";
 import { getOverTime, getOverTimeRanges } from "./time";
+import { avg, med } from "./util";
 
 const stars = await cache(getStars, "./raw/stars");
 const forks = await cache(getForks, "./raw/forks");
@@ -17,40 +20,58 @@ const issues = await cache(getIssues, "./raw/issues");
 const discussions = await cache(getDiscussions, "./raw/discussions");
 
 save(
-  getOverTime(stars.map((star) => star.starred_at)),
-  "./output/stars-over-time"
+  { overTime: getOverTime(stars.map((star) => star.starred_at)) },
+  "./output/stars"
 );
 
 save(
-  getOverTime(forks.map((star) => star.created_at)),
-  "./output/forks-over-time"
+  { overTime: getOverTime(forks.map((star) => star.created_at)) },
+  "./output/forks"
 );
 
 save(
-  getOverTime(commits.map((commit) => commit.commit.committer?.date)),
-  "./output/commits-over-time"
+  {
+    total: issues.length,
+    overTime: getOverTimeRanges(
+      issues.map((issue) => [issue.created_at, issue.closed_at] as const)
+    ),
+    response: (() => {
+      const times = issues.map(issueResponseTime).filter((d) => d !== null);
+      return { avg: avg(times), med: med(times), times };
+    })(),
+  },
+  "./output/issues"
 );
 
 save(
-  getOverTime(pullRequests.map((pr) => pr.created_at)),
-  "./output/pull-requests-over-time"
+  {
+    total: discussions.length,
+    overTime: getOverTimeRanges(
+      discussions.map(
+        (discussion) =>
+          [discussion.createdAt, discussion.answerChosenAt] as const
+      )
+    ),
+    answer: (() => {
+      const times = discussions
+        .map(discussionResponseTime)
+        .filter((d) => d !== null);
+      return { avg: avg(times), med: med(times), times };
+    })(),
+  },
+  "./output/discussions"
 );
 
 save(
-  getOverTimeRanges(
-    issues.map((issue) => [issue.created_at, issue.closed_at] as const)
-  ),
-  "./output/issues-over-time"
+  {
+    overTime: getOverTime(
+      commits.map((commit) => commit.commit.committer?.date)
+    ),
+  },
+  "./output/commits"
 );
 
 save(
-  getOverTimeRanges(
-    discussions.map(
-      (discussion) => [discussion.createdAt, discussion.answerChosenAt] as const
-    )
-  ),
-  "./output/discussions-over-time"
+  { overTime: getOverTime(pullRequests.map((pr) => pr.created_at)) },
+  "./output/pull-requests"
 );
-
-save({ total: issues.length }, "./output/issues-total");
-save({ total: discussions.length }, "./output/discussions-total");

@@ -6,7 +6,7 @@
       "login": "MartinKjunior"
     },
     "createdAt": "2025-06-24T15:25:34Z",
-    "answerChosenAt": null,
+    "answerChosenAt": "2025-07-24T04:32:46Z",
     "comments": {
       "edges": [
         {
@@ -14,6 +14,18 @@
             "createdAt": "2025-06-24T15:58:39Z",
             "author": {
               "login": "MartinKjunior"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2025-06-24T16:42:07Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -35,6 +47,42 @@
             "createdAt": "2025-06-03T15:21:50Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2025-06-03T15:24:49Z",
+                    "author": {
+                      "login": "ptitle"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2025-06-03T15:30:51Z",
+                    "author": {
+                      "login": "ptitle"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2025-06-03T15:44:11Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2025-06-03T15:45:32Z",
+                    "author": {
+                      "login": "ptitle"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -56,6 +104,9 @@
             "createdAt": "2025-05-26T03:58:51Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -77,6 +128,34 @@
             "createdAt": "2025-04-24T17:53:05Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2025-04-25T07:08:45Z",
+                    "author": {
+                      "login": "LupianezLab"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2025-04-25T14:28:00Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2025-04-25T15:30:30Z",
+                    "author": {
+                      "login": "LupianezLab"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -98,6 +177,18 @@
             "createdAt": "2025-03-19T15:06:32Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2025-03-19T17:06:49Z",
+                    "author": {
+                      "login": "mdhumphries"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -119,6 +210,18 @@
             "createdAt": "2025-01-06T16:30:18Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2025-01-06T17:11:24Z",
+                    "author": {
+                      "login": "Llannelongue"
+                    }
+                  }
+                }
+              ]
             }
           }
         },
@@ -127,6 +230,9 @@
             "createdAt": "2025-01-06T17:01:25Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -148,6 +254,42 @@
             "createdAt": "2024-11-19T23:14:45Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-11-20T00:23:20Z",
+                    "author": {
+                      "login": "hyeokhyen"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-11-20T01:12:46Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-11-20T01:35:40Z",
+                    "author": {
+                      "login": "hyeokhyen"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-11-20T15:46:53Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -169,6 +311,9 @@
             "createdAt": "2024-11-11T17:21:13Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -190,6 +335,18 @@
             "createdAt": "2024-10-14T14:54:59Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-10-14T16:40:15Z",
+                    "author": {
+                      "login": "MJDelas"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -211,6 +368,42 @@
             "createdAt": "2024-10-12T23:32:43Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-10-13T00:03:55Z",
+                    "author": {
+                      "login": "imnanxu"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-10-13T01:13:26Z",
+                    "author": {
+                      "login": "imnanxu"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-10-14T14:54:15Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-10-14T15:49:35Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -232,6 +425,9 @@
             "createdAt": "2024-09-29T14:48:37Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -240,6 +436,9 @@
             "createdAt": "2024-09-29T16:40:00Z",
             "author": {
               "login": "nickader"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -261,6 +460,26 @@
             "createdAt": "2024-09-25T14:31:10Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-09-25T14:33:25Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-09-25T15:57:26Z",
+                    "author": {
+                      "login": "SergioAlias"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -282,6 +501,26 @@
             "createdAt": "2024-09-04T22:00:09Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-09-04T23:58:45Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-09-12T19:12:50Z",
+                    "author": {
+                      "login": "imnanxu"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -303,6 +542,9 @@
             "createdAt": "2024-09-11T18:15:36Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -324,6 +566,18 @@
             "createdAt": "2024-08-18T19:06:51Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-08-25T20:11:18Z",
+                    "author": {
+                      "login": "hyeokhyen"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -345,6 +599,9 @@
             "createdAt": "2024-08-19T17:47:53Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -353,6 +610,9 @@
             "createdAt": "2024-08-20T00:30:34Z",
             "author": {
               "login": "ipoom-jeong"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -374,6 +634,9 @@
             "createdAt": "2024-07-26T00:40:02Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -395,6 +658,9 @@
             "createdAt": "2024-07-24T17:34:38Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -403,6 +669,18 @@
             "createdAt": "2024-07-25T22:34:51Z",
             "author": {
               "login": "imnanxu"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-07-26T00:16:49Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -424,6 +702,18 @@
             "createdAt": "2024-07-12T14:34:10Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-07-12T14:35:17Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -445,6 +735,9 @@
             "createdAt": "2024-06-06T14:27:02Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -466,6 +759,18 @@
             "createdAt": "2024-05-20T22:08:58Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-05-20T22:35:13Z",
+                    "author": {
+                      "login": "nickader"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -487,6 +792,9 @@
             "createdAt": "2024-05-07T18:36:56Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -495,6 +803,9 @@
             "createdAt": "2024-05-07T19:17:25Z",
             "author": {
               "login": "andrewsu"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -516,6 +827,9 @@
             "createdAt": "2024-04-29T13:50:26Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -537,6 +851,34 @@
             "createdAt": "2024-04-16T20:13:25Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-04-17T12:18:03Z",
+                    "author": {
+                      "login": "mcgregorian1"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-04-17T13:35:27Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-04-18T13:16:58Z",
+                    "author": {
+                      "login": "mcgregorian1"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -558,6 +900,9 @@
             "createdAt": "2024-04-17T13:12:32Z",
             "author": {
               "login": "sbbe2024"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -566,6 +911,26 @@
             "createdAt": "2024-04-17T13:29:12Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-04-17T19:03:00Z",
+                    "author": {
+                      "login": "sbbe2024"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-04-17T19:15:41Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -587,6 +952,9 @@
             "createdAt": "2024-03-24T18:47:31Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -608,6 +976,9 @@
             "createdAt": "2024-02-27T18:13:57Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -616,6 +987,34 @@
             "createdAt": "2024-02-27T18:27:10Z",
             "author": {
               "login": "bvoightlab"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-02-27T19:05:38Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-02-27T19:43:38Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-03-05T01:27:28Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -637,6 +1036,34 @@
             "createdAt": "2024-02-03T07:37:07Z",
             "author": {
               "login": "XIYANG1018"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-02-07T23:26:50Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-02-08T21:35:37Z",
+                    "author": {
+                      "login": "XIYANG1018"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-02-22T01:47:20Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -658,6 +1085,26 @@
             "createdAt": "2024-02-07T23:11:25Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-02-07T23:16:00Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-02-12T21:49:01Z",
+                    "author": {
+                      "login": "miltondp"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -679,6 +1126,9 @@
             "createdAt": "2024-01-31T02:15:19Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -700,6 +1150,9 @@
             "createdAt": "2024-01-31T00:36:28Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -708,6 +1161,9 @@
             "createdAt": "2024-01-31T00:50:55Z",
             "author": {
               "login": "snaqvi1990"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -729,6 +1185,9 @@
             "createdAt": "2024-01-30T23:32:38Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -737,6 +1196,26 @@
             "createdAt": "2024-01-30T23:52:21Z",
             "author": {
               "login": "snaqvi1990"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-01-31T00:09:32Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-01-31T00:28:01Z",
+                    "author": {
+                      "login": "snaqvi1990"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -758,6 +1237,34 @@
             "createdAt": "2024-01-18T23:44:58Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-01-19T06:16:18Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-01-19T06:22:40Z",
+                    "author": {
+                      "login": "XIYANG1018"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2024-01-19T06:25:11Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -779,6 +1286,18 @@
             "createdAt": "2024-01-10T18:21:34Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2024-01-10T18:27:12Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -800,6 +1319,42 @@
             "createdAt": "2023-11-16T16:31:12Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-11-16T16:37:56Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-11-16T16:40:36Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-11-16T17:21:45Z",
+                    "author": {
+                      "login": "sterding"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-11-16T17:45:12Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -821,6 +1376,18 @@
             "createdAt": "2023-11-12T01:15:51Z",
             "author": {
               "login": "hyeokhyen"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-11-13T15:34:48Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -842,6 +1409,42 @@
             "createdAt": "2023-11-10T01:40:54Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-11-10T14:11:32Z",
+                    "author": {
+                      "login": "hyeokhyen"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-11-10T14:20:03Z",
+                    "author": {
+                      "login": "hyeokhyen"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-11-10T14:30:20Z",
+                    "author": {
+                      "login": "hyeokhyen"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-11-10T16:04:56Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -863,6 +1466,18 @@
             "createdAt": "2023-11-08T16:05:26Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-11-08T17:00:14Z",
+                    "author": {
+                      "login": "hyeokhyen"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -884,6 +1499,9 @@
             "createdAt": "2023-10-29T15:17:54Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -892,6 +1510,18 @@
             "createdAt": "2023-10-29T22:10:18Z",
             "author": {
               "login": "sterding"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-10-29T22:47:11Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         },
@@ -900,6 +1530,26 @@
             "createdAt": "2023-10-29T22:19:20Z",
             "author": {
               "login": "sterding"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-10-29T23:00:16Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-10-29T23:00:33Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         },
@@ -908,6 +1558,18 @@
             "createdAt": "2023-10-29T23:32:46Z",
             "author": {
               "login": "sterding"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-10-29T23:49:58Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         },
@@ -916,6 +1578,9 @@
             "createdAt": "2023-10-30T01:37:05Z",
             "author": {
               "login": "sterding"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -937,6 +1602,34 @@
             "createdAt": "2023-10-27T16:29:19Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-10-27T17:05:26Z",
+                    "author": {
+                      "login": "sterding"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-10-27T17:08:22Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-10-27T19:42:13Z",
+                    "author": {
+                      "login": "sterding"
+                    }
+                  }
+                }
+              ]
             }
           }
         },
@@ -945,6 +1638,18 @@
             "createdAt": "2023-10-29T23:43:02Z",
             "author": {
               "login": "sterding"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-10-30T00:14:49Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -966,6 +1671,9 @@
             "createdAt": "2023-10-16T15:08:58Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -987,6 +1695,9 @@
             "createdAt": "2023-10-13T14:13:05Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1008,6 +1719,34 @@
             "createdAt": "2023-10-02T15:57:04Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-10-05T10:39:59Z",
+                    "author": {
+                      "login": "mrittika-dey"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-10-05T13:41:54Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-10-06T21:53:33Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1029,6 +1768,18 @@
             "createdAt": "2023-06-27T16:13:43Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-09-12T03:27:43Z",
+                    "author": {
+                      "login": "hiiiyilingzhang"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1050,6 +1801,18 @@
             "createdAt": "2023-08-22T17:54:04Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-08-22T17:55:16Z",
+                    "author": {
+                      "login": "SakaizaRajery"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1071,6 +1834,42 @@
             "createdAt": "2023-08-15T18:32:25Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-08-15T18:44:56Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-08-15T19:20:58Z",
+                    "author": {
+                      "login": "mcgregorian1"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-08-15T19:30:15Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-08-15T19:41:08Z",
+                    "author": {
+                      "login": "mcgregorian1"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1092,6 +1891,18 @@
             "createdAt": "2023-07-18T16:22:05Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-07-18T16:23:56Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1113,6 +1924,34 @@
             "createdAt": "2023-07-13T15:37:52Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-07-13T16:04:01Z",
+                    "author": {
+                      "login": "aaronjnewman"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-07-13T17:51:26Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-07-13T18:21:24Z",
+                    "author": {
+                      "login": "aaronjnewman"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1134,6 +1973,9 @@
             "createdAt": "2023-07-10T20:11:29Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -1142,6 +1984,9 @@
             "createdAt": "2023-07-11T15:12:13Z",
             "author": {
               "login": "Srihitha-l"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1163,6 +2008,74 @@
             "createdAt": "2023-07-07T19:08:03Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-07-07T19:14:43Z",
+                    "author": {
+                      "login": "Srihitha-l"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-07-07T19:18:38Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-07-07T19:19:37Z",
+                    "author": {
+                      "login": "Srihitha-l"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-07-07T19:23:00Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-07-07T19:28:37Z",
+                    "author": {
+                      "login": "Srihitha-l"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-07-07T19:37:04Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-07-07T19:53:28Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-07-07T20:16:00Z",
+                    "author": {
+                      "login": "Srihitha-l"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1184,6 +2097,26 @@
             "createdAt": "2023-07-06T19:59:52Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-07-06T20:03:45Z",
+                    "author": {
+                      "login": "Srihitha-l"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-07-06T20:10:23Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         },
@@ -1192,6 +2125,9 @@
             "createdAt": "2023-07-06T20:12:13Z",
             "author": {
               "login": "Srihitha-l"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1211,6 +2147,9 @@
             "createdAt": "2023-06-30T02:34:05Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1232,6 +2171,26 @@
             "createdAt": "2022-12-20T16:00:48Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-06-12T14:51:18Z",
+                    "author": {
+                      "login": "liviuspenter"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-06-12T14:55:52Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         },
@@ -1240,6 +2199,9 @@
             "createdAt": "2022-12-20T18:00:02Z",
             "author": {
               "login": "ksw9"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1261,6 +2223,9 @@
             "createdAt": "2023-05-08T14:59:53Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1282,6 +2247,9 @@
             "createdAt": "2023-05-05T21:37:17Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1303,6 +2271,34 @@
             "createdAt": "2023-05-01T14:49:27Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-05-02T06:34:59Z",
+                    "author": {
+                      "login": "ManuThomasen"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-05-02T18:45:35Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-05-02T19:05:54Z",
+                    "author": {
+                      "login": "ManuThomasen"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1324,6 +2320,26 @@
             "createdAt": "2023-04-27T19:37:59Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-04-27T19:40:14Z",
+                    "author": {
+                      "login": "rebullm"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-04-27T19:54:04Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1345,6 +2361,18 @@
             "createdAt": "2023-04-27T16:49:23Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-04-27T16:57:12Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1366,6 +2394,9 @@
             "createdAt": "2023-04-25T18:34:12Z",
             "author": {
               "login": "rebullm"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -1374,6 +2405,9 @@
             "createdAt": "2023-04-25T19:05:27Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -1382,6 +2416,9 @@
             "createdAt": "2023-04-25T19:10:57Z",
             "author": {
               "login": "rebullm"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -1390,6 +2427,9 @@
             "createdAt": "2023-04-25T19:12:04Z",
             "author": {
               "login": "rebullm"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1411,6 +2451,18 @@
             "createdAt": "2023-04-24T19:31:34Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-04-24T22:45:01Z",
+                    "author": {
+                      "login": "rebullm"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1432,6 +2484,9 @@
             "createdAt": "2023-04-17T16:03:37Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1453,6 +2508,18 @@
             "createdAt": "2023-04-11T15:27:28Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-04-11T15:37:34Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1474,6 +2541,9 @@
             "createdAt": "2023-04-06T16:19:32Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1495,6 +2565,42 @@
             "createdAt": "2023-04-03T14:50:16Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-04-04T06:23:08Z",
+                    "author": {
+                      "login": "hiiiyilingzhang"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-04-04T21:52:44Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-04-04T21:54:08Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-04-05T06:59:20Z",
+                    "author": {
+                      "login": "hiiiyilingzhang"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1516,6 +2622,66 @@
             "createdAt": "2023-03-09T22:21:26Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-03-09T23:14:01Z",
+                    "author": {
+                      "login": "jxchen01"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-03-09T23:37:32Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-03-09T23:52:30Z",
+                    "author": {
+                      "login": "jxchen01"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-03-10T00:15:54Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-03-14T20:21:04Z",
+                    "author": {
+                      "login": "jxchen01"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-03-14T20:28:37Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-03-15T06:16:10Z",
+                    "author": {
+                      "login": "jxchen01"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1537,6 +2703,9 @@
             "createdAt": "2023-03-04T00:51:55Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -1545,6 +2714,9 @@
             "createdAt": "2023-03-06T17:24:14Z",
             "author": {
               "login": "bvoightlab"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1566,6 +2738,26 @@
             "createdAt": "2023-02-02T16:13:34Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2023-02-02T21:13:36Z",
+                    "author": {
+                      "login": "SakaizaRajery"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2023-02-05T18:33:23Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1587,6 +2779,18 @@
             "createdAt": "2022-11-23T01:00:59Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2022-11-23T01:05:45Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1608,6 +2812,26 @@
             "createdAt": "2022-11-04T18:36:39Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2022-11-04T18:39:50Z",
+                    "author": {
+                      "login": "Harrisonthow"
+                    }
+                  }
+                },
+                {
+                  "node": {
+                    "createdAt": "2022-11-04T18:45:59Z",
+                    "author": {
+                      "login": "vincerubinetti"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1629,6 +2853,9 @@
             "createdAt": "2022-11-02T03:33:30Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1650,6 +2877,9 @@
             "createdAt": "2022-10-05T23:50:52Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1671,6 +2901,9 @@
             "createdAt": "2021-08-04T16:12:29Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         },
@@ -1679,6 +2912,9 @@
             "createdAt": "2021-08-04T18:37:36Z",
             "author": {
               "login": "moraesfernanda"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1700,6 +2936,18 @@
             "createdAt": "2021-07-28T18:40:41Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": [
+                {
+                  "node": {
+                    "createdAt": "2021-08-04T14:50:51Z",
+                    "author": {
+                      "login": "moraesfernanda"
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -1721,6 +2969,9 @@
             "createdAt": "2021-07-28T18:36:27Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }
@@ -1742,6 +2993,9 @@
             "createdAt": "2021-07-27T19:43:48Z",
             "author": {
               "login": "vincerubinetti"
+            },
+            "replies": {
+              "edges": []
             }
           }
         }

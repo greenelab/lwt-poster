@@ -6,13 +6,9 @@ import {
   min,
 } from "date-fns";
 import type { Interval } from "date-fns";
+import { pairs } from "./util";
 
 type D = string | undefined | null;
-
-const pairs = <Item>(array: Item[]): [Item, Item][] =>
-  array
-    .map((_, index) => array.slice(index, index + 2) as [Item, Item])
-    .slice(0, -1);
 
 export const getOverTime = (d: D[]) => {
   const dates = d.map((d) => new Date(d || Date.now()));

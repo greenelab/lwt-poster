@@ -1,16 +1,17 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-import { colors, fit, load } from "./util.js";
+import { colors, fit } from "./util.js";
+import {
+  stars,
+  forks,
+  issues,
+  discussions,
+  commits,
+  pullRequests,
+} from "./data.js";
 
 const makeOverTimeChart = async (plot, series) => {
   const svg = d3.select(`#${plot}`);
   const { width, height } = svg.node().getBoundingClientRect();
-
-  series = await Promise.all(
-    series.map(async (series) => ({
-      ...series,
-      data: await load(series.file),
-    }))
-  );
 
   series.forEach(({ data }) =>
     data.forEach((d) => (d.date = new Date(d.date)))
@@ -72,26 +73,24 @@ const makeOverTimeChart = async (plot, series) => {
 };
 
 makeOverTimeChart("popularity", [
-  { file: "stars-over-time", name: "Stars", color: colors[5] },
-  { file: "forks-over-time", name: "Forks", color: colors[6] },
+  { data: stars.overTime, name: "Stars", color: colors[5] },
+  { data: forks.overTime, name: "Forks", color: colors[6] },
 ]);
 
-const issues = (await load("issues-total")).total;
-const discussions = (await load("discussions-total")).total;
 makeOverTimeChart("support", [
   {
-    file: "issues-over-time",
-    name: `Issues (${issues})`,
+    data: issues.overTime,
+    name: "Issues",
     color: colors[11],
   },
   {
-    file: "discussions-over-time",
-    name: `Discussions (${discussions})`,
+    data: discussions.overTime,
+    name: "Discussions",
     color: colors[9],
   },
 ]);
 
 makeOverTimeChart("activity", [
-  { file: "commits-over-time", name: "Commits", color: colors[13] },
-  { file: "pull-requests-over-time", name: "PRs", color: colors[15] },
+  { data: commits.overTime, name: "Commits", color: colors[13] },
+  { data: pullRequests.overTime, name: "PRs", color: colors[15] },
 ]);

@@ -12,6 +12,15 @@
     />
 
     <link rel="stylesheet" href="./styles.css" />
+
+    <script type="module" src="./charts.js"></script>
+
+    <script>
+      window.useData = (func) => {
+        const script = document.currentScript;
+        import("./data.js").then((module) => (script.outerHTML = func(module)));
+      };
+    </script>
   </head>
 
   <body>
@@ -80,13 +89,71 @@
         <svg id="support" width="6in" height="3in"></svg>
       </div>
 
+      <div class="tile" style="grid-area: 2 / 6 / span 1 / span 2">
+        <table>
+          <tr>
+            <td rowspan="3">Issues</td>
+            <td colspan="2">Total</td>
+            <td>
+              <script>
+                window.useData((d) => d.issues.total);
+              </script>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">Res. Time</td>
+            <td>Avg.</td>
+            <td>
+              <script>
+                window.useData((d) => d.issues.response.avg.toFixed());
+              </script>
+              hrs
+            </td>
+          </tr>
+          <tr>
+            <td>Med.</td>
+            <td>
+              <script>
+                window.useData((d) => d.issues.response.med.toFixed());
+              </script>
+              hrs
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="3">Discussions</td>
+            <td colspan="2">Total</td>
+            <td>
+              <script>
+                window.useData((d) => d.discussions.total);
+              </script>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">Res. Time</td>
+            <td>Avg.</td>
+            <td>
+              <script>
+                window.useData((d) => d.discussions.answer.avg.toFixed());
+              </script>
+              hrs
+            </td>
+          </tr>
+          <tr>
+            <td>Med.</td>
+            <td>
+              <script>
+                window.useData((d) => d.discussions.answer.med.toFixed());
+              </script>
+              hrs
+            </td>
+          </tr>
+        </table>
+      </div>
+
       <div class="tile chart" style="grid-area: 1 / 8 / span 1 / span 2">
         <h2>Activity</h2>
         <svg id="activity" width="6in" height="3in"></svg>
       </div>
     </main>
-
-    <script type="module" src="./util.js"></script>
-    <script type="module" src="./charts.js"></script>
   </body>
 </html>
