@@ -152,3 +152,10 @@ export const discussionResponseTime = (
 
   return differenceInHours(response, open, { roundingMethod: "ceil" });
 };
+
+export const getReleases = () =>
+  octokit.paginate(octokit.rest.repos.listReleases, {
+    owner,
+    repo,
+    per_page,
+  });

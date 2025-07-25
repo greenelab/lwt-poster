@@ -6,6 +6,7 @@ import {
   getForks,
   getIssues,
   getPullRequests,
+  getReleases,
   getStars,
   issueResponseTime,
 } from "./github";
@@ -18,6 +19,7 @@ const commits = await cache(getCommits, "./raw/commits");
 const pullRequests = await cache(getPullRequests, "./raw/pull-requests");
 const issues = await cache(getIssues, "./raw/issues");
 const discussions = await cache(getDiscussions, "./raw/discussions");
+const releases = await cache(getReleases, "./raw/releases");
 
 save(
   { overTime: getOverTime(stars.map((star) => star.starred_at)) },
@@ -74,4 +76,9 @@ save(
 save(
   { overTime: getOverTime(pullRequests.map((pr) => pr.created_at)) },
   "./output/pull-requests"
+);
+
+save(
+  releases.map((release) => ({ name: release.name, date: release.created_at })),
+  "./output/releases"
 );

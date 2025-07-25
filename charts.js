@@ -7,6 +7,7 @@ import {
   discussions,
   commits,
   pullRequests,
+  releases,
 } from "./data.js";
 
 const makeOverTimeChart = async (plot, series) => {
@@ -16,6 +17,7 @@ const makeOverTimeChart = async (plot, series) => {
   series.forEach(({ data }) =>
     data.forEach((d) => (d.date = new Date(d.date)))
   );
+  releases.forEach((d) => (d.date = new Date(d.date)));
 
   const flatData = series.map(({ data }) => data).flat();
 
@@ -46,6 +48,27 @@ const makeOverTimeChart = async (plot, series) => {
       .attr("stroke", "none")
       .attr("d", line(data));
 
+  for (const { name, date } of releases) {
+    const major = name.endsWith(".0");
+    svg
+      .append("line")
+      .attr("x1", xScale(date))
+      .attr("x2", xScale(date))
+      .attr("y1", 0)
+      .attr("y2", height)
+      .attr("stroke", series[0].color)
+      .attr("stroke-width", major ? "0.025in" : "0.01in")
+      .attr("stroke-dasharray", major ? "" : "5 10");
+    if (major && !name.startsWith("v1.1"))
+      svg
+        .append("text")
+        .text(name.replace(/(v\d+\.\d+)\.\d+/, "$1"))
+        .attr("text-anchor", "middle")
+        .attr("x", xScale(date))
+        .attr("y", 0)
+        .attr("dy", "-0.5em");
+  }
+
   const maxX = d3.max(flatData.map((d) => d.date));
   const maxY = d3
     .pairs(
@@ -59,9 +82,9 @@ const makeOverTimeChart = async (plot, series) => {
     svg
       .append("text")
       .text(name)
-      .attr("x", (d) => xScale(maxX))
+      .attr("x", () => xScale(maxX))
       .attr("dx", "-0.1in")
-      .attr("y", (d) => yScale(maxY[index]))
+      .attr("y", () => yScale(maxY[index]))
       .attr("text-anchor", "end")
       .attr("alignment-baseline", "hanging");
 
