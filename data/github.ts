@@ -1,7 +1,7 @@
 import { Octokit } from "octokit";
 import { throttling } from "@octokit/plugin-throttling";
 import { paginateGraphQL } from "@octokit/plugin-paginate-graphql";
-import type { Discussion } from "@octokit/graphql-schema";
+import type { Discussion as DiscussionNode } from "@octokit/graphql-schema";
 import { differenceInHours, min } from "date-fns";
 
 const { AUTH_GITHUB } = process.env;
@@ -113,13 +113,14 @@ const discussionsQuery = `
 export const getDiscussions = async () =>
   (
     await octokit.graphql.paginate<{
-      repository: { discussions: { nodes: Discussion[] } };
+      repository: { discussions: { nodes: DiscussionNode[] } };
     }>(discussionsQuery, { owner, repo })
   ).repository.discussions.nodes;
 
-export const issueResponseTime = (
-  issue: Awaited<ReturnType<typeof getIssues>>[number]
-) => {
+type Issue = Awaited<ReturnType<typeof getIssues>>[number];
+type Discussion = Awaited<ReturnType<typeof getDiscussions>>[number];
+
+export const issueResponseTime = (issue: Issue) => {
   if (issue.user?.login === maintainer) return null;
   const open = issue.created_at;
 
@@ -132,9 +133,7 @@ export const issueResponseTime = (
   return differenceInHours(response, open, { roundingMethod: "ceil" });
 };
 
-export const discussionResponseTime = (
-  discussion: Awaited<ReturnType<typeof getDiscussions>>[number]
-) => {
+export const discussionResponseTime = (discussion: Discussion) => {
   const open = discussion.createdAt;
 
   const comments: string[] = [];
@@ -151,6 +150,24 @@ export const discussionResponseTime = (
   const response = min(comments);
 
   return differenceInHours(response, open, { roundingMethod: "ceil" });
+};
+
+export const issueResolutionTime = (issue: Issue) => {
+  const open = issue.created_at;
+  const closed = issue.closed_at;
+
+  if (!closed) return null;
+
+  return differenceInHours(closed, open, { roundingMethod: "ceil" });
+};
+
+export const discussionResolutionTime = (discussion: Discussion) => {
+  const open = discussion.createdAt;
+  const closed = discussion.answerChosenAt;
+
+  if (!closed) return null;
+
+  return differenceInHours(closed, open, { roundingMethod: "ceil" });
 };
 
 export const getReleases = () =>

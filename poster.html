@@ -15,11 +15,28 @@
 
     <script type="module" src="./charts.js"></script>
 
-    <script>
-      window.useData = (func) => {
-        const script = document.currentScript;
-        import("./data.js").then((module) => (script.outerHTML = func(module)));
-      };
+    <script type="module">
+      import * as data from "./data.js";
+      window.data = data;
+
+      window.formatVal = (value) =>
+        value.toLocaleString(undefined, { notation: "compact" });
+
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_COMMENT
+      );
+      let node;
+
+      const comments = [];
+      while ((node = walker.nextNode())) comments.push(node);
+
+      for (const comment of comments) {
+        const content = comment.nodeValue.trim();
+        const result = eval(content);
+        const text = document.createTextNode(String(result));
+        comment.parentNode.replaceChild(text, comment);
+      }
     </script>
   </head>
 
@@ -92,59 +109,53 @@
       <div class="tile" style="grid-area: 2 / 6 / span 1 / span 2">
         <table>
           <tr>
-            <td rowspan="3">Issues</td>
-            <td colspan="2">Total</td>
-            <td>
-              <script>
-                window.useData((d) => d.issues.total);
-              </script>
-            </td>
+            <td></td>
+            <td>Issues (<!-- formatVal(data.issues.total) -->)</td>
+            <td>Discussions (<!-- formatVal(data.discussions.total) -->)</td>
           </tr>
+
           <tr>
-            <td rowspan="2">Resp.</td>
-            <td>Avg.</td>
+            <td>Avg. Resp.</td>
             <td>
-              <script>
-                window.useData((d) => d.issues.response.avg.toFixed());
-              </script>
+              <!-- formatVal(data.issues.response.avg) -->
+              hrs
+            </td>
+            <td>
+              <!-- formatVal(data.discussions.response.avg) -->
               hrs
             </td>
           </tr>
           <tr>
-            <td>Med.</td>
+            <td>Med. Resp.</td>
             <td>
-              <script>
-                window.useData((d) => d.issues.response.med.toFixed());
-              </script>
+              <!-- formatVal(data.issues.response.med) -->
+              hrs
+            </td>
+            <td>
+              <!-- formatVal(data.discussions.response.med) -->
               hrs
             </td>
           </tr>
           <tr>
-            <td rowspan="3">Discuss.</td>
-            <td colspan="2">Total</td>
+            <td>Avg. Reso.</td>
             <td>
-              <script>
-                window.useData((d) => d.discussions.total);
-              </script>
+              <!-- formatVal(data.issues.resolution.avg / 24) -->
+              days
+            </td>
+            <td>
+              <!-- formatVal(data.discussions.resolution.avg / 24) -->
+              days
             </td>
           </tr>
           <tr>
-            <td rowspan="2">Resp.</td>
-            <td>Avg.</td>
+            <td>Med. Reso.</td>
             <td>
-              <script>
-                window.useData((d) => d.discussions.answer.avg.toFixed());
-              </script>
-              hrs
+              <!-- formatVal(data.issues.resolution.med / 24) -->
+              days
             </td>
-          </tr>
-          <tr>
-            <td>Med.</td>
             <td>
-              <script>
-                window.useData((d) => d.discussions.answer.med.toFixed());
-              </script>
-              hrs
+              <!-- formatVal(data.discussions.resolution.med / 24) -->
+              days
             </td>
           </tr>
         </table>

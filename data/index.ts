@@ -1,5 +1,6 @@
 import { cache, save } from "./file";
 import {
+  discussionResolutionTime,
   discussionResponseTime,
   getCommits,
   getDiscussions,
@@ -8,6 +9,7 @@ import {
   getPullRequests,
   getReleases,
   getStars,
+  issueResolutionTime,
   issueResponseTime,
 } from "./github";
 import { getOverTime, getOverTimeRanges } from "./time";
@@ -39,7 +41,11 @@ save(
     ),
     response: (() => {
       const times = issues.map(issueResponseTime).filter((d) => d !== null);
-      return { avg: avg(times), med: med(times), times };
+      return { avg: avg(times), med: med(times) };
+    })(),
+    resolution: (() => {
+      const times = issues.map(issueResolutionTime).filter((d) => d !== null);
+      return { avg: avg(times), med: med(times) };
     })(),
   },
   "./output/issues"
@@ -54,11 +60,17 @@ save(
           [discussion.createdAt, discussion.answerChosenAt] as const
       )
     ),
-    answer: (() => {
+    response: (() => {
       const times = discussions
         .map(discussionResponseTime)
         .filter((d) => d !== null);
-      return { avg: avg(times), med: med(times), times };
+      return { avg: avg(times), med: med(times) };
+    })(),
+    resolution: (() => {
+      const times = discussions
+        .map(discussionResolutionTime)
+        .filter((d) => d !== null);
+      return { avg: avg(times), med: med(times) };
     })(),
   },
   "./output/discussions"
