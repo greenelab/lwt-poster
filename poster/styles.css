@@ -14,14 +14,22 @@
 }
 
 body {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 0.5rem;
   min-height: 100vh;
   margin: 0;
-  padding: 4rem;
+  padding: 0.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 4rem;
+  width: 100%;
 }
 
 h1,
@@ -29,21 +37,19 @@ h2,
 h3 {
   margin: 0;
   font-weight: 500;
-  text-align: center;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 p {
   margin: 0;
   line-height: 1.5;
-  min-width: 4in;
 }
 
 table {
@@ -67,8 +73,7 @@ text {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 .grid > * {
@@ -76,35 +81,58 @@ text {
   flex-basis: 0;
 }
 
-.top {
+.row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 1rem 2rem;
+  text-align: left;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem 2rem;
+}
+
+.gap-sm {
+  gap: 0.5rem;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.center {
+  text-align: center;
+}
+
+.tile {
+  padding: 1.5rem;
+  background: #f1f5f9;
+  min-width: min(20rem, 100%);
 }
 
 .qr {
   height: 6rem;
-  opacity: 0.5;
 }
 
 .logo {
   height: 6rem;
-}
-
-.tile {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
-  background: #f1f5f9;
-  border-radius: 0.25in;
-}
-
-.charts {
-  display: flex;
-  gap: 2rem;
 }
 
 .chart {
@@ -112,6 +140,5 @@ text {
 }
 
 .chart svg {
-  min-width: 20rem;
   aspect-ratio: 16 / 9;
 }

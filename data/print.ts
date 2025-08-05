@@ -7,10 +7,6 @@ const browser = await playwright.chromium.launch({ headless: false });
 const context = await browser.newContext();
 const page = await context.newPage();
 
-/** page size, landscape, in css units */
-const width = 11 * 96;
-const height = 8.5 * 96;
-
 /** preview poster */
 const preview = exec(
   `bunx live-server --no-browser`,
@@ -34,14 +30,13 @@ await page.goto(url + "/poster");
 await page.emulateMedia({ media: "print" });
 await page.waitForSelector("main");
 
-/** force page resize event for e.g. auto-resizing charts */
-await page.setViewportSize({ width, height });
-
 /** print pdf */
+const margin = 1 * 96;
 await page.pdf({
   path: "poster.pdf",
   preferCSSPageSize: true,
   printBackground: true,
+  margin: { left: margin, top: margin, right: margin, bottom: margin },
 });
 
 /** close */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-    <title>Lab Website Template - Poster</title>
+    <title>Poster - Lab Website Template</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,17 +23,40 @@
   </head>
 
   <body>
-    <div class="top">
-      <a href="https://greene-lab.gitbook.io/lab-website-template-docs">
-        <img class="qr" src="./docs-qr.svg" />
-      </a>
-      <img class="logo" src="./logo.svg" />
-      <h1>Lab Website Template</h1>
-      <h2>An Easy, Automatic, Flexible Website Template for Labs</h2>
-    </div>
+    <header class="tile">
+      <div class="row no-wrap">
+        <img class="logo" src="./logo.svg" />
+
+        <div class="col align-start gap-sm">
+          <h1>Lab Website Template</h1>
+          <h2>An Easy, Automatic, Flexible Website Template for Labs</h2>
+        </div>
+      </div>
+
+      <div class="col gap-sm">
+        <span>Vincent Rubinetti, Casey Greene</span>
+        <span>University of Colorado Anschutz School of Medicine</span>
+      </div>
+
+      <div class="row">
+        <div class="col gap-sm center">
+          <a href="https://greene-lab.gitbook.io/lab-website-template-docs">
+            <img class="qr" src="./docs-qr.svg" />
+          </a>
+          Template home
+        </div>
+
+        <div class="col gap-sm">
+          <a href="https://github.com/greenelab/lwt-poster">
+            <img class="qr" src="./poster-qr.svg" />
+          </a>
+          Poster source
+        </div>
+      </div>
+    </header>
 
     <main class="grid">
-      <section class="tile">
+      <section class="col tile">
         <h2>Abstract</h2>
 
         <p>
@@ -86,22 +109,22 @@
       </section>
 
       <section class="grid">
-        <div class="tile chart">
+        <div class="col tile chart">
           <h2>Popularity</h2>
           <svg id="popularity"></svg>
         </div>
 
-        <div class="tile chart">
+        <div class="col tile chart">
           <h2>Activity</h2>
           <svg id="activity"></svg>
         </div>
 
-        <div class="tile chart">
+        <div class="col tile chart">
           <h2>Support</h2>
           <svg id="support"></svg>
         </div>
 
-        <div class="tile">
+        <div class="col tile">
           <table>
             <tr>
               <td></td>
@@ -157,12 +180,5 @@
         </div>
       </section>
     </main>
-
-    <div class="tile">
-      Poster source
-      <a href="https://github.com/greenelab/lwt-poster">
-        <img class="qr" src="./poster-qr.svg" />
-      </a>
-    </div>
   </body>
 </html>
