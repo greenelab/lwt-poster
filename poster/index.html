@@ -11,33 +11,13 @@
       rel="stylesheet"
     />
 
+    <base href="poster" />
+
     <link rel="stylesheet" href="./styles.css" />
 
     <script type="module" src="./charts.js"></script>
 
-    <script type="module">
-      import * as data from "./data.js";
-      window.data = data;
-
-      window.formatVal = (value) =>
-        value.toLocaleString(undefined, { notation: "compact" });
-
-      const walker = document.createTreeWalker(
-        document.body,
-        NodeFilter.SHOW_COMMENT
-      );
-      let node;
-
-      const comments = [];
-      while ((node = walker.nextNode())) comments.push(node);
-
-      for (const comment of comments) {
-        const content = comment.nodeValue.trim();
-        const result = eval(content);
-        const text = document.createTextNode(String(result));
-        comment.parentNode.replaceChild(text, comment);
-      }
-    </script>
+    <script type="module" src="./templating.js"></script>
   </head>
 
   <body>
@@ -154,8 +134,8 @@
               days
             </td>
             <td>
-              <!-- formatVal(data.discussions.resolution.med / 24) -->
-              days
+              <!-- formatVal(data.discussions.resolution.med) -->
+              hrs
             </td>
           </tr>
         </table>

@@ -1,5 +1,169 @@
 [
   {
+    "sha": "2dbda4375816d003eae4f250302b3b2ef3ae41ec",
+    "node_id": "C_kwDOEa796toAKDJkYmRhNDM3NTgxNmQwMDNlYWU0ZjI1MDMwMmIzYjJlZjNhZTQxZWM",
+    "commit": {
+      "author": {
+        "name": "Vincent Rubinetti",
+        "email": "vince.rubinetti@gmail.com",
+        "date": "2025-07-30T17:33:53Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2025-07-30T17:33:53Z"
+      },
+      "message": "v1.3.7 (#331)\n\nRe-closes #191, specifically [this\ncomment](https://github.com/greenelab/lab-website-template/issues/191#issuecomment-3062346669).\nTested on a personal fork.\n\nWhen a user has the \"automatically delete branch on merge\" setting\nenabled, by the time the `build-preview.yaml` workflow runs on pull\nrequest close, the branch is already gone and `actions/checkout` fails.\n\nThere are a few ways to solve this:\n\n1. In the `actions/checkout` step, check out the `main` branch if the\nevent is a PR close (regardless of the \"auto-delete\" option), or check\nout the PR branch otherwise.\n2. Always try to check out the PR branch, and if it errors (user has the\n\"auto-delete\" option on), then try to check out `main`.\n3. Only run first half of workflow if PR event != close. Then, always\n(on any PR activity) run the second half which gets all closed PR\nnumbers and deletes their associated preview folders.\n\n1 or 2 would work going forward, but I opted for the 3rd option because\nit will retroactively fix user's repos that have been affected by this\nshortcoming so far, like Casey's:\n<img height=\"200\" alt=\"Screenshot 2025-07-29 at 5 50 36 PM\"\nsrc=\"https://github.com/user-attachments/assets/51649a7b-3b42-4768-a0dd-6b3d568aa841\"\n/>\n\nNew template version checklist:\n\n- [x] I have updated CITATION and CHANGELOG as appropriate.\n- [x] I have updated lab-website-template-docs as appropriate.\n- [x] I have checked the testbed as appropriate.",
+      "tree": {
+        "sha": "deb8fb510a84c05837560fc031f9cc938602a8c0",
+        "url": "https://api.github.com/repos/greenelab/lab-website-template/git/trees/deb8fb510a84c05837560fc031f9cc938602a8c0"
+      },
+      "url": "https://api.github.com/repos/greenelab/lab-website-template/git/commits/2dbda4375816d003eae4f250302b3b2ef3ae41ec",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJoileBCRC1aQ7uu5UhlAAAX4kQAGBPOGtIbFK81uutgV/JG7nF\nUw+jz8jc3DKwhl6cpGy5vVboYNrRnxVenmQ9aUVHFKM60eohOK5A5q/Z62keLS+f\nSIIf+EvI75vz2g3sMItZ8V7WB8cb0rgeZN8SJsBRK6KmvlDA7U0ePD3mA7ovhTmc\n6k2Chb3dlEz644KIEqWL0LaezIn4dv7qZ2RiupT6XPZySGxxC1fXdHs6mqn05+Lj\nm0to9GBoH1svNyndPn5qQ1r5tCZcJJi58NFpksVhR7/LuJRrystH2vPceW2aljwx\nEBVW0KSkjYrCDquexfQ2S/oT1GDLxW599alBIEov+ZRcCH7nW1lGCFkt4X9k/ejb\nMRI8ltXZtrbzvWLrR+nOntvd0KozBFIQIExtsnnEyZSQFb91s1hYnqLk81zP9zYf\nDUdCr/E2IQ4rNTTe3UAReVAxWpnGOXTHPl2RwgfNofxnN1teLlh+QLZbmtJwbxLx\nIXGQpo0W64klKnO/vHEFaE+RbZQpFvDQsa0CJ88FUKtgImtoxktvnGGMqsquSCWO\nrVWF49PoB1/+BpltS2qqdV/pgPU4/xyyBqFtIDqxt2cGxQvnTdfhvFsys1DTLkZc\nKIEMp7egGIjZfT3NpYAwMUiBwMuDF+NkbDGhelIynolj+OxVuynJsv0Ors/97zBa\nkDXh0TzigA9Lebt5eNOR\n=3z02\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree deb8fb510a84c05837560fc031f9cc938602a8c0\nparent f35e90903ae5e9c4ac7fa8f6fa4cf9d56721b614\nauthor Vincent Rubinetti <vince.rubinetti@gmail.com> 1753896833 -0400\ncommitter GitHub <noreply@github.com> 1753896833 -0400\n\nv1.3.7 (#331)\n\nRe-closes #191, specifically [this\ncomment](https://github.com/greenelab/lab-website-template/issues/191#issuecomment-3062346669).\nTested on a personal fork.\n\nWhen a user has the \"automatically delete branch on merge\" setting\nenabled, by the time the `build-preview.yaml` workflow runs on pull\nrequest close, the branch is already gone and `actions/checkout` fails.\n\nThere are a few ways to solve this:\n\n1. In the `actions/checkout` step, check out the `main` branch if the\nevent is a PR close (regardless of the \"auto-delete\" option), or check\nout the PR branch otherwise.\n2. Always try to check out the PR branch, and if it errors (user has the\n\"auto-delete\" option on), then try to check out `main`.\n3. Only run first half of workflow if PR event != close. Then, always\n(on any PR activity) run the second half which gets all closed PR\nnumbers and deletes their associated preview folders.\n\n1 or 2 would work going forward, but I opted for the 3rd option because\nit will retroactively fix user's repos that have been affected by this\nshortcoming so far, like Casey's:\n<img height=\"200\" alt=\"Screenshot 2025-07-29 at 5 50 36 PM\"\nsrc=\"https://github.com/user-attachments/assets/51649a7b-3b42-4768-a0dd-6b3d568aa841\"\n/>\n\nNew template version checklist:\n\n- [x] I have updated CITATION and CHANGELOG as appropriate.\n- [x] I have updated lab-website-template-docs as appropriate.\n- [x] I have checked the testbed as appropriate.",
+        "verified_at": "2025-07-30T17:33:54Z"
+      }
+    },
+    "url": "https://api.github.com/repos/greenelab/lab-website-template/commits/2dbda4375816d003eae4f250302b3b2ef3ae41ec",
+    "html_url": "https://github.com/greenelab/lab-website-template/commit/2dbda4375816d003eae4f250302b3b2ef3ae41ec",
+    "comments_url": "https://api.github.com/repos/greenelab/lab-website-template/commits/2dbda4375816d003eae4f250302b3b2ef3ae41ec/comments",
+    "author": {
+      "login": "vincerubinetti",
+      "id": 8326331,
+      "node_id": "MDQ6VXNlcjgzMjYzMzE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8326331?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/vincerubinetti",
+      "html_url": "https://github.com/vincerubinetti",
+      "followers_url": "https://api.github.com/users/vincerubinetti/followers",
+      "following_url": "https://api.github.com/users/vincerubinetti/following{/other_user}",
+      "gists_url": "https://api.github.com/users/vincerubinetti/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/vincerubinetti/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/vincerubinetti/subscriptions",
+      "organizations_url": "https://api.github.com/users/vincerubinetti/orgs",
+      "repos_url": "https://api.github.com/users/vincerubinetti/repos",
+      "events_url": "https://api.github.com/users/vincerubinetti/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/vincerubinetti/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f35e90903ae5e9c4ac7fa8f6fa4cf9d56721b614",
+        "url": "https://api.github.com/repos/greenelab/lab-website-template/commits/f35e90903ae5e9c4ac7fa8f6fa4cf9d56721b614",
+        "html_url": "https://github.com/greenelab/lab-website-template/commit/f35e90903ae5e9c4ac7fa8f6fa4cf9d56721b614"
+      }
+    ]
+  },
+  {
+    "sha": "f35e90903ae5e9c4ac7fa8f6fa4cf9d56721b614",
+    "node_id": "C_kwDOEa796toAKGYzNWU5MDkwM2FlNWU5YzRhYzdmYThmNmZhNGNmOWQ1NjcyMWI2MTQ",
+    "commit": {
+      "author": {
+        "name": "Vincent Rubinetti",
+        "email": "vince.rubinetti@gmail.com",
+        "date": "2025-07-29T20:07:46Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2025-07-29T20:07:46Z"
+      },
+      "message": "v1.3.6 (#330)\n\nUpdates the behavior of the `orcid.py` script again to address #327. See\n[this comment\nspecifically](https://github.com/greenelab/lab-website-template/issues/327#issuecomment-3130260839)\nfor tests of the new behavior on various real ORCIDs.\n\nThe behavior before this PR:\n\n- only use `work-summary` field and not the top level `external-ids`\nfield\n- find first ID of certain relationship type\n- if none found, ignore work completely\n- if ID found, and ID can't be cited by Manubot, keep citation details\nfrom ORCID\n\nBehavior after this PR (more general/flexible):\n\n- only use `work-summary` field and not the top level `external-ids`\nfield. this still appears to be the correct choice, because after\ntesting with various ORCIDs, the former seems to reflect the\nauthor-selected \"preferred source\" whereas the latter doesn't.\n- filter possible IDs by filter function (hard reject/accept)\n  - is ID of certain relationship type?\n  - is ID of certain type (e.g. `doi`)? (commented out by default)\n  - is ID citable by Manubot?\n- sort possible IDs by sort function (soft prefer/deprioritize)\n  - prefer particular ID types (e.g. `doi`) before others\n- pick first ID available after filtering and sorting\n- if picked ID is citable with Manubot, do that, otherwise keep citation\ndetails from ORCID\n\nI think this code offers easier flexibility. For example, a user could\nmake \"citable by Manubot\" a soft requirement (maybe they want to always\nprefer some obscure ID type when it exists, even if it means using the\ncitation data from ORCID instead of Manubot) very easily by moving it\nfrom the filter function to the sort function.\n\nNew template version checklist:\n\n- [x] I have updated CITATION and CHANGELOG as appropriate.\n- [x] I have updated lab-website-template-docs as appropriate.\n- [x] I have checked the testbed as appropriate.\n\n---------\n\nCo-authored-by: vincerubinetti <8326331+vincerubinetti@users.noreply.github.com>",
+      "tree": {
+        "sha": "9206d8c5dcb198165855798006b0d05dd41679aa",
+        "url": "https://api.github.com/repos/greenelab/lab-website-template/git/trees/9206d8c5dcb198165855798006b0d05dd41679aa"
+      },
+      "url": "https://api.github.com/repos/greenelab/lab-website-template/git/commits/f35e90903ae5e9c4ac7fa8f6fa4cf9d56721b614",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJoiSoSCRC1aQ7uu5UhlAAAJqYQAK3gM3SQAi5orOjBWawg0tp0\n2FImivRS/5LZ8o5jeKe3/eDt7QhCPIcsnSr/KYcPpCTCmtPMrVRC8nCzGE/tB7rm\nk3G95fXR/bMln2BhP8SIC0eRz01ahuCPsyiMa8jWkdSkGpPgETkaiYnY1AzptwB6\nk/SLRsQ5SzsKWDtc2HtFlDKICIpOsbqal7b2XYy0IRZ51lRMywr0ecwweDl+8ahA\nRjSroZVJ0F1oUIhjWel8w0DqynWbd6vJWgxhP/G8dJ2/UjxdH2lnjiwfkoMT3Uzl\nsuqdB93i4rSqTAXV7avokBdbOOd3wXSkMSFvMef1uSQK9D2nsdduiIgOM2FMSD9J\nX9EZ8Z20M0IIEi19mEzQacETPIyRLrurkPOUIXgY4laeRHP+M4OxtK02dKWLI82c\nIhxUCAnJTd8dk1Clo6MhQZkuuKbXnySMKQi7KeYpcoOadxk0BPtnaTk93S/PCj+Q\njOD0CpjY74RpUQutpyso62d2h3INGsCEneT/wf8M8EmnyofMDZeAm5vixbERkoYg\nPccMxUPFucRhJHjpdFW0Onq6/V3Dmp/grffsJCIbCobmYhlYFtOmROmdmd0QClxL\neVHZpGVV+rMnf3FFFxX2RSRWxtHI6VcZS6+3dJZeVHYtNiKOjr7o2DxuM5jpXGu/\n3MKYdQwHKIcO5zyNQTP/\n=JhSk\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 9206d8c5dcb198165855798006b0d05dd41679aa\nparent ebeb5e200ae5d61df5265f5594f59b5a45d2d4fa\nauthor Vincent Rubinetti <vince.rubinetti@gmail.com> 1753819666 -0400\ncommitter GitHub <noreply@github.com> 1753819666 -0400\n\nv1.3.6 (#330)\n\nUpdates the behavior of the `orcid.py` script again to address #327. See\n[this comment\nspecifically](https://github.com/greenelab/lab-website-template/issues/327#issuecomment-3130260839)\nfor tests of the new behavior on various real ORCIDs.\n\nThe behavior before this PR:\n\n- only use `work-summary` field and not the top level `external-ids`\nfield\n- find first ID of certain relationship type\n- if none found, ignore work completely\n- if ID found, and ID can't be cited by Manubot, keep citation details\nfrom ORCID\n\nBehavior after this PR (more general/flexible):\n\n- only use `work-summary` field and not the top level `external-ids`\nfield. this still appears to be the correct choice, because after\ntesting with various ORCIDs, the former seems to reflect the\nauthor-selected \"preferred source\" whereas the latter doesn't.\n- filter possible IDs by filter function (hard reject/accept)\n  - is ID of certain relationship type?\n  - is ID of certain type (e.g. `doi`)? (commented out by default)\n  - is ID citable by Manubot?\n- sort possible IDs by sort function (soft prefer/deprioritize)\n  - prefer particular ID types (e.g. `doi`) before others\n- pick first ID available after filtering and sorting\n- if picked ID is citable with Manubot, do that, otherwise keep citation\ndetails from ORCID\n\nI think this code offers easier flexibility. For example, a user could\nmake \"citable by Manubot\" a soft requirement (maybe they want to always\nprefer some obscure ID type when it exists, even if it means using the\ncitation data from ORCID instead of Manubot) very easily by moving it\nfrom the filter function to the sort function.\n\nNew template version checklist:\n\n- [x] I have updated CITATION and CHANGELOG as appropriate.\n- [x] I have updated lab-website-template-docs as appropriate.\n- [x] I have checked the testbed as appropriate.\n\n---------\n\nCo-authored-by: vincerubinetti <8326331+vincerubinetti@users.noreply.github.com>",
+        "verified_at": "2025-07-29T20:07:46Z"
+      }
+    },
+    "url": "https://api.github.com/repos/greenelab/lab-website-template/commits/f35e90903ae5e9c4ac7fa8f6fa4cf9d56721b614",
+    "html_url": "https://github.com/greenelab/lab-website-template/commit/f35e90903ae5e9c4ac7fa8f6fa4cf9d56721b614",
+    "comments_url": "https://api.github.com/repos/greenelab/lab-website-template/commits/f35e90903ae5e9c4ac7fa8f6fa4cf9d56721b614/comments",
+    "author": {
+      "login": "vincerubinetti",
+      "id": 8326331,
+      "node_id": "MDQ6VXNlcjgzMjYzMzE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8326331?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/vincerubinetti",
+      "html_url": "https://github.com/vincerubinetti",
+      "followers_url": "https://api.github.com/users/vincerubinetti/followers",
+      "following_url": "https://api.github.com/users/vincerubinetti/following{/other_user}",
+      "gists_url": "https://api.github.com/users/vincerubinetti/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/vincerubinetti/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/vincerubinetti/subscriptions",
+      "organizations_url": "https://api.github.com/users/vincerubinetti/orgs",
+      "repos_url": "https://api.github.com/users/vincerubinetti/repos",
+      "events_url": "https://api.github.com/users/vincerubinetti/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/vincerubinetti/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ebeb5e200ae5d61df5265f5594f59b5a45d2d4fa",
+        "url": "https://api.github.com/repos/greenelab/lab-website-template/commits/ebeb5e200ae5d61df5265f5594f59b5a45d2d4fa",
+        "html_url": "https://github.com/greenelab/lab-website-template/commit/ebeb5e200ae5d61df5265f5594f59b5a45d2d4fa"
+      }
+    ]
+  },
+  {
     "sha": "ebeb5e200ae5d61df5265f5594f59b5a45d2d4fa",
     "node_id": "C_kwDOEa796toAKGViZWI1ZTIwMGFlNWQ2MWRmNTI2NWY1NTk0ZjU5YjVhNDVkMmQ0ZmE",
     "commit": {

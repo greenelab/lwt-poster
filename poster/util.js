@@ -1,11 +1,14 @@
+/** format value */
+window.formatVal = (value) =>
+  value.toLocaleString(undefined, { notation: "compact" });
+
+/** fit svg view box to contents */
 export const fit = (svg) => {
   const { x, y, width, height } = svg.node().getBBox();
   svg.attr("viewBox", [x, y, width, height].join(" "));
 };
 
-export const load = async (name) =>
-  await (await fetch(`./data/output/${name}.json`)).json();
-
+/** color palette */
 export const colors = [
   "#64748b",
   "#6b7280",

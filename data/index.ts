@@ -1,3 +1,4 @@
+import { mkdirSync } from "fs";
 import { cache, save } from "./file";
 import {
   discussionResolutionTime,
@@ -12,85 +13,107 @@ import {
   issueResolutionTime,
   issueResponseTime,
 } from "./github";
-import { getOverTime, getOverTimeRanges } from "./time";
+import { binDatesCumulative, binDateRanges } from "./time";
 import { avg, med } from "./util";
 
-const stars = await cache(getStars, "./raw/stars");
-const forks = await cache(getForks, "./raw/forks");
-const commits = await cache(getCommits, "./raw/commits");
-const pullRequests = await cache(getPullRequests, "./raw/pull-requests");
-const issues = await cache(getIssues, "./raw/issues");
-const discussions = await cache(getDiscussions, "./raw/discussions");
-const releases = await cache(getReleases, "./raw/releases");
+const raw = "./data/raw";
+const output = "./data/output";
 
+mkdirSync(raw, { recursive: true });
+mkdirSync(output, { recursive: true });
+
+/** load data from raw cache, or from github if doesn't exist */
+const stars = await cache(getStars, `${raw}/stars`);
+const forks = await cache(getForks, `${raw}/forks`);
+const commits = await cache(getCommits, `${raw}/commits`);
+const pullRequests = await cache(getPullRequests, `${raw}/pull-requests`);
+const issues = await cache(getIssues, `${raw}/issues`);
+const discussions = await cache(getDiscussions, `${raw}/discussions`);
+const releases = await cache(getReleases, `${raw}/releases`);
+
+/** process star data */
 save(
-  { overTime: getOverTime(stars.map((star) => star.starred_at)) },
-  "./output/stars"
+  { overTime: binDatesCumulative(stars.map((star) => star.starred_at)) },
+  `${output}/stars`
 );
 
+/** process fork data */
 save(
-  { overTime: getOverTime(forks.map((star) => star.created_at)) },
-  "./output/forks"
+  { overTime: binDatesCumulative(forks.map((star) => star.created_at)) },
+  `${output}/forks`
 );
 
+/** process issue data */
 save(
   {
     total: issues.length,
-    overTime: getOverTimeRanges(
+    overTime: binDateRanges(
       issues.map((issue) => [issue.created_at, issue.closed_at] as const)
     ),
     response: (() => {
+      /** get all times */
       const times = issues.map(issueResponseTime).filter((d) => d !== null);
+      /** calc overview numbers */
       return { avg: avg(times), med: med(times) };
     })(),
     resolution: (() => {
+      /** get all times */
       const times = issues.map(issueResolutionTime).filter((d) => d !== null);
+      /** calc overview numbers */
       return { avg: avg(times), med: med(times) };
     })(),
   },
-  "./output/issues"
+  `${output}/issues`
 );
 
+/** process discussion data */
 save(
   {
     total: discussions.length,
-    overTime: getOverTimeRanges(
+    overTime: binDateRanges(
       discussions.map(
         (discussion) =>
           [discussion.createdAt, discussion.answerChosenAt] as const
       )
     ),
     response: (() => {
+      /** get all times */
       const times = discussions
         .map(discussionResponseTime)
         .filter((d) => d !== null);
+      /** calc overview numbers */
       return { avg: avg(times), med: med(times) };
     })(),
     resolution: (() => {
+      /** get all times */
       const times = discussions
         .map(discussionResolutionTime)
         .filter((d) => d !== null);
+      /** calc overview numbers */
       return { avg: avg(times), med: med(times) };
     })(),
   },
-  "./output/discussions"
+  `${output}/discussions`
 );
 
+/** process commit data */
 save(
   {
-    overTime: getOverTime(
+    overTime: binDatesCumulative(
       commits.map((commit) => commit.commit.committer?.date)
     ),
   },
-  "./output/commits"
+  `${output}/commits`
 );
 
+/** process pull request data */
 save(
-  { overTime: getOverTime(pullRequests.map((pr) => pr.created_at)) },
-  "./output/pull-requests"
+  { overTime: binDatesCumulative(pullRequests.map((pr) => pr.created_at)) },
+  `${output}/pull-requests`
 );
 
+/** process release data */
 save(
   releases.map((release) => ({ name: release.name, date: release.created_at })),
-  "./output/releases"
+  `${output}/releases`
 );

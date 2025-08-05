@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "compile": "bun ./data/index.ts",
+    "preview": "bunx kill-port --port 3000 && bunx open-cli http://localhost:3000/poster/ && bunx serve ./ -p 3000"
+  },
   "dependencies": {
     "@octokit/graphql-schema": "^15.26.0",
     "@octokit/plugin-paginate-graphql": "^6.0.0",
