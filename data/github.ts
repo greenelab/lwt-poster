@@ -3,6 +3,7 @@ import { throttling } from "@octokit/plugin-throttling";
 import { paginateGraphQL } from "@octokit/plugin-paginate-graphql";
 import type { Discussion as DiscussionNode } from "@octokit/graphql-schema";
 import { differenceInHours, min } from "date-fns";
+import { today } from "./time";
 
 /** github authentication token */
 const { AUTH_GITHUB } = process.env;
@@ -14,9 +15,6 @@ if (!AUTH_GITHUB)
 const owner = "greenelab";
 const repo = "lab-website-template";
 const maintainer = "vincerubinetti";
-
-/** today's date, for fallbacks */
-const today = new Date().toISOString();
 
 /** github client */
 export const octokit = new (Octokit.plugin(throttling).plugin(paginateGraphQL))(

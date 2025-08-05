@@ -1,12 +1,15 @@
 import {
+  addMonths,
   areIntervalsOverlapping,
   eachMonthOfInterval,
   isBefore,
-  max,
   min,
 } from "date-fns";
 import type { Interval } from "date-fns";
 import { pairs } from "./util";
+
+/** today's date */
+export const today = new Date().toISOString();
 
 type RawDate = string | undefined | null;
 
@@ -17,15 +20,20 @@ export const binDateRanges = (d: [RawDate, RawDate][]) => {
 
   /** find earliest/latest dates */
   const start = min(dates.flat());
-  const end = max(dates.flat());
+  const end = today;
 
   /** create interval objects for comparison */
   const ranges: Interval[] = dates.map(([start, end]) => ({ start, end }));
 
   /** create evenly spaced bins between earliest/latest */
-  const bins: Interval[] = pairs(eachMonthOfInterval({ start, end })).map(
-    ([start, end]) => ({ start, end })
-  );
+  const months = eachMonthOfInterval({ start, end });
+  /** add one month so last month always extends beyond end date */
+  months.push(addMonths(months.at(-1)!, 1));
+  /** create intervals from months */
+  const bins: Interval[] = pairs(months).map(([start, end]) => ({
+    start,
+    end,
+  }));
 
   /** for each bin */
   return bins.map((bin) => ({
@@ -42,7 +50,7 @@ export const binDatesCumulative = (d: RawDate[]) => {
 
   /** find earliest/latest dates */
   const start = min(dates);
-  const end = max(dates);
+  const end = today;
 
   /** create evenly spaced bins between earliest/latest */
   const bins = eachMonthOfInterval({ start, end });

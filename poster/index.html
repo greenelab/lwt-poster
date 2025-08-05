@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Lab Website Template</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Lab Website Template - Poster</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,10 +23,17 @@
   </head>
 
   <body>
-    <h1>An Easy, Automatic, Flexible Website Template for Labs</h1>
+    <div class="top">
+      <a href="https://greene-lab.gitbook.io/lab-website-template-docs">
+        <img class="qr" src="./docs-qr.svg" />
+      </a>
+      <img class="logo" src="./logo.svg" />
+      <h1>Lab Website Template</h1>
+      <h2>An Easy, Automatic, Flexible Website Template for Labs</h2>
+    </div>
 
-    <main>
-      <section class="tile" style="grid-area: 1 / 1 / span 4 / span 3">
+    <main class="grid">
+      <section class="tile">
         <h2>Abstract</h2>
 
         <p>
@@ -76,75 +85,84 @@
         </p>
       </section>
 
-      <div class="tile chart" style="grid-area: 1 / 4 / span 1 / span 2">
-        <h2>Popularity</h2>
-        <svg id="popularity" width="6in" height="3in"></svg>
-      </div>
+      <section class="grid">
+        <div class="tile chart">
+          <h2>Popularity</h2>
+          <svg id="popularity"></svg>
+        </div>
 
-      <div class="tile chart" style="grid-area: 1 / 6 / span 1 / span 2">
-        <h2>Support</h2>
-        <svg id="support" width="6in" height="3in"></svg>
-      </div>
+        <div class="tile chart">
+          <h2>Activity</h2>
+          <svg id="activity"></svg>
+        </div>
 
-      <div class="tile" style="grid-area: 2 / 6 / span 1 / span 2">
-        <table>
-          <tr>
-            <td></td>
-            <td>Issues (<!-- formatVal(data.issues.total) -->)</td>
-            <td>Discussions (<!-- formatVal(data.discussions.total) -->)</td>
-          </tr>
+        <div class="tile chart">
+          <h2>Support</h2>
+          <svg id="support"></svg>
+        </div>
 
-          <tr>
-            <td>Avg. Resp.</td>
-            <td>
-              <!-- formatVal(data.issues.response.avg) -->
-              hrs
-            </td>
-            <td>
-              <!-- formatVal(data.discussions.response.avg) -->
-              hrs
-            </td>
-          </tr>
-          <tr>
-            <td>Med. Resp.</td>
-            <td>
-              <!-- formatVal(data.issues.response.med) -->
-              hrs
-            </td>
-            <td>
-              <!-- formatVal(data.discussions.response.med) -->
-              hrs
-            </td>
-          </tr>
-          <tr>
-            <td>Avg. Reso.</td>
-            <td>
-              <!-- formatVal(data.issues.resolution.avg / 24) -->
-              days
-            </td>
-            <td>
-              <!-- formatVal(data.discussions.resolution.avg / 24) -->
-              days
-            </td>
-          </tr>
-          <tr>
-            <td>Med. Reso.</td>
-            <td>
-              <!-- formatVal(data.issues.resolution.med / 24) -->
-              days
-            </td>
-            <td>
-              <!-- formatVal(data.discussions.resolution.med) -->
-              hrs
-            </td>
-          </tr>
-        </table>
-      </div>
+        <div class="tile">
+          <table>
+            <tr>
+              <td></td>
+              <td>Issues (<!-- formatVal(data.issues.total) -->)</td>
+              <td>Discussions (<!-- formatVal(data.discussions.total) -->)</td>
+            </tr>
 
-      <div class="tile chart" style="grid-area: 1 / 8 / span 1 / span 2">
-        <h2>Activity</h2>
-        <svg id="activity" width="6in" height="3in"></svg>
-      </div>
+            <tr>
+              <td>Avg. Resp.</td>
+              <td>
+                <!-- formatVal(data.issues.response.avg) -->
+                hrs
+              </td>
+              <td>
+                <!-- formatVal(data.discussions.response.avg) -->
+                hrs
+              </td>
+            </tr>
+            <tr>
+              <td>Med. Resp.</td>
+              <td>
+                <!-- formatVal(data.issues.response.med) -->
+                hrs
+              </td>
+              <td>
+                <!-- formatVal(data.discussions.response.med) -->
+                hrs
+              </td>
+            </tr>
+            <tr>
+              <td>Avg. Reso.</td>
+              <td>
+                <!-- formatVal(data.issues.resolution.avg / 24) -->
+                days
+              </td>
+              <td>
+                <!-- formatVal(data.discussions.resolution.avg / 24) -->
+                days
+              </td>
+            </tr>
+            <tr>
+              <td>Med. Reso.</td>
+              <td>
+                <!-- formatVal(data.issues.resolution.med / 24) -->
+                days
+              </td>
+              <td>
+                <!-- formatVal(data.discussions.resolution.med) -->
+                hrs
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
     </main>
+
+    <div class="tile">
+      Poster source
+      <a href="https://github.com/greenelab/lwt-poster">
+        <img class="qr" src="./poster-qr.svg" />
+      </a>
+    </div>
   </body>
 </html>

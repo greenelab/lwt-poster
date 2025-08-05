@@ -10,8 +10,14 @@ import {
   releases,
 } from "./data.js";
 
-const makeOverTimeChart = async (plot, series) => {
+const overTimeChart = (plot, series) => {
   const svg = d3.select(`#${plot}`);
+  makeOverTimeChart(svg, series);
+  new ResizeObserver(() => makeOverTimeChart(svg, series)).observe(svg.node());
+};
+
+const makeOverTimeChart = async (svg, series) => {
+  svg.node().innerHTML = "";
   const { width, height } = svg.node().getBoundingClientRect();
 
   series.forEach(({ data }) =>
@@ -95,12 +101,12 @@ const makeOverTimeChart = async (plot, series) => {
   fit(svg);
 };
 
-makeOverTimeChart("popularity", [
+overTimeChart("popularity", [
   { data: stars.overTime, name: "Stars", color: colors[5] },
   { data: forks.overTime, name: "Forks", color: colors[6] },
 ]);
 
-makeOverTimeChart("support", [
+overTimeChart("support", [
   {
     data: issues.overTime,
     name: "Issues",
@@ -113,7 +119,7 @@ makeOverTimeChart("support", [
   },
 ]);
 
-makeOverTimeChart("activity", [
+overTimeChart("activity", [
   { data: commits.overTime, name: "Commits", color: colors[13] },
   { data: pullRequests.overTime, name: "PRs", color: colors[15] },
 ]);

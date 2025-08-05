@@ -1,7 +1,8 @@
 {
   "scripts": {
     "compile": "bun ./data/index.ts",
-    "preview": "bunx kill-port --port 3000 && bunx open-cli http://localhost:3000/poster/ && bunx serve ./ -p 3000"
+    "preview": "bunx live-server --open=poster",
+    "print": "bunx playwright install chromium && bun ./data/print.ts"
   },
   "dependencies": {
     "@octokit/graphql-schema": "^15.26.0",
@@ -9,7 +10,9 @@
     "@octokit/plugin-throttling": "^11.0.1",
     "date-fns": "^4.1.0",
     "lodash-es": "^4.17.21",
-    "octokit": "^5.0.3"
+    "octokit": "^5.0.3",
+    "playwright": "^1.54.2",
+    "strip-ansi": "^7.1.0"
   },
   "devDependencies": {
     "@types/node": "^24.1.0"
