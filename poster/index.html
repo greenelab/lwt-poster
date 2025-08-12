@@ -112,72 +112,67 @@
         <div class="col tile chart">
           <h2>Popularity</h2>
           <svg id="popularity"></svg>
+
+          <dl class="stats" style="--cols: 3">
+            <dt>Generated</dt>
+            <dd><!-- formatVal(data.generated.total) --></dd>
+            <dt>Stars</dt>
+            <dd><!-- formatVal(data.stars.total) --></dd>
+            <dt>Forks</dt>
+            <dd><!-- formatVal(data.forks.total) --></dd>
+          </dl>
         </div>
 
         <div class="col tile chart">
           <h2>Activity</h2>
           <svg id="activity"></svg>
+
+          <dl class="stats">
+            <dt>Commits</dt>
+            <dd><!-- formatVal(data.commits.total) --></dd>
+            <dt>PRs</dt>
+            <dd><!-- formatVal(data.pullRequests.total) --></dd>
+            <dt>Minor Releases</dt>
+            <dd><!-- formatVal(data.releases.totalMinor) --></dd>
+            <dt>Patch Releases</dt>
+            <dd><!-- formatVal(data.releases.totalPatch) --></dd>
+          </dl>
         </div>
 
         <div class="col tile chart">
           <h2>Support</h2>
           <svg id="support"></svg>
+
+          <dl class="stats">
+            <div class="stats-heading">
+              Issues (<!-- formatVal(data.issues.total) -->)
+            </div>
+
+            <dt>Avg. Resp.</dt>
+            <dd><!-- formatHrs(data.issues.response.avg) --></dd>
+            <dt>Med. Resp.</dt>
+            <dd><!-- formatHrs(data.issues.response.med) --></dd>
+            <dt>Avg. Reso.</dt>
+            <dd><!-- formatHrs(data.issues.resolution.avg) --></dd>
+            <dt>Med. Reso.</dt>
+            <dd><!-- formatHrs(data.issues.resolution.med) --></dd>
+
+            <div class="stats-heading">
+              Discussions (<!-- formatVal(data.discussions.total) -->)
+            </div>
+
+            <dt>Avg. Resp.</dt>
+            <dd><!-- formatHrs(data.discussions.response.avg) --></dd>
+            <dt>Med. Resp.</dt>
+            <dd><!-- formatHrs(data.discussions.response.med) --></dd>
+            <dt>Avg. Reso.</dt>
+            <dd><!-- formatHrs(data.discussions.resolution.avg) --></dd>
+            <dt>Med. Reso.</dt>
+            <dd><!-- formatHrs(data.discussions.resolution.med) --></dd>
+          </dl>
         </div>
 
-        <div class="col tile">
-          <table>
-            <tr>
-              <td></td>
-              <td>Issues (<!-- formatVal(data.issues.total) -->)</td>
-              <td>Discussions (<!-- formatVal(data.discussions.total) -->)</td>
-            </tr>
-
-            <tr>
-              <td>Avg. Resp.</td>
-              <td>
-                <!-- formatVal(data.issues.response.avg) -->
-                hrs
-              </td>
-              <td>
-                <!-- formatVal(data.discussions.response.avg) -->
-                hrs
-              </td>
-            </tr>
-            <tr>
-              <td>Med. Resp.</td>
-              <td>
-                <!-- formatVal(data.issues.response.med) -->
-                hrs
-              </td>
-              <td>
-                <!-- formatVal(data.discussions.response.med) -->
-                hrs
-              </td>
-            </tr>
-            <tr>
-              <td>Avg. Reso.</td>
-              <td>
-                <!-- formatVal(data.issues.resolution.avg / 24) -->
-                days
-              </td>
-              <td>
-                <!-- formatVal(data.discussions.resolution.avg / 24) -->
-                days
-              </td>
-            </tr>
-            <tr>
-              <td>Med. Reso.</td>
-              <td>
-                <!-- formatVal(data.issues.resolution.med / 24) -->
-                days
-              </td>
-              <td>
-                <!-- formatVal(data.discussions.resolution.med) -->
-                hrs
-              </td>
-            </tr>
-          </table>
-        </div>
+        <div class="col tile"></div>
       </section>
     </main>
   </body>

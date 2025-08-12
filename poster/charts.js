@@ -29,7 +29,7 @@ const makeOverTimeChart = async (svg, series) => {
   series.forEach(({ data }) =>
     data.forEach((d) => (d.date = new Date(d.date)))
   );
-  releases.forEach((d) => (d.date = new Date(d.date)));
+  releases.list.forEach((d) => (d.date = new Date(d.date)));
 
   /** get data from all series */
   const flatData = series.map(({ data }) => data).flat();
@@ -96,7 +96,7 @@ const makeOverTimeChart = async (svg, series) => {
   }
 
   /** mark release dates */
-  for (const { name, date } of releases) {
+  for (const { name, date } of releases.list) {
     const major = name.endsWith(".0");
     /** line */
     svg
@@ -107,7 +107,7 @@ const makeOverTimeChart = async (svg, series) => {
       .attr("y1", 0)
       .attr("y2", height)
       .attr("stroke", series[0].color)
-      .attr("stroke-width", major ? "0.025in" : "0.01in")
+      .attr("stroke-width", major ? "0.1rem" : "0.05rem")
       .attr("stroke-dasharray", major ? "" : "1 2")
       .attr("pointer-events", "none");
     if (major && !name.startsWith("v1.1"))
@@ -142,7 +142,7 @@ const makeOverTimeChart = async (svg, series) => {
       .text(name)
       .attr("data-series", "")
       .attr("x", () => xScale(maxX))
-      .attr("dx", "-0.1in")
+      .attr("dx", "-0.5rem")
       .attr("y", () => yScale(maxY[index]))
       .attr("text-anchor", "end")
       .attr("alignment-baseline", "hanging")
@@ -161,11 +161,11 @@ const makeOverTimeChart = async (svg, series) => {
     .attr("pointer-events", "none");
   const tooltipTextTop = tooltipGroup
     .append("text")
-    .attr("dy", "-0.1in")
+    .attr("dy", "-0.5rem")
     .attr("text-anchor", "middle");
   const tooltipTextBottom = tooltipGroup
     .append("text")
-    .attr("dy", "0.1in")
+    .attr("dy", "0.5rem")
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "hanging");
   tooltipGroup
@@ -175,7 +175,7 @@ const makeOverTimeChart = async (svg, series) => {
     .attr("r", 3)
     .attr("fill", "white")
     .attr("stroke", "black")
-    .attr("stroke-width", "0.02in");
+    .attr("stroke-width", "0.1rem");
 
   /** fit to contents */
   fit(svg);

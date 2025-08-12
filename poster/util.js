@@ -2,6 +2,17 @@
 window.formatVal = (value) =>
   value.toLocaleString(undefined, { notation: "compact" });
 
+/** format hours */
+window.formatHrs = (hours) => {
+  let suffix = "hrs";
+  if (hours > 2 * 24) {
+    hours /= 24;
+    suffix = "days";
+  }
+  hours = hours.toLocaleString(undefined, { notation: "compact" });
+  return `${hours} ${suffix}`;
+};
+
 /** fit svg view box to contents */
 export const fit = (svg) => {
   const { x, y, width, height } = svg.node().getBBox();

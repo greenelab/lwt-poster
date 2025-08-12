@@ -70,6 +70,14 @@ text {
   paint-order: stroke fill;
 }
 
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -124,7 +132,7 @@ text {
 .tile {
   padding: 1.5rem;
   background: #f1f5f9;
-  min-width: min(20rem, 100%);
+  min-width: min(20rem, 100vw);
 }
 
 .qr {
@@ -141,4 +149,55 @@ text {
 
 .chart svg {
   aspect-ratio: 16 / 9;
+}
+
+.stats {
+  --cols: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), max-content 1fr);
+  width: 100%;
+  gap: 0.5rem 1rem;
+}
+
+.stats dd {
+  font-weight: 500;
+}
+
+.stats-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.2in;
+  grid-column: 1 / -1;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.stats-heading:first-child {
+  padding-top: 0;
+}
+
+.stats-heading::before,
+.stats-heading::after {
+  content: "";
+  flex-grow: 1;
+  background: #cbd5e1;
+  height: 0.01in;
+}
+
+:has(> .stats) {
+  container-type: inline-size;
+}
+
+@container (max-width: 25rem) {
+  .stats {
+    --cols: 2 !important;
+  }
+}
+
+@container (max-width: 20rem) {
+  .stats {
+    --cols: 1 !important;
+  }
 }

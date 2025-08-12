@@ -25,13 +25,6 @@ mkdirSync(raw, { recursive: true });
 mkdirSync(output, { recursive: true });
 
 /** load data from raw cache, or from github if doesn't exist */
-const stars = await cache(getStars, `${raw}/stars`);
-const forks = await cache(getForks, `${raw}/forks`);
-const commits = await cache(getCommits, `${raw}/commits`);
-const pullRequests = await cache(getPullRequests, `${raw}/pull-requests`);
-const issues = await cache(getIssues, `${raw}/issues`);
-const discussions = await cache(getDiscussions, `${raw}/discussions`);
-const releases = await cache(getReleases, `${raw}/releases`);
 const possiblyGenerated = await cache(
   getPossiblyGenerated,
   `${raw}/possibly-generated`
@@ -52,99 +45,109 @@ const generated = await cache(
     ).filter((repo) => !!repo),
   `${raw}/generated`
 );
-
-/** process star data */
-save(
-  { overTime: binDatesCumulative(stars.map((star) => star.starred_at)) },
-  `${output}/stars`
-);
-
-/** process fork data */
-save(
-  { overTime: binDatesCumulative(forks.map((star) => star.created_at)) },
-  `${output}/forks`
-);
-
-/** process issue data */
-save(
-  {
-    total: issues.length,
-    overTime: binDateRanges(
-      issues.map((issue) => [issue.created_at, issue.closed_at] as const)
-    ),
-    response: (() => {
-      /** get all times */
-      const times = issues.map(issueResponseTime).filter((d) => d !== null);
-      /** calc overview numbers */
-      return { avg: avg(times), med: med(times) };
-    })(),
-    resolution: (() => {
-      /** get all times */
-      const times = issues.map(issueResolutionTime).filter((d) => d !== null);
-      /** calc overview numbers */
-      return { avg: avg(times), med: med(times) };
-    })(),
-  },
-  `${output}/issues`
-);
-
-/** process discussion data */
-save(
-  {
-    total: discussions.length,
-    overTime: binDateRanges(
-      discussions.map(
-        (discussion) =>
-          [discussion.createdAt, discussion.answerChosenAt] as const
-      )
-    ),
-    response: (() => {
-      /** get all times */
-      const times = discussions
-        .map(discussionResponseTime)
-        .filter((d) => d !== null);
-      /** calc overview numbers */
-      return { avg: avg(times), med: med(times) };
-    })(),
-    resolution: (() => {
-      /** get all times */
-      const times = discussions
-        .map(discussionResolutionTime)
-        .filter((d) => d !== null);
-      /** calc overview numbers */
-      return { avg: avg(times), med: med(times) };
-    })(),
-  },
-  `${output}/discussions`
-);
-
-/** process commit data */
-save(
-  {
-    overTime: binDatesCumulative(
-      commits.map((commit) => commit.commit.committer?.date)
-    ),
-  },
-  `${output}/commits`
-);
-
-/** process pull request data */
-save(
-  { overTime: binDatesCumulative(pullRequests.map((pr) => pr.created_at)) },
-  `${output}/pull-requests`
-);
-
-/** process release data */
-save(
-  releases.map((release) => ({ name: release.name, date: release.created_at })),
-  `${output}/releases`
-);
+const stars = await cache(getStars, `${raw}/stars`);
+const forks = await cache(getForks, `${raw}/forks`);
+const commits = await cache(getCommits, `${raw}/commits`);
+const pullRequests = await cache(getPullRequests, `${raw}/pull-requests`);
+const issues = await cache(getIssues, `${raw}/issues`);
+const discussions = await cache(getDiscussions, `${raw}/discussions`);
+const releases = await cache(getReleases, `${raw}/releases`);
 
 /** process generated data */
-save(
-  {
-    repos: generated,
-    overTime: binDatesCumulative(generated.map((repo) => repo.date)),
-  },
-  `${output}/generated`
-);
+{
+  const total = generated.length;
+  const repos = generated;
+  const overTime = binDatesCumulative(generated.map((repo) => repo.date));
+  save({ total, repos, overTime }, `${output}/generated`);
+}
+
+/** process star data */
+{
+  const total = stars.length;
+  const overTime = binDatesCumulative(stars.map((star) => star.starred_at));
+  save({ total, overTime }, `${output}/stars`);
+}
+
+/** process fork data */
+{
+  const total = forks.length;
+  const overTime = binDatesCumulative(forks.map((fork) => fork.created_at));
+  save({ total, overTime }, `${output}/forks`);
+}
+
+/** process issue data */
+{
+  const total = issues.length;
+  const overTime = binDateRanges(
+    issues.map((issue) => [issue.created_at, issue.closed_at] as const)
+  );
+  const responseTimes = issues.map(issueResponseTime).filter((d) => d !== null);
+  const resolutionTimes = issues
+    .map(issueResolutionTime)
+    .filter((d) => d !== null);
+  save(
+    {
+      total,
+      overTime,
+      response: { avg: avg(responseTimes), med: med(responseTimes) },
+      resolution: { avg: avg(resolutionTimes), med: med(resolutionTimes) },
+    },
+    `${output}/issues`
+  );
+}
+
+/** process discussion data */
+{
+  const total = discussions.length;
+  const overTime = binDateRanges(
+    discussions.map(
+      (discussion) => [discussion.createdAt, discussion.answerChosenAt] as const
+    )
+  );
+  const responseTimes = discussions
+    .map(discussionResponseTime)
+    .filter((d) => d !== null);
+  const resolutionTimes = discussions
+    .map(discussionResolutionTime)
+    .filter((d) => d !== null);
+  save(
+    {
+      total,
+      overTime,
+      response: { avg: avg(responseTimes), med: med(responseTimes) },
+      resolution: { avg: avg(resolutionTimes), med: med(resolutionTimes) },
+    },
+    `${output}/discussions`
+  );
+}
+
+/** process commit data */
+{
+  const total = commits.length;
+  const overTime = binDatesCumulative(
+    commits.map((commit) => commit.commit.committer?.date)
+  );
+  save({ total, overTime }, `${output}/commits`);
+}
+
+/** process pull request data */
+{
+  const total = pullRequests.length;
+  const overTime = binDatesCumulative(pullRequests.map((pr) => pr.created_at));
+  save({ total, overTime }, `${output}/pull-requests`);
+}
+
+/** process release data */
+{
+  const list = releases.map((release) => ({
+    name: release.name,
+    date: release.created_at,
+  }));
+  const totalMinor = list.filter((release) =>
+    release.name?.endsWith(".0")
+  ).length;
+  const totalPatch = list.filter(
+    (release) => !release.name?.endsWith(".0")
+  ).length;
+  save({ totalMinor, totalPatch, list }, `${output}/releases`);
+}
