@@ -17,15 +17,15 @@
 
     <link rel="stylesheet" href="./styles.css" />
 
-    <script type="module" src="./charts.js"></script>
+    <script type="module" src="./scripts/charts.js"></script>
 
-    <script type="module" src="./templating.js"></script>
+    <script type="module" src="./scripts/templating.js"></script>
   </head>
 
   <body>
     <header class="tile">
       <div class="row no-wrap">
-        <img class="logo" src="./logo.svg" />
+        <img class="logo" src="./images/logo.svg" />
 
         <div class="col align-start gap-sm">
           <h1>Lab Website Template</h1>
@@ -41,14 +41,14 @@
       <div class="row">
         <div class="col gap-sm center">
           <a href="https://greene-lab.gitbook.io/lab-website-template-docs">
-            <img class="qr" src="./docs-qr.svg" />
+            <img class="qr" src="./images/docs-qr.svg" />
           </a>
           Template home
         </div>
 
         <div class="col gap-sm">
           <a href="https://github.com/greenelab/lwt-poster">
-            <img class="qr" src="./poster-qr.svg" />
+            <img class="qr" src="./images/poster-qr.svg" />
           </a>
           Poster source
         </div>
@@ -109,43 +109,81 @@
       </section>
 
       <section class="grid">
-        <div class="col tile chart">
-          <h2>Popularity</h2>
-          <svg id="popularity"></svg>
+        <div class="col tile">
+          <h2>
+            <img src="./icons/fire.svg" style="color: var(--color-5)" />
+            Popularity
+          </h2>
+          <svg id="popularity" class="chart"></svg>
 
           <dl class="stats" style="--cols: 3">
-            <dt>Generated</dt>
+            <dt>
+              <img src="./icons/book.svg" style="color: var(--color-5)" />
+              Generated
+            </dt>
             <dd><!-- formatVal(data.generated.total) --></dd>
-            <dt>Stars</dt>
+            <dt>
+              <img src="./icons/star.svg" style="color: var(--color-6)" />
+              Stars
+            </dt>
             <dd><!-- formatVal(data.stars.total) --></dd>
-            <dt>Forks</dt>
+            <dt>
+              <img src="./icons/fork.svg" style="color: var(--color-7)" />
+              Forks
+            </dt>
             <dd><!-- formatVal(data.forks.total) --></dd>
           </dl>
         </div>
 
-        <div class="col tile chart">
-          <h2>Activity</h2>
-          <svg id="activity"></svg>
+        <div class="col tile">
+          <h2>
+            <img src="./icons/activity.svg" style="color: var(--color-13)" />
+            Activity
+          </h2>
+          <svg id="activity" class="chart"></svg>
 
           <dl class="stats">
-            <dt>Commits</dt>
+            <dt>
+              <img src="./icons/commit.svg" style="color: var(--color-13)" />
+              Commits
+            </dt>
             <dd><!-- formatVal(data.commits.total) --></dd>
-            <dt>PRs</dt>
+            <dt>
+              <img src="./icons/pr.svg" style="color: var(--color-15)" />
+              PRs
+            </dt>
             <dd><!-- formatVal(data.pullRequests.total) --></dd>
-            <dt>Minor Releases</dt>
+            <dt>
+              <img
+                src="./icons/minor-release.svg"
+                style="color: var(--color-15)"
+              />
+              Minor Releases
+            </dt>
             <dd><!-- formatVal(data.releases.totalMinor) --></dd>
-            <dt>Patch Releases</dt>
+            <dt>
+              <img
+                src="./icons/patch-release.svg"
+                style="color: var(--color-13)"
+              />
+              Patch Releases
+            </dt>
             <dd><!-- formatVal(data.releases.totalPatch) --></dd>
           </dl>
         </div>
 
-        <div class="col tile chart">
-          <h2>Support</h2>
-          <svg id="support"></svg>
+        <div class="col tile">
+          <h2>
+            <img src="./icons/handshake.svg" style="color: var(--color-11)" />
+            Support
+          </h2>
+          <svg id="support" class="chart"></svg>
 
           <dl class="stats">
             <div class="stats-heading">
-              Issues (<!-- formatVal(data.issues.total) -->)
+              <img src="./icons/bug.svg" style="color: var(--color-11)" />
+              Issues &ndash;
+              <!-- formatVal(data.issues.total) -->
             </div>
 
             <dt>Avg. Resp.</dt>
@@ -158,7 +196,9 @@
             <dd><!-- formatHrs(data.issues.resolution.med) --></dd>
 
             <div class="stats-heading">
-              Discussions (<!-- formatVal(data.discussions.total) -->)
+              <img src="./icons/speech.svg" style="color: var(--color-9)" />
+              Discussions &ndash;
+              <!-- formatVal(data.discussions.total) -->
             </div>
 
             <dt>Avg. Resp.</dt>

@@ -95,7 +95,7 @@ const makeOverTimeChart = async (svg, series) => {
       });
   }
 
-  /** mark release dates */
+  /** mark releases */
   for (const { name, date } of releases.list) {
     const major = name.endsWith(".0");
     /** line */
@@ -106,9 +106,9 @@ const makeOverTimeChart = async (svg, series) => {
       .attr("x2", xScale(date))
       .attr("y1", 0)
       .attr("y2", height)
-      .attr("stroke", series[0].color)
-      .attr("stroke-width", major ? "0.1rem" : "0.05rem")
-      .attr("stroke-dasharray", major ? "" : "1 2")
+      .attr("stroke", "var(--color-4)")
+      .attr("stroke-width", major ? "0.1rem" : "0.02rem")
+      .attr("stroke-opacity", 0.1)
       .attr("pointer-events", "none");
     if (major && !name.startsWith("v1.1"))
       /** label */
@@ -189,6 +189,11 @@ overTimeChart("popularity", [
   { data: forks.overTime, name: "Forks", color: colors[7] },
 ]);
 
+overTimeChart("activity", [
+  { data: commits.overTime, name: "Commits", color: colors[13] },
+  { data: pullRequests.overTime, name: "PRs", color: colors[15] },
+]);
+
 overTimeChart("support", [
   {
     data: issues.overTime,
@@ -200,9 +205,4 @@ overTimeChart("support", [
     name: "Discussions",
     color: colors[9],
   },
-]);
-
-overTimeChart("activity", [
-  { data: commits.overTime, name: "Commits", color: colors[13] },
-  { data: pullRequests.overTime, name: "PRs", color: colors[15] },
 ]);

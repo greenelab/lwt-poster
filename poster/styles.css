@@ -35,6 +35,11 @@ header {
 h1,
 h2,
 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
   margin: 0;
   font-weight: 500;
 }
@@ -52,15 +57,6 @@ p {
   line-height: 1.5;
 }
 
-table {
-  border-collapse: collapse;
-}
-
-td {
-  border: solid 0.1rem #cbd5e1;
-  padding: 0.5rem;
-}
-
 svg {
   overflow: visible;
 }
@@ -76,6 +72,13 @@ dd {
   margin: 0;
   padding: 0;
   text-align: left;
+}
+
+dt,
+dd {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .grid {
@@ -130,9 +133,16 @@ dd {
 }
 
 .tile {
-  padding: 1.5rem;
-  background: #f1f5f9;
+  padding: 1rem;
+  background: var(--color-1);
   min-width: min(20rem, 100vw);
+}
+
+.tile h2:first-child {
+  width: calc(100% + 2rem);
+  height: 2.5rem;
+  margin-top: -1rem;
+  background: var(--color-2);
 }
 
 .qr {
@@ -143,11 +153,21 @@ dd {
   height: 6rem;
 }
 
-.chart {
-  text-align: center;
+.icon {
+  display: grid;
+  place-items: center;
+  background: color-mix(in oklab, currentColor, white 65%);
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 999px;
 }
 
-.chart svg {
+.icon > svg {
+  color: color-mix(in oklab, currentColor, black 10%);
+  height: 1em;
+}
+
+.chart {
   aspect-ratio: 16 / 9;
 }
 
@@ -166,7 +186,7 @@ dd {
 .stats-heading {
   display: flex;
   align-items: center;
-  gap: 0.2in;
+  gap: 0.5rem;
   grid-column: 1 / -1;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
@@ -182,8 +202,8 @@ dd {
 .stats-heading::after {
   content: "";
   flex-grow: 1;
-  background: #cbd5e1;
-  height: 0.01in;
+  height: 0.05rem;
+  background: var(--color-4);
 }
 
 :has(> .stats) {

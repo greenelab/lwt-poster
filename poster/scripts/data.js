@@ -12,7 +12,7 @@ export const commits = await load("commits");
 export const pullRequests = await load("pull-requests");
 export const releases = await load("releases");
 
-/** make data globally available */
+/** make globally available */
 window.data = {
   stars,
   forks,

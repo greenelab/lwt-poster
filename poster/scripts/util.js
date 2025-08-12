@@ -1,9 +1,9 @@
 /** format value */
-window.formatVal = (value) =>
+const formatVal = (value) =>
   value.toLocaleString(undefined, { notation: "compact" });
 
 /** format hours */
-window.formatHrs = (hours) => {
+const formatHrs = (hours) => {
   let suffix = "hrs";
   if (hours > 2 * 24) {
     hours /= 24;
@@ -21,11 +21,11 @@ export const fit = (svg) => {
 
 /** color palette */
 export const colors = [
-  "#64748b",
-  "#6b7280",
-  "#71717a",
-  "#737373",
-  "#78716c",
+  "#f8fafc",
+  "#f1f5f9",
+  "#e2e8f0",
+  "#94a3b8",
+  "black",
   "#ef4444",
   "#f97316",
   "#f59e0b",
@@ -43,4 +43,13 @@ export const colors = [
   "#d946ef",
   "#ec4899",
   "#f43f5e",
-].map((color) => `color-mix(in oklab, ${color}, white 25%)`);
+];
+
+/** make colors available as css vars */
+colors.forEach((color, index) =>
+  document.documentElement.style.setProperty(`--color-${index}`, color)
+);
+
+/** make globally available */
+window.formatVal = formatVal;
+window.formatHrs = formatHrs;

@@ -1,0 +1,61 @@
+window.addEventListener("data", () => {
+  /** walker to go through dom nodes */
+  const walker = document.createTreeWalker(
+    document.body,
+    NodeFilter.SHOW_COMMENT
+  );
+  let node;
+
+  /** find all comment nodes */
+  const comments = [];
+  while ((node = walker.nextNode())) comments.push(node);
+
+  /** for each comment */
+  for (const comment of comments) {
+    try {
+      const content = comment.nodeValue.trim();
+      /** evaluate comment as javascript */
+      const result = eval(content);
+      /** replace comment node with text node of eval result */
+      const text = document.createTextNode(String(result));
+      comment.parentNode.replaceChild(text, comment);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+});
+
+/** inline svgs */
+window.addEventListener("load", async () => {
+  /** get all img tags with an svg src */
+  const imgs = document.querySelectorAll("img[src*='.svg']");
+
+  for (const img of imgs) {
+    /** fetch raw svg file text content */
+    const content = await (await fetch(img.src)).text();
+    /** insert svg source as new node */
+    img.insertAdjacentHTML("beforebegin", content);
+    /** get new node */
+    const svg = img.previousElementSibling;
+    /** special behavior for icon */
+    const isIcon = img.src.includes("icon");
+    const icon = document.createElement("div");
+    icon.classList.add("icon");
+    if (isIcon) wrap(svg, icon);
+    /** transfer over attributes from img to svg */
+    for (const { name, value } of img.attributes)
+      (isIcon ? icon : svg).setAttribute(name, value);
+    /** remove certain attributes on svg */
+    for (const { name } of svg.attributes)
+      if (["width", "height"].includes(name)) svg.setAttribute(name, "");
+
+    /** delete img tag */
+    img.remove();
+  }
+});
+
+/** wrap element in wrapper element */
+const wrap = (element, wrapper) => {
+  element.parentNode.insertBefore(wrapper, element);
+  wrapper.append(element);
+};
