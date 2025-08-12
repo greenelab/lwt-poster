@@ -71,8 +71,8 @@ const makeOverTimeChart = async (svg, series) => {
         let [x] = d3.pointer(event);
         /** find date and value at x coord */
         let date = xScale.invert(x);
-        const { count } = data.find((d) => d.date > date);
-        /** snap values back to x/y */
+        const { count } = data.findLast((d) => d.date < date);
+        /** translate values back to x/y */
         x = xScale(date);
         const y = yScale(count);
         /** update tooltip position */
