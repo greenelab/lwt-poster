@@ -4,9 +4,11 @@ import {
   discussionResolutionTime,
   discussionResponseTime,
   getCommits,
+  getDefinitelyGenerated,
   getDiscussions,
   getForks,
   getIssues,
+  getPossiblyGenerated,
   getPullRequests,
   getReleases,
   getStars,
@@ -30,6 +32,26 @@ const pullRequests = await cache(getPullRequests, `${raw}/pull-requests`);
 const issues = await cache(getIssues, `${raw}/issues`);
 const discussions = await cache(getDiscussions, `${raw}/discussions`);
 const releases = await cache(getReleases, `${raw}/releases`);
+const possiblyGenerated = await cache(
+  getPossiblyGenerated,
+  `${raw}/possibly-generated`
+);
+const generated = await cache(
+  async () =>
+    (
+      await Promise.all(
+        possiblyGenerated.map(async (repo) => {
+          const owner = repo.owner?.login;
+          const name = repo.name;
+          if (!owner || !name) return;
+          const date = await getDefinitelyGenerated(owner, name);
+          if (!date) return;
+          return { owner, repo: name, date: date.toISOString() };
+        })
+      )
+    ).filter((repo) => !!repo),
+  `${raw}/generated`
+);
 
 /** process star data */
 save(
@@ -116,4 +138,13 @@ save(
 save(
   releases.map((release) => ({ name: release.name, date: release.created_at })),
   `${output}/releases`
+);
+
+/** process generated data */
+save(
+  {
+    repos: generated,
+    overTime: binDatesCumulative(generated.map((repo) => repo.date)),
+  },
+  `${output}/generated`
 );

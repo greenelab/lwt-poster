@@ -3,6 +3,7 @@ import { colors, fit } from "./util.js";
 import {
   stars,
   forks,
+  generated,
   issues,
   discussions,
   commits,
@@ -43,7 +44,8 @@ const makeOverTimeChart = async (svg, series) => {
   const yScale = d3
     .scaleLinear()
     .domain(d3.extent(flatData, (d) => d.count))
-    .range([height, 0]);
+    .range([height, 0])
+    .nice(5);
 
   /** line generator */
   const line = d3
@@ -54,12 +56,44 @@ const makeOverTimeChart = async (svg, series) => {
     .y1(height);
 
   /** draw data line for each series */
-  for (const { data, color } of series)
+  for (const { data, name, color } of series) {
+    /** other elements we wish to de-emphasize while hovering this series */
+    const others = () =>
+      svg.selectAll(`[data-series]:not([data-series='${name}'])`);
     svg
       .append("path")
+      .attr("data-series", name)
       .attr("fill", `color-mix(in oklab, ${color}, white 50%)`)
       .attr("stroke", "none")
-      .attr("d", line(data));
+      .attr("d", line(data))
+      /** on hover */
+      .on("mousemove", (event) => {
+        let [x] = d3.pointer(event);
+        /** find date and value at x coord */
+        let date = xScale.invert(x);
+        const { count } = data.find((d) => d.date > date);
+        /** snap values back to x/y */
+        x = xScale(date);
+        const y = yScale(count);
+        /** update tooltip position */
+        tooltipGroup
+          .attr("opacity", 1)
+          .attr("transform", `translate(${x}, ${y})`);
+        /** update tooltip content */
+        date = new Date(date);
+        const month = date.toLocaleString(undefined, { month: "short" });
+        const year = date.getFullYear();
+        tooltipTextTop.text(count);
+        tooltipTextBottom.text(`${month} ${year}`);
+        /** de-emphasize other elements */
+        others().attr("opacity", 0.25);
+      })
+      /** on un-hover */
+      .on("mouseleave", () => {
+        tooltipGroup.attr("opacity", 0);
+        others().attr("opacity", 1);
+      });
+  }
 
   /** mark release dates */
   for (const { name, date } of releases) {
@@ -67,22 +101,26 @@ const makeOverTimeChart = async (svg, series) => {
     /** line */
     svg
       .append("line")
+      .attr("data-series", "")
       .attr("x1", xScale(date))
       .attr("x2", xScale(date))
       .attr("y1", 0)
       .attr("y2", height)
       .attr("stroke", series[0].color)
       .attr("stroke-width", major ? "0.025in" : "0.01in")
-      .attr("stroke-dasharray", major ? "" : "5 10");
+      .attr("stroke-dasharray", major ? "" : "1 2")
+      .attr("pointer-events", "none");
     if (major && !name.startsWith("v1.1"))
       /** label */
       svg
         .append("text")
+        .attr("data-series", "")
         .text(name.replace(/(v\d+\.\d+)\.\d+/, "$1"))
         .attr("text-anchor", "middle")
         .attr("x", xScale(date))
         .attr("y", 0)
-        .attr("dy", "-0.5em");
+        .attr("dy", "-0.5em")
+        .attr("pointer-events", "none");
   }
 
   /** data maxes */
@@ -102,17 +140,42 @@ const makeOverTimeChart = async (svg, series) => {
     svg
       .append("text")
       .text(name)
+      .attr("data-series", "")
       .attr("x", () => xScale(maxX))
       .attr("dx", "-0.1in")
       .attr("y", () => yScale(maxY[index]))
       .attr("text-anchor", "end")
-      .attr("alignment-baseline", "hanging");
+      .attr("alignment-baseline", "hanging")
+      .attr("pointer-events", "none");
 
   /** axes */
   const xAxis = d3.axisBottom(xScale).ticks(5);
   const yAxis = d3.axisLeft(yScale).ticks(5);
   svg.append("g").attr("transform", `translate(0, ${height})`).call(xAxis);
   svg.append("g").call(yAxis);
+
+  /** tooltip elements */
+  const tooltipGroup = svg
+    .append("g")
+    .attr("opacity", 0)
+    .attr("pointer-events", "none");
+  const tooltipTextTop = tooltipGroup
+    .append("text")
+    .attr("dy", "-0.1in")
+    .attr("text-anchor", "middle");
+  const tooltipTextBottom = tooltipGroup
+    .append("text")
+    .attr("dy", "0.1in")
+    .attr("text-anchor", "middle")
+    .attr("dominant-baseline", "hanging");
+  tooltipGroup
+    .append("circle")
+    .attr("cx", 0)
+    .attr("cy", 0)
+    .attr("r", 3)
+    .attr("fill", "white")
+    .attr("stroke", "black")
+    .attr("stroke-width", "0.02in");
 
   /** fit to contents */
   fit(svg);
@@ -121,8 +184,9 @@ const makeOverTimeChart = async (svg, series) => {
 /** make charts for each data set */
 
 overTimeChart("popularity", [
-  { data: stars.overTime, name: "Stars", color: colors[5] },
-  { data: forks.overTime, name: "Forks", color: colors[6] },
+  { data: generated.overTime, name: "Generated", color: colors[5] },
+  { data: stars.overTime, name: "Stars", color: colors[6] },
+  { data: forks.overTime, name: "Forks", color: colors[7] },
 ]);
 
 overTimeChart("support", [
