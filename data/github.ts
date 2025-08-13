@@ -1,8 +1,8 @@
-import { Octokit, type RequestError } from "octokit";
-import { throttling } from "@octokit/plugin-throttling";
-import { paginateGraphQL } from "@octokit/plugin-paginate-graphql";
 import type { Discussion as DiscussionNode } from "@octokit/graphql-schema";
+import { paginateGraphQL } from "@octokit/plugin-paginate-graphql";
+import { throttling } from "@octokit/plugin-throttling";
 import { differenceInHours, min } from "date-fns";
+import { Octokit, type RequestError } from "octokit";
 import { today } from "./time";
 
 /** github authentication token */

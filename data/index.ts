@@ -15,7 +15,7 @@ import {
   issueResolutionTime,
   issueResponseTime,
 } from "./github";
-import { binDatesCumulative, binDateRanges } from "./time";
+import { binDateRanges, binDatesCumulative } from "./time";
 import { avg, med } from "./util";
 
 const raw = "./data/raw";
@@ -39,7 +39,7 @@ const generated = await cache(
           if (!owner || !name) return;
           const date = await getDefinitelyGenerated(owner, name);
           if (!date) return;
-          return { owner, repo: name, date: date.toISOString() };
+          return { ...repo, generated_on: date.toISOString() };
         })
       )
     ).filter((repo) => !!repo),
@@ -53,11 +53,22 @@ const issues = await cache(getIssues, `${raw}/issues`);
 const discussions = await cache(getDiscussions, `${raw}/discussions`);
 const releases = await cache(getReleases, `${raw}/releases`);
 
+/** check that no repos are double-counted in generated and forks */
+const generatedSet = new Set(generated.map((repo) => repo.full_name));
+const forkSet = new Set(forks.map((fork) => fork.full_name));
+const dupes = [...generatedSet.intersection(forkSet)];
+if (dupes.length)
+  throw Error(`${dupes.length} repos are double counted: ${dupes}`);
+
 /** process generated data */
 {
   const total = generated.length;
-  const repos = generated;
-  const overTime = binDatesCumulative(generated.map((repo) => repo.date));
+  const repos = generated.map((repo) => ({
+    owner: repo.owner?.login,
+    repo: repo.name,
+    date: repo.generated_on,
+  }));
+  const overTime = binDatesCumulative(repos.map((repo) => repo.date));
   save({ total, repos, overTime }, `${output}/generated`);
 }
 
@@ -71,8 +82,13 @@ const releases = await cache(getReleases, `${raw}/releases`);
 /** process fork data */
 {
   const total = forks.length;
-  const overTime = binDatesCumulative(forks.map((fork) => fork.created_at));
-  save({ total, overTime }, `${output}/forks`);
+  const repos = forks.map((repo) => ({
+    owner: repo.owner?.login,
+    repo: repo.name,
+    date: repo.created_at,
+  }));
+  const overTime = binDatesCumulative(repos.map((repo) => repo.date));
+  save({ total, repos, overTime }, `${output}/forks`);
 }
 
 /** process issue data */

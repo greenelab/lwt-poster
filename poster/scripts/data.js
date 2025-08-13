@@ -3,9 +3,9 @@ const load = async (name) =>
   await (await fetch(`../data/output/${name}.json`)).json();
 
 /** import all data */
+export const generated = await load("generated");
 export const stars = await load("stars");
 export const forks = await load("forks");
-export const generated = await load("generated");
 export const issues = await load("issues");
 export const discussions = await load("discussions");
 export const commits = await load("commits");
@@ -14,9 +14,9 @@ export const releases = await load("releases");
 
 /** make globally available */
 window.data = {
+  generated,
   stars,
   forks,
-  generated,
   issues,
   discussions,
   commits,

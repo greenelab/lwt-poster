@@ -28,7 +28,9 @@ await page.goto(url + "/poster");
 
 /** wait for app to render */
 await page.emulateMedia({ media: "print" });
-await page.waitForSelector("main");
+
+/** wait for full page load */
+await page.waitForTimeout(3 * 1000);
 
 /** print pdf */
 const margin = 1 * 96;

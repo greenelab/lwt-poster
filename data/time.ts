@@ -1,3 +1,4 @@
+import type { Interval } from "date-fns";
 import {
   addMonths,
   areIntervalsOverlapping,
@@ -5,7 +6,6 @@ import {
   isBefore,
   min,
 } from "date-fns";
-import type { Interval } from "date-fns";
 import { pairs } from "./util";
 
 /** today's date */

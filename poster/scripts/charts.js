@@ -1,15 +1,15 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-import { colors, fit } from "./util.js";
 import {
-  stars,
+  commits,
+  discussions,
   forks,
   generated,
   issues,
-  discussions,
-  commits,
   pullRequests,
   releases,
+  stars,
 } from "./data.js";
+import { colors, fit } from "./util.js";
 
 /** re-create chart whenever needed */
 const overTimeChart = (plot, series) => {
