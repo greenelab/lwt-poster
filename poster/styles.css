@@ -163,12 +163,9 @@ dd {
     grid-template-columns: 1fr 1fr;
   }
 
-  :not(.qr) {
+  header > :not(.qr) {
     grid-column: 1 / -1;
-  }
-
-  .qr:last-child {
-    order: -1;
+    order: 1;
   }
 }
 
