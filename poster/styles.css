@@ -33,11 +33,7 @@ header {
 h1,
 h2,
 h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
+  display: inline;
   margin: 0;
   font-weight: 500;
 }
@@ -53,6 +49,11 @@ h2 {
 p {
   margin: 0;
   line-height: 1.5;
+}
+
+strong,
+b {
+  font-weight: 500;
 }
 
 svg {
@@ -121,6 +122,10 @@ dd {
 }
 
 .tile h2:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   width: calc(100% + 2rem);
   height: 2.5rem;
   margin-top: -1rem;
@@ -137,32 +142,20 @@ dd {
 
 .title {
   display: grid;
+  grid-template-columns: auto auto;
   place-content: center;
-  place-items: center;
+  align-items: center;
   gap: 0.5rem 1rem;
 }
 
-.title > :first-child {
-  grid-column: 1;
-  grid-row: 1 / span 3;
+.logo {
   height: 5rem;
 }
 
-.title > :not(:first-child) {
-  justify-content: flex-start;
-  grid-column: 2;
-}
-
-.title > :nth-child(2) {
-  grid-row: 1;
-}
-
-.title > :nth-child(3) {
-  grid-row: 2;
-}
-
-.title > :nth-child(4) {
-  grid-row: 3;
+@media (max-width: 70rem) {
+  .title {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 45rem) {
@@ -170,7 +163,7 @@ dd {
     grid-template-columns: 1fr 1fr;
   }
 
-  .title {
+  :not(.qr) {
     grid-column: 1 / -1;
   }
 
