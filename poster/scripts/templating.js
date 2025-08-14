@@ -20,7 +20,7 @@ window.addEventListener("data", () => {
       const text = document.createTextNode(String(result));
       comment.parentNode.replaceChild(text, comment);
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   }
 });
@@ -46,9 +46,7 @@ window.addEventListener("load", async () => {
     for (const { name, value } of img.attributes)
       (isIcon ? icon : svg).setAttribute(name, value);
     /** remove certain attributes on svg */
-    for (const { name } of svg.attributes)
-      if (["width", "height"].includes(name)) svg.setAttribute(name, "");
-
+    for (const attr of ["width", "height"]) svg.removeAttribute(attr);
     /** delete img tag */
     img.remove();
   }
