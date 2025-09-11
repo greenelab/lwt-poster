@@ -9,7 +9,8 @@ import {
   releases,
   stars,
 } from "./data.js";
-import { colors, fit } from "./util.js";
+import { fit } from "./util.js";
+import { colors } from "./colors.js";
 
 /** re-create chart whenever needed */
 const overTimeChart = (plot, series) => {
@@ -106,7 +107,7 @@ const makeOverTimeChart = async (svg, series) => {
       .attr("x2", xScale(date))
       .attr("y1", 0)
       .attr("y2", height)
-      .attr("stroke", "var(--color-4)")
+      .attr("stroke", "var(--slate-600)")
       .attr("stroke-width", major ? "0.1rem" : "0.02rem")
       .attr("stroke-opacity", 0.1)
       .attr("pointer-events", "none");
@@ -184,25 +185,45 @@ const makeOverTimeChart = async (svg, series) => {
 /** make charts for each data set */
 
 overTimeChart("popularity", [
-  { data: generated.overTime, name: "Generated", color: colors[5] },
-  { data: stars.overTime, name: "Stars", color: colors[6] },
-  { data: forks.overTime, name: "Forks", color: colors[7] },
+  {
+    data: generated.overTime,
+    name: "Generated",
+    color: colors.red["500"],
+  },
+  {
+    data: stars.overTime,
+    name: "Stars",
+    color: colors.orange["500"],
+  },
+  {
+    data: forks.overTime,
+    name: "Forks",
+    color: colors.amber["500"],
+  },
 ]);
 
 overTimeChart("activity", [
-  { data: commits.overTime, name: "Commits", color: colors[13] },
-  { data: pullRequests.overTime, name: "PRs", color: colors[15] },
+  {
+    data: commits.overTime,
+    name: "Commits",
+    color: colors.cyan["500"],
+  },
+  {
+    data: pullRequests.overTime,
+    name: "PRs",
+    color: colors.blue["500"],
+  },
 ]);
 
 overTimeChart("support", [
   {
     data: issues.overTime,
     name: "Issues",
-    color: colors[11],
+    color: colors.emerald["500"],
   },
   {
     data: discussions.overTime,
     name: "Discussions",
-    color: colors[9],
+    color: colors.lime["500"],
   },
 ]);

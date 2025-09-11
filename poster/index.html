@@ -18,20 +18,11 @@
     <link rel="stylesheet" href="./styles.css" />
 
     <script type="module" src="./scripts/charts.js"></script>
-
     <script type="module" src="./scripts/templating.js"></script>
   </head>
 
   <body>
     <header>
-      <div class="qr tile col gap-sm center">
-        <a href="https://greene-lab.gitbook.io/lab-website-template-docs">
-          <img src="./images/docs-qr.svg" />
-        </a>
-        Template home
-      </div>
-
-      <div class="row tile">
         <img class="logo" src="./images/logo.svg" />
 
         <div class="title">
@@ -42,14 +33,6 @@
           <div>Vincent Rubinetti, Casey Greene</div>
           <div>University of Colorado Anschutz School of Medicine</div>
         </div>
-      </div>
-
-      <div class="qr tile col gap-sm">
-        <a href="https://github.com/greenelab/lwt-poster">
-          <img src="./images/poster-qr.svg" />
-        </a>
-        Poster source
-      </div>
     </header>
 
     <main class="grid">
@@ -108,24 +91,24 @@
       <section class="grid">
         <div class="col tile">
           <h2>
-            <img src="./icons/fire.svg" style="color: var(--color-5)" />
+            <img src="./icons/fire.svg" style="color: var(--red-500)" />
             Popularity
           </h2>
           <svg id="popularity" class="chart"></svg>
 
           <dl class="stats" style="--cols: 3">
             <dt>
-              <img src="./icons/book.svg" style="color: var(--color-5)" />
+              <img src="./icons/book.svg" style="color: var(--red-500)" />
               Generated
             </dt>
             <dd><!-- formatVal(data.generated.total) --></dd>
             <dt>
-              <img src="./icons/star.svg" style="color: var(--color-6)" />
+              <img src="./icons/star.svg" style="color: var(--orange-500)" />
               Stars
             </dt>
             <dd><!-- formatVal(data.stars.total) --></dd>
             <dt>
-              <img src="./icons/fork.svg" style="color: var(--color-7)" />
+              <img src="./icons/fork.svg" style="color: var(--amber-500)" />
               Forks
             </dt>
             <dd><!-- formatVal(data.forks.total) --></dd>
@@ -134,51 +117,48 @@
 
         <div class="col tile">
           <h2>
-            <img src="./icons/activity.svg" style="color: var(--color-13)" />
+            <img src="./icons/activity.svg" style="color: var(--cyan-500)" />
             Activity
           </h2>
           <svg id="activity" class="chart"></svg>
 
           <dl class="stats">
             <dt>
-              <img src="./icons/commit.svg" style="color: var(--color-13)" />
+              <img src="./icons/commit.svg" style="color: var(--cyan-500)" />
               Commits
             </dt>
             <dd><!-- formatVal(data.commits.total) --></dd>
             <dt>
-              <img src="./icons/pr.svg" style="color: var(--color-15)" />
+              <img src="./icons/pr.svg" style="color: var(--blue-500)" />
               PRs
             </dt>
             <dd><!-- formatVal(data.pullRequests.total) --></dd>
             <dt>
-              <img
-                src="./icons/minor-release.svg"
-                style="color: var(--color-15)"
-              />
-              Minor Releases
-            </dt>
-            <dd><!-- formatVal(data.releases.totalMinor) --></dd>
-            <dt>
-              <img
-                src="./icons/patch-release.svg"
-                style="color: var(--color-13)"
-              />
+              <img src="./icons/bandage.svg" style="color: var(--cyan-500)" />
               Patch Releases
             </dt>
             <dd><!-- formatVal(data.releases.totalPatch) --></dd>
+            <dt>
+              <img src="./icons/rocket.svg" style="color: var(--blue-500)" />
+              Minor Releases
+            </dt>
+            <dd><!-- formatVal(data.releases.totalMinor) --></dd>
           </dl>
         </div>
 
         <div class="col tile">
           <h2>
-            <img src="./icons/handshake.svg" style="color: var(--color-11)" />
+            <img
+              src="./icons/handshake.svg"
+              style="color: var(--emerald-500)"
+            />
             Support
           </h2>
           <svg id="support" class="chart"></svg>
 
           <dl class="stats">
             <div class="stats-heading">
-              <img src="./icons/bug.svg" style="color: var(--color-11)" />
+              <img src="./icons/bug.svg" style="color: var(--emerald-500)" />
               Issues &ndash;
               <!-- formatVal(data.issues.total) -->
             </div>
@@ -193,7 +173,7 @@
             <dd><!-- formatHrs(data.issues.resolution.med) --></dd>
 
             <div class="stats-heading">
-              <img src="./icons/speech.svg" style="color: var(--color-9)" />
+              <img src="./icons/question.svg" style="color: var(--lime-500)" />
               Discussions &ndash;
               <!-- formatVal(data.discussions.total) -->
             </div>
@@ -209,8 +189,45 @@
           </dl>
         </div>
 
-        <div class="col tile"></div>
+        <div class="col tile">
+          <h2>
+            <img src="./icons/books.svg" style="color: var(--purple-800)" />
+            Gallery
+          </h2>
+
+          <div id="gallery"></div>
+          <script>
+            /** create gallery images */
+            const gallery = document.getElementById("gallery");
+            const count = 21;
+            gallery.style.setProperty("--cols", Math.ceil(count / 3));
+            for (let index = 0; index < count; index++) {
+              const item = document.createElement("div");
+              item.className = "gallery-item";
+              gallery.append(item);
+              const img = document.createElement("img");
+              img.src = `images/labs/${index}.jpg`;
+              item.append(img);
+            }
+          </script>
+        </div>
       </section>
     </main>
+
+    <footer>
+      <div class="qr col gap-sm center">
+        <a href="https://greene-lab.gitbook.io/lab-website-template-docs">
+          <img src="./images/docs-qr.svg" />
+        </a>
+        Template home
+      </div>
+
+      <div class="qr col gap-sm">
+        <a href="https://github.com/greenelab/lwt-poster">
+          <img src="./images/poster-qr.svg" />
+        </a>
+        Poster source
+      </div>
+    </footer>
   </body>
 </html>

@@ -21,13 +21,17 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0.5rem;
+  background: var(--cyan-500);
 }
 
-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 0.5rem;
+header,
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   width: 100%;
+  padding: 1rem;
+  background: var(--orange-200);
 }
 
 h1,
@@ -118,7 +122,7 @@ dd {
 
 .tile {
   padding: 1rem;
-  background: var(--color-1);
+  background: var(--orange-50);
 }
 
 .tile h2:first-child {
@@ -129,7 +133,7 @@ dd {
   width: calc(100% + 2rem);
   height: 2.5rem;
   margin-top: -1rem;
-  background: var(--color-2);
+  background: var(--orange-200);
 }
 
 .qr {
@@ -158,34 +162,17 @@ dd {
   }
 }
 
-@media (max-width: 45rem) {
-  header {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  header > :not(.qr) {
-    grid-column: 1 / -1;
-    order: 1;
-  }
-}
-
-@media (max-width: 20rem) {
-  header {
-    grid-template-columns: 1fr;
-  }
-}
-
 .icon {
   display: grid;
   place-items: center;
-  background: color-mix(in oklab, currentColor, white 65%);
+  background: color-mix(in oklab, currentColor, white 50%);
   width: 1.75em;
   height: 1.75em;
   border-radius: 999px;
 }
 
 .icon > svg {
-  color: color-mix(in oklab, currentColor, black 10%);
+  color: color-mix(in oklab, currentColor, black 25%);
   height: 1em;
 }
 
@@ -225,7 +212,7 @@ dd {
   content: "";
   flex-grow: 1;
   height: 0.05rem;
-  background: var(--color-4);
+  background: var(--slate-500);
 }
 
 :has(> .stats) {
@@ -242,4 +229,23 @@ dd {
   .stats {
     --cols: 1 !important;
   }
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  place-items: center;
+  width: 100%;
+}
+
+.gallery-item {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+#gallery img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
