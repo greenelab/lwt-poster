@@ -39,12 +39,9 @@ window.addEventListener("load", async () => {
     const svg = img.previousElementSibling;
     /** special behavior for icon */
     const isIcon = img.src.includes("icon");
-    const icon = document.createElement("div");
-    icon.classList.add("icon");
-    if (isIcon) wrap(svg, icon);
+    if (isIcon) svg.classList.add("icon");
     /** transfer over attributes from img to svg */
-    for (const { name, value } of img.attributes)
-      (isIcon ? icon : svg).setAttribute(name, value);
+    for (const { name, value } of img.attributes) svg.setAttribute(name, value);
     /** remove certain attributes on svg */
     for (const attr of ["width", "height"]) svg.removeAttribute(attr);
     /** delete img tag */

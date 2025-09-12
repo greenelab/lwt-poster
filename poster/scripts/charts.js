@@ -14,17 +14,22 @@ import { colors } from "./colors.js";
 
 /** re-create chart whenever needed */
 const overTimeChart = (plot, series) => {
-  const svg = d3.select(`#${plot}`);
-  makeOverTimeChart(svg, series);
-  new ResizeObserver(() => makeOverTimeChart(svg, series)).observe(svg.node());
+  const chart = d3.select(`#${plot}`);
+  makeOverTimeChart(chart, series);
+  new ResizeObserver(() => makeOverTimeChart(chart, series)).observe(
+    chart.node()
+  );
 };
 
-const makeOverTimeChart = async (svg, series) => {
+const makeOverTimeChart = async (chart, series) => {
   /** empty node contents */
-  svg.node().innerHTML = "";
+  chart.node().innerHTML = "";
 
   /** get current size */
-  const { width, height } = svg.node().getBoundingClientRect();
+  const { width, height } = chart.node().getBoundingClientRect();
+
+  /** create svg */
+  const svg = chart.append("svg");
 
   /** convert to date objects */
   series.forEach(({ data }) =>
@@ -107,7 +112,7 @@ const makeOverTimeChart = async (svg, series) => {
       .attr("x2", xScale(date))
       .attr("y1", 0)
       .attr("y2", height)
-      .attr("stroke", "var(--slate-600)")
+      .attr("stroke", "var(--dark)")
       .attr("stroke-width", major ? "0.1rem" : "0.02rem")
       .attr("stroke-opacity", 0.1)
       .attr("pointer-events", "none");

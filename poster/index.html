@@ -25,9 +25,7 @@
     <header>
       <div class="title">
         <h1>Lab Website Template</h1>
-        <div>
-          An Easy, Automatic, Flexible Website Template for Labs
-        </div>
+        <div>An easy, automatic, flexible website template for labs</div>
       </div>
 
       <img class="logo" src="./images/logo.svg" />
@@ -38,170 +36,131 @@
       </div>
     </header>
 
-    <main class="grid">
-      <section class="col tile">
-        <h2>Abstract</h2>
+    <main>
+      <section>
+        <div class="tile">
+          <h2>Abstract</h2>
 
-        <p>
-          Research laboratories require a professional and up-to-date website to
-          showcase their work, attract collaborators, and establish a strong
-          online presence. However, developing and maintaining such a website
-          can be challenging and time consuming. We present Lab Website
-          Template, open-source website template specifically designed for the
-          unique needs of labs, allowing lab members to focus more on research
-          activities and less on web development.
-        </p>
-        <p>
-          A critical feature of our template is its ability to automatically
-          generate citations (titles, authors, publishing info, etc.) from
-          simple identifiers like DOIs, PubMed, ORCID, and thousands of other
-          types using the open-source tool Manubot. Advanced pipelines
-          automatically update citations when site content changes, on a
-          periodic schedule, or on demand. The user chooses what sources to pull
-          from and how to filter and display the resulting citations on their
-          site.
-        </p>
-        <p>
-          To reduce administrative burden and to remain accessible to
-          non-technical users, we automate everything we can, not just
-          citations. This includes: first time setup of the repository,
-          generating live previews of pull requests, configuring custom URLs,
-          and more. To the same end, though the full codebase is exposed to the
-          user, it is structured around the most common use cases and separates
-          user content from internal logic. This allows users to concentrate on
-          the content of their site without wading through implementation
-          details, but still enables advanced customization if needed.
-        </p>
-        <p>
-          A key strength is our singular commitment to user support,
-          demonstrated by consistently low issue response times and high
-          successful resolution rate. We foster an environment where user input
-          is highly valued and carefully considered, but balanced against
-          maintaining an un-bloated design. Recognizing that source code and
-          comments alone are insufficient, we also maintain a searchable,
-          comprehensive, dedicated documentation suite so users can find answers
-          immediately before needing to ask for help.
-        </p>
-        <p>
-          The success of our design and approach is evidenced by our template's
-          widespread adoption, with 450+ stars on GitHub, 350+ forks, and a
-          growing gallery of dozens of active labs using it. This work reflects
-          not just a powerful software tool, but an evolving, open, community
-          resource that effectively serves the needs of its users.
-        </p>
+          <p>
+            Research laboratories need a professional and up-to-date website to
+            showcase their work, attract collaborators, and establish a strong
+            online presence, but developing and maintaining such a website can
+            be challenging and time consuming. We present
+            <strong>Lab Website Template</strong>, an open-source website
+            template specifically designed for the unique needs of labs,
+            allowing them to focus more on research activities and less on web
+            development.
+          </p>
+        </div>
       </section>
 
-      <section class="grid">
-        <div class="col tile">
-          <h2>
-            <img src="./icons/fire.svg" style="color: var(--red-500)" />
-            Popularity
-          </h2>
-          <svg id="popularity" class="chart"></svg>
+      <section>
+        <div class="tile">
+          <h2>Methods</h2>
 
-          <dl class="stats" style="--cols: 3">
-            <dt>
-              <img src="./icons/book.svg" style="color: var(--red-500)" />
-              Generated
-            </dt>
-            <dd><!-- formatVal(data.generated.total) --></dd>
-            <dt>
-              <img src="./icons/star.svg" style="color: var(--orange-500)" />
-              Stars
-            </dt>
-            <dd><!-- formatVal(data.stars.total) --></dd>
-            <dt>
-              <img src="./icons/fork.svg" style="color: var(--amber-500)" />
-              Forks
-            </dt>
-            <dd><!-- formatVal(data.forks.total) --></dd>
-          </dl>
-        </div>
+          <div id="activity" class="chart"></div>
 
-        <div class="col tile">
-          <h2>
-            <img src="./icons/activity.svg" style="color: var(--cyan-500)" />
-            Activity
-          </h2>
-          <svg id="activity" class="chart"></svg>
-
-          <dl class="stats">
+          <dl>
             <dt>
               <img src="./icons/commit.svg" style="color: var(--cyan-500)" />
               Commits
             </dt>
             <dd><!-- formatVal(data.commits.total) --></dd>
+
             <dt>
               <img src="./icons/pr.svg" style="color: var(--blue-500)" />
               PRs
             </dt>
             <dd><!-- formatVal(data.pullRequests.total) --></dd>
+
             <dt>
               <img src="./icons/bandage.svg" style="color: var(--cyan-500)" />
               Patch Releases
             </dt>
             <dd><!-- formatVal(data.releases.totalPatch) --></dd>
+
             <dt>
               <img src="./icons/rocket.svg" style="color: var(--blue-500)" />
               Minor Releases
             </dt>
             <dd><!-- formatVal(data.releases.totalMinor) --></dd>
           </dl>
-        </div>
 
-        <div class="col tile">
-          <h2>
-            <img
-              src="./icons/handshake.svg"
-              style="color: var(--emerald-500)"
-            />
-            Support
-          </h2>
-          <svg id="support" class="chart"></svg>
+          <div id="support" class="chart"></div>
 
-          <dl class="stats">
-            <div class="stats-heading">
-              <img src="./icons/bug.svg" style="color: var(--emerald-500)" />
-              Issues &ndash;
+          <dl>
+            <dt>
+              <img
+                src="./icons/bug.svg"
+                style="color: var(--emerald-500)"
+              />Issues
+            </dt>
+            <dd>
               <!-- formatVal(data.issues.total) -->
-            </div>
+            </dd>
 
-            <dt>Avg. Resp.</dt>
-            <dd><!-- formatHrs(data.issues.response.avg) --></dd>
-            <dt>Med. Resp.</dt>
+            <dt>Med. Response</dt>
             <dd><!-- formatHrs(data.issues.response.med) --></dd>
-            <dt>Avg. Reso.</dt>
-            <dd><!-- formatHrs(data.issues.resolution.avg) --></dd>
-            <dt>Med. Reso.</dt>
+
+            <dt>Med. Resolution</dt>
             <dd><!-- formatHrs(data.issues.resolution.med) --></dd>
 
-            <div class="stats-heading">
+            <dt>
               <img src="./icons/question.svg" style="color: var(--lime-500)" />
-              Discussions &ndash;
+              Discussions
+            </dt>
+            <dd>
               <!-- formatVal(data.discussions.total) -->
-            </div>
+            </dd>
 
-            <dt>Avg. Resp.</dt>
-            <dd><!-- formatHrs(data.discussions.response.avg) --></dd>
-            <dt>Med. Resp.</dt>
+            <dt>Med. Response</dt>
             <dd><!-- formatHrs(data.discussions.response.med) --></dd>
-            <dt>Avg. Reso.</dt>
-            <dd><!-- formatHrs(data.discussions.resolution.avg) --></dd>
-            <dt>Med. Reso.</dt>
+
+            <dt>Med. Resolution</dt>
             <dd><!-- formatHrs(data.discussions.resolution.med) --></dd>
           </dl>
         </div>
+      </section>
 
-        <div class="col tile">
-          <h2>
-            <img src="./icons/books.svg" style="color: var(--purple-800)" />
-            Gallery
-          </h2>
+      <section>
+        <div class="tile">
+          <h2>Outcome</h2>
 
-          <div id="gallery"></div>
+          <div id="popularity" class="chart"></div>
+
+          <dl>
+            <dt>
+              <img src="./icons/book.svg" style="color: var(--red-500)" />
+              Generated
+            </dt>
+            <dd><!-- formatVal(data.generated.total) --></dd>
+
+            <dt>
+              <img src="./icons/star.svg" style="color: var(--orange-500)" />
+              Stars
+            </dt>
+            <dd><!-- formatVal(data.stars.total) --></dd>
+
+            <dt>
+              <img src="./icons/fork.svg" style="color: var(--amber-500)" />
+              Forks
+            </dt>
+            <dd><!-- formatVal(data.forks.total) --></dd>
+          </dl>
+
+          <p>
+            The success of our design and approach is evidenced by the
+            template's widespread adoption, with considerable activity on GitHub
+            and a growing gallery of dozens of active labs using it. This work
+            reflects not just a powerful software tool, but an evolving
+            community resource that effectively serves the needs of its users.
+          </p>
+
+          <div class="gallery"></div>
+
           <script>
             /** create gallery images */
-            const gallery = document.getElementById("gallery");
+            const gallery = document.querySelector(".gallery");
             const count = 21;
             gallery.style.setProperty("--cols", Math.ceil(count / 3));
             for (let index = 0; index < count; index++) {
@@ -218,14 +177,14 @@
     </main>
 
     <footer>
-      <div class="qr col gap-sm">
+      <div class="qr">
         <a href="https://greene-lab.gitbook.io/lab-website-template-docs">
           <img src="./images/docs-qr.svg" />
         </a>
         Template home
       </div>
 
-      <div class="qr col gap-sm">
+      <div class="qr">
         <a href="https://github.com/greenelab/lwt-poster">
           <img src="./images/poster-qr.svg" />
         </a>
