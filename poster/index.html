@@ -39,7 +39,7 @@
     <main>
       <section>
         <div class="tile">
-          <h2>Abstract</h2>
+          <h2>Introduction</h2>
 
           <p>
             Research laboratories need a professional and up-to-date website to
@@ -56,69 +56,87 @@
 
       <section>
         <div class="tile">
-          <h2>Methods</h2>
+          <h2>Approach</h2>
 
-          <div id="activity" class="chart"></div>
+          <div class="cols">
+            <div>
+              <div id="activity" class="chart"></div>
 
-          <dl>
-            <dt>
-              <img src="./icons/commit.svg" style="color: var(--cyan-500)" />
-              Commits
-            </dt>
-            <dd><!-- formatVal(data.commits.total) --></dd>
+              <dl>
+                <dt>
+                  <img
+                    src="./icons/commit.svg"
+                    style="color: var(--cyan-500)"
+                  />
+                  Commits
+                </dt>
+                <dd><!-- formatVal(data.commits.total) --></dd>
 
-            <dt>
-              <img src="./icons/pr.svg" style="color: var(--blue-500)" />
-              PRs
-            </dt>
-            <dd><!-- formatVal(data.pullRequests.total) --></dd>
+                <dt>
+                  <img src="./icons/pr.svg" style="color: var(--blue-500)" />
+                  PRs
+                </dt>
+                <dd><!-- formatVal(data.pullRequests.total) --></dd>
 
-            <dt>
-              <img src="./icons/bandage.svg" style="color: var(--cyan-500)" />
-              Patch Releases
-            </dt>
-            <dd><!-- formatVal(data.releases.totalPatch) --></dd>
+                <dt>
+                  <img
+                    src="./icons/bandage.svg"
+                    style="color: var(--cyan-500)"
+                  />
+                  Patch Releases
+                </dt>
+                <dd><!-- formatVal(data.releases.totalPatch) --></dd>
 
-            <dt>
-              <img src="./icons/rocket.svg" style="color: var(--blue-500)" />
-              Minor Releases
-            </dt>
-            <dd><!-- formatVal(data.releases.totalMinor) --></dd>
-          </dl>
+                <dt>
+                  <img
+                    src="./icons/rocket.svg"
+                    style="color: var(--blue-500)"
+                  />
+                  Minor Releases
+                </dt>
+                <dd><!-- formatVal(data.releases.totalMinor) --></dd>
+              </dl>
+            </div>
 
-          <div id="support" class="chart"></div>
+            <div>
+              <div id="support" class="chart"></div>
 
-          <dl>
-            <dt>
-              <img
-                src="./icons/bug.svg"
-                style="color: var(--emerald-500)"
-              />Issues
-            </dt>
-            <dd>
-              <!-- formatVal(data.issues.total) -->
-            </dd>
+              <dl>
+                <dt>
+                  <img
+                    src="./icons/bug.svg"
+                    style="color: var(--emerald-500)"
+                  />Issues
+                </dt>
+                <dd>
+                  <!-- formatVal(data.issues.total) -->
+                </dd>
 
-            <dt>Med. Response</dt>
-            <dd><!-- formatHrs(data.issues.response.med) --></dd>
+                <dt>Med. Response</dt>
+                <dd><!-- formatHrs(data.issues.response.med) --></dd>
 
-            <dt>Med. Resolution</dt>
-            <dd><!-- formatHrs(data.issues.resolution.med) --></dd>
+                <dt>Med. Resolution</dt>
+                <dd><!-- formatHrs(data.issues.resolution.med) --></dd>
 
-            <dt>
-              <img src="./icons/question.svg" style="color: var(--lime-500)" />
-              Discussions
-            </dt>
-            <dd>
-              <!-- formatVal(data.discussions.total) -->
-            </dd>
+                <dt>
+                  <img
+                    src="./icons/question.svg"
+                    style="color: var(--lime-500)"
+                  />
+                  Discussions
+                </dt>
+                <dd>
+                  <!-- formatVal(data.discussions.total) -->
+                </dd>
 
-            <dt>Med. Response</dt>
-            <dd><!-- formatHrs(data.discussions.response.med) --></dd>
+                <dt>Med. Response</dt>
+                <dd><!-- formatHrs(data.discussions.response.med) --></dd>
 
-            <dt>Med. Resolution</dt>
-            <dd><!-- formatHrs(data.discussions.resolution.med) --></dd>
-          </dl>
+                <dt>Med. Resolution</dt>
+                <dd><!-- formatHrs(data.discussions.resolution.med) --></dd>
+              </dl>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -128,7 +146,7 @@
 
           <div id="popularity" class="chart"></div>
 
-          <dl>
+          <dl style="--cols: 3">
             <dt>
               <img src="./icons/book.svg" style="color: var(--red-500)" />
               Generated

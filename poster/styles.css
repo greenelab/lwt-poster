@@ -35,7 +35,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
   padding: 1rem;
   gap: 1rem 2rem;
@@ -43,31 +42,17 @@ footer {
 }
 
 @media (max-width: 40rem) {
-  header {
+  header,
+  footer {
     flex-direction: column;
+    align-items: center;
   }
 }
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
   gap: 1rem;
-}
-
-main > * {
-  min-width: 0;
-}
-
-@media (max-width: 60rem) {
-  main {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 40rem) {
-  main {
-    grid-template-columns: 1fr;
-  }
 }
 
 section {
@@ -162,11 +147,13 @@ dd {
 }
 
 dl {
-  --cols: 2;
+  --max-cols: 3;
+  --cols: 1;
   display: grid;
-  grid-template-columns: repeat(var(--cols), auto auto);
+  grid-template-columns: repeat(min(var(--cols), var(--max-cols)), auto auto);
   width: 100%;
   gap: 0.5rem 1rem;
+  overflow-wrap: anywhere;
 }
 
 dl > * {
@@ -181,9 +168,15 @@ dd {
   container-type: inline-size;
 }
 
+@container (max-width: 30rem) {
+  dl {
+    --max-cols: 2;
+  }
+}
+
 @container (max-width: 20rem) {
   dl {
-    --cols: 1 !important;
+    --max-cols: 1;
   }
 }
 
@@ -208,6 +201,11 @@ dd {
   text-align: right;
 }
 
+.logo {
+  flex-grow: 1;
+  height: 5rem;
+}
+
 @media (max-width: 40rem) {
   .title,
   .authors {
@@ -216,13 +214,24 @@ dd {
   }
 }
 
-.logo {
-  flex-grow: 1;
-  height: 5rem;
-}
-
 .icon {
   height: 1.25em;
+}
+
+.cols {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+}
+
+.cols > * {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-direction: column;
+  min-width: min(10rem, 100%);
+  gap: 1rem;
 }
 
 .chart {
