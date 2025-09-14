@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-    <title>Poster - Lab Website Template</title>
+    <title>Lab Website Template</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,8 +37,8 @@
     </header>
 
     <main>
-      <section>
-        <div class="tile">
+      <div class="section-group">
+        <section>
           <h2>Introduction</h2>
 
           <p>
@@ -46,17 +46,72 @@
             showcase their work, attract collaborators, and establish a strong
             online presence, but developing and maintaining such a website can
             be challenging and time consuming. We present
-            <strong>Lab Website Template</strong>, an open-source website
-            template specifically designed for the unique needs of labs,
-            allowing them to focus more on research activities and less on web
-            development.
+            <b>Lab Website Template</b>, an open-source website template
+            specifically designed for the unique needs of labs. It
+            <b>automates citation generation</b>, <b>repo configuration</b>, and
+            <b>anything else it can</b>, allowing labs to focus more on research
+            and less on web development and grunt work.
           </p>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <div class="tile">
+        <section>
           <h2>Approach</h2>
+
+          <p>
+            Our approach to designing and developing the template was
+            deliberately chosen. We feel it benefited our tool and could benefit
+            other research software as well. The template spent significant time
+            in "pre-release" (< v1.0), where we gathered observations and direct
+            feedback that shaped our approach.
+            <b>Some things we noticed</b>:
+          </p>
+
+          <ul>
+            <li>
+              The most <b>common pain points were about the same things</b> (<i
+                >Zipf's law</i
+              >), like setting up their repo and configuring key options.
+            </li>
+            <li>
+              <b>Labs can't waste time</b> on basic/common tasks or low-level
+              details, but still need a way to customize things when necessary.
+            </li>
+            <li>
+              Users want to see that the software is <b>actively maintained</b>,
+              greatly comforted and attracted by good support.
+            </li>
+          </ul>
+
+          <p><b>Some philosophies we adopted to address these needs</b>:</p>
+
+          <ul>
+            <li>
+              <b>Doing is better than instructing</b>. Exhaustive
+              experimentation with GitHub Actions and scripting showed we could
+              automate much more setup/config/etc. than we thought.
+            </li>
+            <li>
+              <b>Don't let issues languish</b>. We try to respond quickly and
+              discuss pros/cons of suggestions to make users feel heard, even if
+              actual resolution takes longer.
+            </li>
+            <li>
+              <b>Keep it simple and focused</b>. We diligently consider all
+              feedback, but also don't accept every suggestion at face value to
+              avoid feature/config bloat (<i>inner-platform effect</i>).
+            </li>
+            <li>
+              <b>Documentation is essential</b>. Code/comments are not enough.
+              We invested in writing a full GitBook suite with examples, guides,
+              diagrams, search, etc. Users can help themselves for common
+              issues, saving us time for more valuable work.
+            </li>
+            <li>
+              <b>Carefully structure repos</b>. We try to separate
+              "under-the-hood content" from "user content" so users can focus on
+              just what's important.
+            </li>
+          </ul>
 
           <div class="cols">
             <div>
@@ -137,60 +192,62 @@
               </dl>
             </div>
           </div>
-        </div>
+        </section>
+      </div>
+
+      <section>
+        <h2>Methods</h2>
       </section>
 
       <section>
-        <div class="tile">
-          <h2>Outcome</h2>
+        <h2>Outcome</h2>
 
-          <div id="popularity" class="chart"></div>
+        <div id="popularity" class="chart"></div>
 
-          <dl style="--cols: 3">
-            <dt>
-              <img src="./icons/book.svg" style="color: var(--red-500)" />
-              Generated
-            </dt>
-            <dd><!-- formatVal(data.generated.total) --></dd>
+        <dl style="--cols: 3">
+          <dt>
+            <img src="./icons/book.svg" style="color: var(--red-500)" />
+            Generated
+          </dt>
+          <dd><!-- formatVal(data.generated.total) --></dd>
 
-            <dt>
-              <img src="./icons/star.svg" style="color: var(--orange-500)" />
-              Stars
-            </dt>
-            <dd><!-- formatVal(data.stars.total) --></dd>
+          <dt>
+            <img src="./icons/star.svg" style="color: var(--orange-500)" />
+            Stars
+          </dt>
+          <dd><!-- formatVal(data.stars.total) --></dd>
 
-            <dt>
-              <img src="./icons/fork.svg" style="color: var(--amber-500)" />
-              Forks
-            </dt>
-            <dd><!-- formatVal(data.forks.total) --></dd>
-          </dl>
+          <dt>
+            <img src="./icons/fork.svg" style="color: var(--amber-500)" />
+            Forks
+          </dt>
+          <dd><!-- formatVal(data.forks.total) --></dd>
+        </dl>
 
-          <p>
-            The success of our design and approach is evidenced by the
-            template's widespread adoption, with considerable activity on GitHub
-            and a growing gallery of dozens of active labs using it. This work
-            reflects not just a powerful software tool, but an evolving
-            community resource that effectively serves the needs of its users.
-          </p>
+        <p>
+          The success of our design and approach is evidenced by the template's
+          widespread adoption, with considerable activity on GitHub and a
+          growing gallery of dozens of active labs using it. This work reflects
+          not just a powerful software tool, but an evolving community resource
+          that effectively serves the needs of its users.
+        </p>
 
-          <div class="gallery"></div>
+        <div class="gallery"></div>
 
-          <script>
-            /** create gallery images */
-            const gallery = document.querySelector(".gallery");
-            const count = 21;
-            gallery.style.setProperty("--cols", Math.ceil(count / 3));
-            for (let index = 0; index < count; index++) {
-              const item = document.createElement("div");
-              item.className = "gallery-item";
-              gallery.append(item);
-              const img = document.createElement("img");
-              img.src = `images/labs/${index}.jpg`;
-              item.append(img);
-            }
-          </script>
-        </div>
+        <script>
+          /** create gallery images */
+          const gallery = document.querySelector(".gallery");
+          const count = 21;
+          gallery.style.setProperty("--cols", Math.ceil(count / 3));
+          for (let index = 0; index < count; index++) {
+            const item = document.createElement("div");
+            item.className = "gallery-item";
+            gallery.append(item);
+            const img = document.createElement("img");
+            img.src = `images/labs/${index}.jpg`;
+            item.append(img);
+          }
+        </script>
       </section>
     </main>
 
@@ -201,6 +258,8 @@
         </a>
         Template home
       </div>
+
+      <a href="https://us-rse.org/usrse25">For USRSE 2025</a>
 
       <div class="qr">
         <a href="https://github.com/greenelab/lwt-poster">

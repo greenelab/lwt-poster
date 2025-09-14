@@ -1,29 +1,5 @@
 # VINCE
 
-## introduction
-
-helps lab runners focus on running their lab. takes care of citations.
-
-## approach
-
-focused ethos
-
-flexible design, deeply customizable by opening code (template, not a package), code separated as much as possible into user content vs under the hood so advanced users can customize, but without overly complex configuration (inner platform effect)
-
-respond quickly, make users feel heard
-
-being open to feedback, but not overly accepting
-
-beware of inner platform effect, feature/config bloat
-
-don't let issues languish. issues prioritized with labels always. possible solutions/ideas discussed and documented immediately, like an RFC, even if work comes later
-
-before v1.0, the template spent much time in a "pre-release" state, gathering feedback from potential users.
-
-most common pain points and questions were about the same things (Zipf's law). these included setting up the repo, and setting some key configuration options based on where and how the user decided to host their site. to that end, we sought to automate as much of this we could.
-
-full documentation suite with gitbook. comments or source code not enough. users can help themselves without bogging down maintainers with simple questions, more sustainable. started with github wiki but not enough: needed more complex UI components, searchability, section links, etc
-
 ## methods
 
 auto cite process: plugin architecture, use of manubot, metasources
@@ -40,9 +16,30 @@ proof is in the pudding, lots adoption and positive feedback
 
 template is also useful for software devs, see SET website
 
-saving time
+saving time, saving money, focusing on what matters most
 
 challenges/next evolution/next steps: migrate from jekyll to newer framework like astro (based on node, more crossplatform), increase flexibility, reduce bugs, automate even more. long issue on github discussing this.
+
+# TOPICS
+
+- Code: Share your software with the community
+  - Research software applications
+  - Impact of software on research
+  - Software and application design
+  - Code assist tools, templates, and frameworks
+- Practices: Discuss how RSEs code and how they can code better
+  - Open source development
+  - Secure research software
+  - Best practices for research software engineering
+  - Making research software sustainable
+  - Creating reproducible code
+- People: Support the development of the RSE community
+  - Leadership and management of RSE teams
+  - Training and workforce development
+  - Accessibility and belonging for RSEs
+  - Efforts to expand the RSE movement
+  - Impact of RSEs
+  - Collaboration between RSEs and researchers
 
 # FAISAL
 
