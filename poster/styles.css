@@ -1,4 +1,4 @@
-:root {
+html {
   --dark: hsl(210, 50%, 25%);
   --mid: hsl(190, 50%, 85%);
   --light: hsl(45, 100%, 97%);
@@ -9,23 +9,13 @@
   font-family: "Barlow", sans-serif;
 }
 
-@media print {
-  html {
-    font-size: 0.15in;
-  }
-}
-
-@page {
-  size: 48in 36in;
-}
-
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  padding: 1rem;
+  padding: 2rem;
   gap: 1rem;
   background: var(--dark);
 }
@@ -128,7 +118,7 @@ svg {
 }
 
 text {
-  font-size: 1rm;
+  font-size: 1rem;
 }
 
 dl,
