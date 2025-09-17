@@ -139,6 +139,19 @@ ul {
   line-height: var(--spacing);
 }
 
+ul:has(svg) {
+  list-style: none;
+}
+
+ul:has(svg) li {
+  position: relative;
+}
+
+li svg {
+  position: absolute;
+  left: -2rem;
+}
+
 .title,
 .authors {
   display: flex;
@@ -223,4 +236,10 @@ ul {
 
 .qr svg {
   height: 6rem;
+}
+
+.lucide {
+  width: unset;
+  height: 1.25em;
+  translate: 0 0.3em;
 }

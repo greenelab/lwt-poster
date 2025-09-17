@@ -65,15 +65,21 @@
 
           <ul>
             <li>
+              <i
+                data-lucide="message-circle-question-mark"
+                style="color: var(--red-500)"
+              ></i>
               The most <b>common pain points were about the same things</b> (<i
                 >Zipf's law</i
               >), like repo setup and configuring key options.
             </li>
             <li>
+              <i data-lucide="timer" style="color: var(--orange-500)"></i>
               <b>Labs can't waste time</b> on basic tasks or low-level details,
               but still need a way to customize things when necessary.
             </li>
             <li>
+              <i data-lucide="calendar-cog" style="color: var(--amber-500)"></i>
               Users want to see that software is <b>actively maintained</b>,
               greatly comforted and sold by good support.
             </li>
@@ -83,27 +89,38 @@
 
           <ul>
             <li>
+              <i data-lucide="wand" style="color: var(--green-500)"></i>
               <b>Doing is better than instructing</b>. Exhaustive
               experimentation with GitHub Actions and scripting showed we could
               automate much more setup/config/etc. than we thought.
             </li>
             <li>
+              <i
+                data-lucide="message-circle-reply"
+                style="color: var(--emerald-500)"
+              ></i>
               <b>Don't let issues languish</b>. Respond quickly and discuss
               pros/cons of suggestions to make users feel heard, even if actual
               resolution takes longer.
             </li>
             <li>
+              <i data-lucide="focus" style="color: var(--teal-500)"></i>
               <b>Keep it simple and focused</b>. Diligently consider all
               feedback, but also don't accept every suggestion at face value to
               avoid feature/config bloat (<i>inner-platform effect</i>).
             </li>
             <li>
+              <i data-lucide="book-marked" style="color: var(--cyan-500)"></i>
               <b>Documentation is essential</b>. Code/comments are not enough.
               Investing time in a full GitBook suite with examples, guides,
               diagrams, search, etc. lets users help themselves for common
               issues, saving us time for more novel work.
             </li>
             <li>
+              <i
+                data-lucide="layout-panel-top"
+                style="color: var(--sky-500)"
+              ></i>
               <b>Cleanly structure content</b>. Try to separate "under-the-hood
               content" from "user content" so users can focus on just what's
               important.
@@ -145,7 +162,7 @@
         </div>
 
         <p>
-          The success of our approach is evidenced by the template's widespread
+          The success of this approach is evidenced by the template's widespread
           adoption, with considerable activity on GitHub and a growing gallery
           of dozens of active labs using it. This work reflects not just a
           powerful software tool, but an evolving community resource that
@@ -185,8 +202,12 @@
         <a href="https://github.com/greenelab/lwt-poster">
           <img src="./images/poster-qr.svg" />
         </a>
-        Poster source
       </div>
     </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>
