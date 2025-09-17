@@ -45,7 +45,6 @@ footer {
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
-  flex-grow: 1;
   align-items: flex-start;
   gap: 1rem;
 }
@@ -113,7 +112,13 @@ h4 {
 }
 
 a {
-  color: inherit;
+  color: var(--dark);
+}
+
+@media only print {
+  a {
+    text-decoration: none;
+  }
 }
 
 strong,
@@ -200,8 +205,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(var(--cols), 1fr);
   place-items: center;
-  width: 100%;
-  filter: saturate(0.5);
+  width: calc(100% - 2rem);
 }
 
 .gallery-item {

@@ -10,16 +10,6 @@ stretching the limits of jekyll, like list component with filtering with ruby ex
 
 dockerization for consistency across platforms
 
-## outcome
-
-proof is in the pudding, lots adoption and positive feedback
-
-template is also useful for software devs, see SET website
-
-saving time, saving money, focusing on what matters most
-
-challenges/next evolution/next steps: migrate from jekyll to newer framework like astro (based on node, more crossplatform), increase flexibility, reduce bugs, automate even more. long issue on github discussing this.
-
 # TOPICS
 
 - Code: Share your software with the community
