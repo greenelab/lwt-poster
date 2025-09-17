@@ -49,6 +49,20 @@ window.addEventListener("load", async () => {
   }
 });
 
+/** wrap icons */
+window.addEventListener("load", () => {
+  /** get all icons */
+  const icons = document.querySelectorAll(".lucide");
+  for (const icon of icons) {
+    /** create wrapper element */
+    const wrapper = document.createElement("span");
+    wrapper.classList.add("icon");
+    /** copy inline styles to wrapper */
+    wrapper.setAttribute("style", icon.style.cssText);
+    wrap(icon, wrapper);
+  }
+});
+
 /** wrap element in wrapper element */
 const wrap = (element, wrapper) => {
   element.parentNode.insertBefore(wrapper, element);

@@ -5,10 +5,11 @@ html {
 
   --bold: 500;
   --spacing: 1.75;
+
+  /* font-size: 0.35in; */
 }
 
 * {
-  box-sizing: border-box;
   font-family: "Barlow", sans-serif;
 }
 
@@ -136,20 +137,8 @@ text {
 
 ul {
   margin: 0;
+  padding-left: 2rem;
   line-height: var(--spacing);
-}
-
-ul:has(svg) {
-  list-style: none;
-}
-
-ul:has(svg) li {
-  position: relative;
-}
-
-li svg {
-  position: absolute;
-  left: -2rem;
 }
 
 .title,
@@ -238,8 +227,32 @@ li svg {
   height: 6rem;
 }
 
-.lucide {
-  width: unset;
-  height: 1.25em;
-  translate: 0 0.3em;
+.icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.icon svg {
+  width: 1.1rem !important;
+  height: 1.1rem !important;
+  color: var(--light) !important;
+  stroke-width: 2.5 !important;
+}
+
+ul:has(.icon) {
+  padding-left: 2.5rem;
+  list-style: none;
+}
+
+ul:has(.icon) li {
+  position: relative;
+}
+
+li .icon {
+  position: absolute;
+  left: -2.5rem;
 }
