@@ -15,10 +15,8 @@ import { colors } from "./colors.js";
 /** re-create chart whenever needed */
 const overTimeChart = (plot, series) => {
   const chart = d3.select(`#${plot}`);
-  makeOverTimeChart(chart, series);
-  new ResizeObserver(() => makeOverTimeChart(chart, series)).observe(
-    chart.node()
-  );
+  const make = () => makeOverTimeChart(chart, series);
+  new ResizeObserver(make).observe(chart.node());
 };
 
 const makeOverTimeChart = async (chart, series) => {
@@ -61,6 +59,35 @@ const makeOverTimeChart = async (chart, series) => {
     .y0((d) => yScale(d.count))
     .y1(height);
 
+  /** mark releases */
+  for (const { name, date } of releases.list) {
+    const major = name.endsWith(".0");
+    /** line */
+    svg
+      .append("line")
+      .attr("data-series", "")
+      .attr("x1", xScale(date))
+      .attr("x2", xScale(date))
+      .attr("y1", 0)
+      .attr("y2", height)
+      .attr("stroke", "black")
+      .attr("stroke-width", "0.05rem")
+      .attr("stroke-dasharray", major ? "" : "0.1rem 0.2rem")
+      .attr("stroke-opacity", 0.25)
+      .attr("pointer-events", "none");
+    if (major && !name.startsWith("v1.1"))
+      /** label */
+      svg
+        .append("text")
+        .attr("data-series", "")
+        .text(name.replace(/(v\d+\.\d+)\.\d+/, "$1"))
+        .attr("text-anchor", "middle")
+        .attr("x", xScale(date))
+        .attr("y", 0)
+        .attr("dy", "-0.5em")
+        .attr("pointer-events", "none");
+  }
+
   /** draw data line for each series */
   for (const { data, name, color } of series) {
     /** other elements we wish to de-emphasize while hovering this series */
@@ -101,34 +128,6 @@ const makeOverTimeChart = async (chart, series) => {
       });
   }
 
-  /** mark releases */
-  for (const { name, date } of releases.list) {
-    const major = name.endsWith(".0");
-    /** line */
-    svg
-      .append("line")
-      .attr("data-series", "")
-      .attr("x1", xScale(date))
-      .attr("x2", xScale(date))
-      .attr("y1", 0)
-      .attr("y2", height)
-      .attr("stroke", "var(--dark)")
-      .attr("stroke-width", major ? "0.1rem" : "0.02rem")
-      .attr("stroke-opacity", 0.1)
-      .attr("pointer-events", "none");
-    if (major && !name.startsWith("v1.1"))
-      /** label */
-      svg
-        .append("text")
-        .attr("data-series", "")
-        .text(name.replace(/(v\d+\.\d+)\.\d+/, "$1"))
-        .attr("text-anchor", "middle")
-        .attr("x", xScale(date))
-        .attr("y", 0)
-        .attr("dy", "-0.5em")
-        .attr("pointer-events", "none");
-  }
-
   /** data maxes */
   const maxX = d3.max(flatData.map((d) => d.date));
   const maxY = d3
@@ -151,7 +150,7 @@ const makeOverTimeChart = async (chart, series) => {
       .attr("dx", "-0.5rem")
       .attr("y", () => yScale(maxY[index]))
       .attr("text-anchor", "end")
-      .attr("alignment-baseline", "hanging")
+      .attr("dominant-baseline", "hanging")
       .attr("pointer-events", "none");
 
   /** axes */
@@ -223,12 +222,12 @@ overTimeChart("activity", [
 overTimeChart("support", [
   {
     data: issues.overTime,
-    name: "Issues",
+    name: `Issues (${data.issues.total})`,
     color: colors.emerald["500"],
   },
   {
     data: discussions.overTime,
-    name: "Discussions",
+    name: `Discussions (${data.discussions.total})`,
     color: colors.lime["500"],
   },
 ]);

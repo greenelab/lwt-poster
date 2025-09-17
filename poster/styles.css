@@ -3,6 +3,7 @@ html {
   --mid: hsl(190, 50%, 85%);
   --light: hsl(45, 100%, 97%);
 
+  --bold: 500;
   --spacing: 1.75;
 }
 
@@ -80,7 +81,7 @@ h4 {
   justify-content: center;
   margin: 0;
   gap: 0.5rem;
-  font-weight: 500;
+  font-weight: var(--bold);
 }
 
 h1 {
@@ -138,55 +139,6 @@ ul {
   line-height: var(--spacing);
 }
 
-dl,
-dt,
-dd {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-dt,
-dd {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-dl {
-  --max-cols: 3;
-  --cols: 1;
-  display: grid;
-  grid-template-columns: repeat(min(var(--cols), var(--max-cols)), auto auto);
-  width: 100%;
-  gap: 0.5rem 1rem;
-  overflow-wrap: anywhere;
-}
-
-dl > * {
-  min-width: 0;
-}
-
-dd {
-  font-weight: 500;
-}
-
-:has(> dl) {
-  container-type: inline-size;
-}
-
-@container (max-width: 30rem) {
-  dl {
-    --max-cols: 2;
-  }
-}
-
-@container (max-width: 20rem) {
-  dl {
-    --max-cols: 1;
-  }
-}
-
 .title,
 .authors {
   display: flex;
@@ -217,25 +169,29 @@ dd {
 }
 
 .cols {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  align-items: center;
   width: 100%;
-  gap: 1rem;
-}
-
-.cols > * {
-  display: flex;
-  flex-grow: 1;
-  flex-basis: 0;
-  flex-direction: column;
-  min-width: min(10rem, 100%);
-  gap: 1rem;
+  gap: 1rem 2rem;
 }
 
 .chart {
   aspect-ratio: 16 / 9;
-  width: 0;
-  min-width: 100%;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+}
+
+.stats > :where(:nth-child(2), :nth-child(3), :nth-child(4), :nth-child(7)) {
+  font-weight: var(--bold);
+}
+
+.stats > * {
+  min-width: 0;
 }
 
 .gallery {

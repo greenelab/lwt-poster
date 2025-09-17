@@ -46,11 +46,11 @@
             showcase their work, attract collaborators, and establish a strong
             online presence, but developing and maintaining such a website can
             be challenging and time consuming. We present
-            <b>Lab Website Template</b>, an open-source website template
-            specifically designed for the unique needs of labs. It
-            <b>automates citation generation</b>, <b>repo configuration</b>, and
-            <b>anything else it can</b>, allowing labs to focus more on research
-            and less on web development and grunt work.
+            <b>Lab Website Template</b>, an open-source tool designed for the
+            unique needs of labs. It <b>automates citation generation</b>,
+            <b>repo configuration</b>, and <b>anything else it can</b>, allowing
+            labs to focus more on research and less on web development and grunt
+            work.
           </p>
         </section>
 
@@ -58,11 +58,8 @@
           <h2>Approach</h2>
 
           <p>
-            Our approach to designing and developing the template was
-            deliberately chosen. We feel it benefited our tool and could benefit
-            other research software as well. The template spent significant time
-            in "pre-release" (< v1.0), where we gathered observations and direct
-            feedback that shaped our approach.
+            We spent significant time in <i>pre-release</i> (< v1.0), where we
+            gathered observations and direct feedback that shaped our approach.
             <b>Some things we noticed</b>:
           </p>
 
@@ -70,15 +67,15 @@
             <li>
               The most <b>common pain points were about the same things</b> (<i
                 >Zipf's law</i
-              >), like setting up their repo and configuring key options.
+              >), like repo setup and configuring key options.
             </li>
             <li>
-              <b>Labs can't waste time</b> on basic/common tasks or low-level
-              details, but still need a way to customize things when necessary.
+              <b>Labs can't waste time</b> on basic tasks or low-level details,
+              but still need a way to customize things when necessary.
             </li>
             <li>
-              Users want to see that the software is <b>actively maintained</b>,
-              greatly comforted and attracted by good support.
+              Users want to see that software is <b>actively maintained</b>,
+              greatly comforted and sold by good support.
             </li>
           </ul>
 
@@ -91,107 +88,32 @@
               automate much more setup/config/etc. than we thought.
             </li>
             <li>
-              <b>Don't let issues languish</b>. We try to respond quickly and
-              discuss pros/cons of suggestions to make users feel heard, even if
-              actual resolution takes longer.
+              <b>Don't let issues languish</b>. Respond quickly and discuss
+              pros/cons of suggestions to make users feel heard, even if actual
+              resolution takes longer.
             </li>
             <li>
-              <b>Keep it simple and focused</b>. We diligently consider all
+              <b>Keep it simple and focused</b>. Diligently consider all
               feedback, but also don't accept every suggestion at face value to
               avoid feature/config bloat (<i>inner-platform effect</i>).
             </li>
             <li>
               <b>Documentation is essential</b>. Code/comments are not enough.
-              We invested in writing a full GitBook suite with examples, guides,
-              diagrams, search, etc. Users can help themselves for common
-              issues, saving us time for more valuable work.
+              Investing time in a full GitBook suite with examples, guides,
+              diagrams, search, etc. lets users help themselves for common
+              issues, saving us time for more novel work.
             </li>
             <li>
-              <b>Carefully structure repos</b>. We try to separate
-              "under-the-hood content" from "user content" so users can focus on
-              just what's important.
+              <b>Cleanly structure content</b>. Try to separate "under-the-hood
+              content" from "user content" so users can focus on just what's
+              important.
             </li>
           </ul>
 
-          <div class="cols">
-            <div>
-              <div id="activity" class="chart"></div>
-
-              <dl>
-                <dt>
-                  <img
-                    src="./icons/commit.svg"
-                    style="color: var(--cyan-500)"
-                  />
-                  Commits
-                </dt>
-                <dd><!-- formatVal(data.commits.total) --></dd>
-
-                <dt>
-                  <img src="./icons/pr.svg" style="color: var(--blue-500)" />
-                  PRs
-                </dt>
-                <dd><!-- formatVal(data.pullRequests.total) --></dd>
-
-                <dt>
-                  <img
-                    src="./icons/bandage.svg"
-                    style="color: var(--cyan-500)"
-                  />
-                  Patch Releases
-                </dt>
-                <dd><!-- formatVal(data.releases.totalPatch) --></dd>
-
-                <dt>
-                  <img
-                    src="./icons/rocket.svg"
-                    style="color: var(--blue-500)"
-                  />
-                  Minor Releases
-                </dt>
-                <dd><!-- formatVal(data.releases.totalMinor) --></dd>
-              </dl>
-            </div>
-
-            <div>
-              <div id="support" class="chart"></div>
-
-              <dl>
-                <dt>
-                  <img
-                    src="./icons/bug.svg"
-                    style="color: var(--emerald-500)"
-                  />Issues
-                </dt>
-                <dd>
-                  <!-- formatVal(data.issues.total) -->
-                </dd>
-
-                <dt>Med. Response</dt>
-                <dd><!-- formatHrs(data.issues.response.med) --></dd>
-
-                <dt>Med. Resolution</dt>
-                <dd><!-- formatHrs(data.issues.resolution.med) --></dd>
-
-                <dt>
-                  <img
-                    src="./icons/question.svg"
-                    style="color: var(--lime-500)"
-                  />
-                  Discussions
-                </dt>
-                <dd>
-                  <!-- formatVal(data.discussions.total) -->
-                </dd>
-
-                <dt>Med. Response</dt>
-                <dd><!-- formatHrs(data.discussions.response.med) --></dd>
-
-                <dt>Med. Resolution</dt>
-                <dd><!-- formatHrs(data.discussions.resolution.med) --></dd>
-              </dl>
-            </div>
-          </div>
+          <p>
+            We feel our approach benefited our tool and could benefit other
+            research software as well.
+          </p>
         </section>
       </div>
 
@@ -202,34 +124,32 @@
       <section>
         <h2>Outcome</h2>
 
-        <div id="popularity" class="chart"></div>
+        <div class="cols">
+          <div id="popularity" class="chart"></div>
 
-        <dl style="--cols: 3">
-          <dt>
-            <img src="./icons/book.svg" style="color: var(--red-500)" />
-            Generated
-          </dt>
-          <dd><!-- formatVal(data.generated.total) --></dd>
+          <div id="support" class="chart"></div>
 
-          <dt>
-            <img src="./icons/star.svg" style="color: var(--orange-500)" />
-            Stars
-          </dt>
-          <dd><!-- formatVal(data.stars.total) --></dd>
+          <div id="activity" class="chart"></div>
 
-          <dt>
-            <img src="./icons/fork.svg" style="color: var(--amber-500)" />
-            Forks
-          </dt>
-          <dd><!-- formatVal(data.forks.total) --></dd>
-        </dl>
+          <div class="stats">
+            <div>Median...</div>
+            <div>Response</div>
+            <div>Resolution</div>
+            <div>Issue</div>
+            <div><!-- formatHrs(data.issues.response.med) --></div>
+            <div><!-- formatHrs(data.issues.resolution.med) --></div>
+            <div>Discussion</div>
+            <div><!-- formatHrs(data.discussions.response.med) --></div>
+            <div><!-- formatHrs(data.discussions.resolution.med) --></div>
+          </div>
+        </div>
 
         <p>
-          The success of our design and approach is evidenced by the template's
-          widespread adoption, with considerable activity on GitHub and a
-          growing gallery of dozens of active labs using it. This work reflects
-          not just a powerful software tool, but an evolving community resource
-          that effectively serves the needs of its users.
+          The success of our approach is evidenced by the template's widespread
+          adoption, with considerable activity on GitHub and a growing gallery
+          of dozens of active labs using it. This work reflects not just a
+          powerful software tool, but an evolving community resource that
+          effectively serves the needs of its users.
         </p>
 
         <div class="gallery"></div>
