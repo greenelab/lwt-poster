@@ -27,7 +27,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   min-height: 100%;
   margin: 0;
   padding: 2rem;
@@ -36,22 +36,44 @@ body {
   font-family: var(--sans);
 }
 
-header,
-footer {
+header {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
   width: 100%;
-  gap: 1rem 2rem;
+  gap: 2rem;
   color: white;
   line-height: 1;
 }
 
-@media (max-width: 40rem) {
-  header,
-  footer {
+@media (max-width: 100rem) {
+  header {
     grid-template-columns: 1fr;
   }
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  color: white;
+}
+
+@media (max-width: 40rem) {
+  footer {
+    flex-direction: column;
+  }
+}
+
+header a,
+footer a {
+  color: inherit;
+}
+
+header {
+  padding: 1rem;
 }
 
 main {
@@ -95,19 +117,22 @@ h4 {
   margin: 0;
   gap: 0.5rem;
   font-weight: var(--medium);
+  text-wrap: balance;
 }
 
 h1 {
   justify-content: flex-start;
-  font-size: 1.5rem;
+  font-size: 2.25rem;
   letter-spacing: 0.2rem;
+  text-align: center;
   text-transform: uppercase;
 }
 
 h2 {
   width: calc(100% + 2rem);
-  height: 2.5rem;
+  min-height: 2.5rem;
   margin-top: -1rem;
+  padding: 0.5rem;
   background: var(--mid);
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
@@ -126,6 +151,7 @@ h4 {
 
 a {
   color: var(--dark);
+  text-underline-offset: 0.15rem;
 }
 
 @media only print {
@@ -189,37 +215,25 @@ pre {
   font: inherit;
 }
 
-.title,
-.authors {
+.title {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem 1rem;
-  text-wrap: balance;
-}
-
-.authors {
-  text-align: right;
-}
-
-@media (max-width: 40rem) {
-  .title,
-  .authors {
-    align-items: center;
-    text-align: center;
-  }
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
 }
 
 .logo {
-  height: 0;
-  min-height: 100%;
-  scale: 1.5;
+  height: 4rem;
 }
 
-@media (max-width: 60rem) {
-  .logo {
-    height: 5rem;
-    scale: 1;
-  }
+.authors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  text-align: center;
+  text-wrap: balance;
 }
 
 .cols {
@@ -231,46 +245,46 @@ pre {
 }
 
 .icon {
+  height: 1em;
+  stroke-width: 2.5;
+  translate: 0 0.1rem;
+}
+
+.pill {
   display: inline-grid;
   place-items: center;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 999px;
   background: currentColor;
 }
 
-.icon svg {
-  width: 1.1rem !important;
-  height: 1.1rem !important;
-  color: var(--light) !important;
-  stroke-width: 2.5 !important;
+.pill .icon {
+  translate: 0 0;
+  color: var(--light);
 }
 
-ul:has(.icon) {
+ul:has(.pill) {
   padding-left: 2.5rem;
   list-style: none;
 }
 
-ul:has(.icon) li {
+ul:has(.pill) li {
   position: relative;
+}
+
+ul .pill {
+  position: absolute;
+  top: 0.15rem;
+  left: -2rem;
 }
 
 .stack {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  place-items: center;
-  margin-left: 1rem;
-  float: right;
+  grid-template-columns: repeat(2, 1.5rem auto auto);
+  align-items: center;
+  width: 100%;
   gap: 1rem;
-}
-
-.stack > * {
-  height: 2rem;
-}
-
-li .icon {
-  position: absolute;
-  left: -2.5rem;
 }
 
 .plugins {
@@ -333,24 +347,25 @@ code:not(.code-block > code) {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(11, 1fr);
+  grid-auto-rows: 1fr;
   grid-auto-flow: dense;
   place-items: center;
-  width: calc(100% - 2rem);
 }
 
-.gallery > :first-child {
-  grid-column: span 5;
-  grid-row: span 5;
-}
-
-.gallery-item {
+.gallery > * {
   aspect-ratio: 1 / 1;
   width: 100%;
   overflow: hidden;
 }
 
-.gallery img {
+.gallery > :first-child {
+  grid-row: span 3;
+  grid-column: span 4;
+  aspect-ratio: 4 / 3;
+}
+
+.gallery > * > img {
   width: 100%;
   height: 100%;
   object-fit: cover;

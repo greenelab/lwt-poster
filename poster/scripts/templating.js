@@ -25,7 +25,7 @@ window.addEventListener("data", () => {
   }
 });
 
-/** trim code blocksw */
+/** trim code blocks */
 window.addEventListener("load", () => {
   const blocks = document.querySelectorAll(".code-block > code > pre");
   for (const block of blocks) block.innerHTML = block.innerHTML.trim();
@@ -42,9 +42,11 @@ window.addEventListener("load", async () => {
     /** insert svg source as new node */
     img.insertAdjacentHTML("beforebegin", content);
     /** get new node */
-    const svg = img.previousElementSibling;
+    let svg = img.previousElementSibling;
     /** remove certain attributes on svg */
     for (const attr of ["width", "height"]) svg.removeAttribute(attr);
+    /** handle icons */
+    if (img.src.includes("icons")) svg.classList.add("icon");
     /** transfer over attributes from img to svg */
     for (const { name, value } of img.attributes) svg.setAttribute(name, value);
     /** delete img tag */
@@ -52,17 +54,16 @@ window.addEventListener("load", async () => {
   }
 });
 
-/** wrap icons */
+/** create gallery images */
 window.addEventListener("load", () => {
-  /** get all icons */
-  const icons = document.querySelectorAll(".lucide");
-  for (const icon of icons) {
-    /** create wrapper element */
-    const wrapper = document.createElement("span");
-    wrapper.classList.add("icon");
-    /** copy inline styles to wrapper */
-    wrapper.setAttribute("style", icon.style.cssText);
-    wrap(icon, wrapper);
+  const gallery = document.querySelector(".gallery");
+  const count = 20;
+  for (let index = 0; index <= count; index++) {
+    const item = document.createElement("div");
+    gallery.append(item);
+    const img = document.createElement("img");
+    img.src = `images/labs/${index}.jpg`;
+    item.append(img);
   }
 });
 
@@ -70,4 +71,5 @@ window.addEventListener("load", () => {
 const wrap = (element, wrapper) => {
   element.parentNode.insertBefore(wrapper, element);
   wrapper.append(element);
+  return wrapper;
 };

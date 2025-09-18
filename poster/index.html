@@ -16,18 +16,18 @@
 
     <link rel="stylesheet" href="./styles.css" />
 
-    <script type="module" src="./scripts/charts.js"></script>
-    <script type="module" src="./scripts/templating.js"></script>
+    <script type="module" src="scripts/charts.js"></script>
+    <script type="module" src="scripts/templating.js"></script>
   </head>
 
   <body>
     <header>
       <div class="title">
-        <h1>Lab Website Template</h1>
-        <div>An easy, automatic, flexible website template for labs</div>
+        <img class="logo" src="images/logo.svg" />
+        Lab Website Template
       </div>
 
-      <img class="logo" src="./images/logo.svg" />
+      <h1>An easy, automatic, flexible website template for labs</h1>
 
       <div class="authors">
         <div>Vincent Rubinetti, Casey Greene</div>
@@ -43,12 +43,12 @@
           <p>
             Research labs need a professional and up-to-date website to showcase
             their work, attract collaborators, and establish an online presence,
-            but developing and maintaining such a website can be challenging and
-            time consuming. <b>Lab Website Template</b> is an open-source tool
-            designed for the unique needs of labs. It
+            but developing and maintaining one can be challenging and time
+            consuming. <b>Lab Website Template</b> is an open-source tool
+            designed specifically for labs. It
             <b>automates citation generation</b>, <b>repo configuration</b>, and
-            <b>anything else it can</b>, allowing labs to focus more on research
-            and less on web development and grunt work.
+            <b>anything else it can</b>, letting labs focus more on research and
+            less on web development and grunt work.
           </p>
         </section>
 
@@ -56,14 +56,16 @@
           <h2>Approach</h2>
 
           <p>
-            We spent significant time in <i>pre-release</i> (< v1.0) where we
-            gathered observations and direct feedback that shaped our approach.
+            Before v1.0, we gathered many observations and direct feedback that
+            shaped our approach.
             <b>Some things we noticed</b>:
           </p>
 
           <ul>
             <li>
-              <i data-lucide="box" style="color: var(--red-500)"></i>
+              <span class="pill" style="color: var(--red-500)">
+                <img src="images/icons/box.svg" />
+              </span>
               The most
               <b
                 >common pain points were about the same things
@@ -73,14 +75,18 @@
               >, like repo setup and configuring key options.
             </li>
             <li>
-              <i data-lucide="clock" style="color: var(--orange-500)"></i>
-              <b>Labs can't waste time</b> on basic tasks or low-level details,
-              but still need a way to customize things when necessary.
+              <span class="pill" style="color: var(--orange-500)">
+                <img src="images/icons/clock.svg" />
+              </span>
+              <b>Labs can't waste time</b> on basics or low-level details, but
+              still need ways to customize things when needed.
             </li>
             <li>
-              <i data-lucide="refresh-ccw" style="color: var(--amber-500)"></i>
+              <span class="pill" style="color: var(--amber-500)">
+                <img src="images/icons/refresh-ccw.svg" />
+              </span>
               Users want to see that software is <b>actively maintained</b>,
-              greatly comforted and sold good support.
+              greatly sold by good support.
             </li>
           </ul>
 
@@ -88,20 +94,26 @@
 
           <ul>
             <li>
-              <i data-lucide="play" style="color: var(--green-500)"></i>
-              <b>Doing is better than instructing</b>. Exhaustive
-              experimentation with GitHub Actions and scripting showed we could
-              automate much more setup/config/etc. than we thought.
+              <span class="pill" style="color: var(--green-500)">
+                <img src="images/icons/play.svg" />
+              </span>
+              <b>Doing is better than instructing</b>. With GitHub Actions and
+              scripting, we could automate much more setup/config/etc. than we
+              thought.
             </li>
             <li>
-              <i data-lucide="reply" style="color: var(--emerald-500)"></i>
+              <span class="pill" style="color: var(--emerald-500)">
+                <img src="images/icons/reply.svg" />
+              </span>
               <b>Don't let issues languish</b>. We respond quickly and discuss
-              pros/cons of suggestions to make users feel heard, even if actual
-              resolution takes longer.
+              suggestions to make users feel heard, even if actual resolution
+              takes longer.
             </li>
             <li>
-              <i data-lucide="crosshair" style="color: var(--teal-500)"></i>
-              <b>Keep it simple and focused</b>. We diligently consider all
+              <span class="pill" style="color: var(--teal-500)">
+                <img src="images/icons/crosshair.svg" />
+              </span>
+              <b>Keep it simple and focused</b>. We earnestly consider all
               feedback, but also don't accept every suggestion at face value to
               avoid feature/config bloat (<a
                 href="https://en.wikipedia.org/wiki/Inner-platform_effect"
@@ -109,60 +121,82 @@
               >).
             </li>
             <li>
-              <i data-lucide="book" style="color: var(--cyan-500)"></i>
-              <b>Documentation is essential</b>. Code/comments are not enough.
-              We invested in writing a full
+              <span class="pill" style="color: var(--cyan-500)">
+                <img src="images/icons/book.svg" />
+              </span>
+              <b>Docs are essential</b>. Code/comments are not enough. We wrote
               <a href="https://greene-lab.gitbook.io/lab-website-template-docs"
-                >GitBook suite</a
+                >dedicated GitBook docs</a
               >
-              with examples, guides, diagrams, search, etc., which lets users
-              help themselves for common issues and saves us time in the long
-              run.
+              with examples, guides, diagrams, search, etc. that lets users help
+              themselves for common things and saves us time in the long run.
             </li>
             <li>
-              <i
-                data-lucide="layout-panel-top"
-                style="color: var(--sky-500)"
-              ></i>
+              <span class="pill" style="color: var(--sky-500)">
+                <img src="images/icons/layout-panel-top.svg" />
+              </span>
               <b>Cleanly structure content</b>. We separate "under-the-hood
               content" from "user content" so users can focus on just what's
               important.
             </li>
           </ul>
-
-          <p>
-            We feel our approach benefited our tool and could benefit other
-            research software as well.
-          </p>
         </section>
 
         <section>
-          <h2>Tech Stack</h2>
+          <h2>Tech stack</h2>
 
-          <p>
-            <span class="stack">
-              <img src="images/jekyll.svg" />
-              <img src="images/github.svg" />
-              <img src="images/markdown.svg" />
-              <img src="images/ruby.svg" />
-              <img src="images/python.svg" />
-              <img src="images/docker.svg" />
+          <div class="stack">
+            <img src="images/logos/jekyll.svg" />
+            <b><a href="https://jekyllrb.com/">Jekyll</a></b>
+            <span>Static site generator, long/widely supported</span>
+
+            <img src="images/logos/github.svg" />
+            <b>GitHub</b>
+            <span>Pages for hosting and Actions for automation</span>
+
+            <img src="images/logos/markdown.svg" />
+            <b>Markdown</b>
+            <span>
+              For user content, along with
+              <a href="https://shopify.github.io/liquid/">Liquid syntax</a>
             </span>
-            We use the veteran static-site generator
-            <a href="https://jekyllrb.com/">Jekyll</a>. We target the GitHub
-            platform, using Pages for hosting and Actions for automation. Users
-            write content in Markdown and
-            <a href="https://shopify.github.io/liquid/">Liquid syntax</a>. The
-            cite process uses Python for researchers to modify more easily. For
-            users who like to run things locally, a Docker container provides
-            cross-platform consistency and single installation.
-          </p>
+
+            <img src="images/logos/python.svg" />
+            <b>Python</b>
+            <span>For cite-process, easy to modify for researchers</span>
+
+            <img src="images/logos/docker.svg" />
+            <b>Docker</b>
+            <span>
+              Runs template locally, cross-platform and single install
+            </span>
+
+            <img src="images/logos/ruby.svg" />
+            <b>Ruby</b>
+            <span>Data filtering and other misc.</span>
+          </div>
         </section>
       </div>
 
       <div class="section-group">
         <section>
-          <h2>Citations</h2>
+          <h2>Auto-cite process</h2>
+
+          <p>
+            Who wants to manually manage citations?<b>
+              Simple inputs
+              <img
+                src="images/icons/arrow-right.svg"
+                style="color: var(--gray-500)"
+              />
+              Automation magic
+              <img
+                src="images/icons/arrow-right.svg"
+                style="color: var(--gray-500)"
+              />
+              Rich outputs
+            </b>
+          </p>
 
           <div class="cols">
             <div class="code-block">
@@ -174,27 +208,23 @@
               </code>
             </div>
 
-            <p>
-              User inputs their "<b>meta-sources</b>" as a
-              <b>simple list of IDs</b>.
-            </p>
+            <p>User inputs "<b>meta-sources</b>" as <b>simple IDs</b>.</p>
 
             <div class="plugins">
               <figure>
-                <img src="images/orcid.svg" height="3rem" />
+                <img src="images/logos/orcid.svg" height="3rem" />
               </figure>
               <figure>
-                <img src="images/google-scholar.svg" height="3rem" />
+                <img src="images/logos/google-scholar.svg" height="3rem" />
               </figure>
               <figure>
-                <img src="images/pubmed.svg" height="3rem" />
+                <img src="images/logos/pubmed.svg" height="3rem" />
               </figure>
             </div>
 
             <p>
-              We automatically "<b>expand</b>" these into <b>full lists</b> of
-              sources from ORCID, Google Scholar, or PubMed (extendable with
-              plugins)
+              We <b>auto-expand</b> these into <b>full lists</b> of sources from
+              ORCID, Google Scholar, or PubMed (extendable with plugins).
             </p>
 
             <div class="code-block">
@@ -209,20 +239,20 @@
             </div>
 
             <p>
-              User inputs their "<b>manual</b>", hand-picked <b>sources</b> as
+              User inputs "<b>manual</b>", hand-picked <b>sources</b> as
               <b>simple IDs</b> (<a
                 href="https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155"
                 >2k+ supported types</a
-              >), along with extra rich details.
+              >), along with extra, rich details.
             </p>
 
             <figure>
-              <img src="images/manubot.svg" height="5rem" />
+              <img src="images/logos/manubot.svg" height="5rem" />
             </figure>
 
             <p>
               We use <a href="https://manubot.org"><b>Manubot</b></a> to
-              generate <b>full citations details</b> &ndash; title, authors,
+              <b>auto-generate full citation details</b> &ndash; title, authors,
               date, publisher, etc. &ndash; for all sources.
             </p>
 
@@ -248,13 +278,26 @@
         </section>
 
         <section>
-          <h2>Setup/Previews/Deployment/Etc.</h2>
+          <h2>Setup, previews, deployment</h2>
         </section>
       </div>
 
       <div class="section-group">
         <section>
           <h2>Outcome</h2>
+
+          <p>
+            We believe <b>our approach lead to an effective tool</b>, evidenced
+            by the template's growing adoption on GitHub, direct positive
+            feedback, and gallery of active labs using it.
+          </p>
+
+          <p>
+            This work has likely saved time and money for research labs and
+            <a href="https://cu-dbmi.github.io/set-website">other groups</a>,
+            reflecting not just a powerful tool, but a community resource that
+            serves the needs of its users.
+          </p>
 
           <div class="cols">
             <div id="popularity" class="chart"></div>
@@ -277,75 +320,40 @@
           </div>
 
           <p>
-            The success of this approach is evidenced by the template's
-            widespread adoption, with considerable activity on GitHub and a
-            growing gallery of active labs using it.
-          </p>
-
-          <div class="gallery">
-            <img src="images/screenshot.png" />
-          </div>
-
-          <script>
-            /** create gallery images */
-            const gallery = document.querySelector(".gallery");
-            const count = 20;
-            for (let index = 0; index < count; index++) {
-              const item = document.createElement("div");
-              item.className = "gallery-item";
-              gallery.append(item);
-              const img = document.createElement("img");
-              img.src = `images/labs/${index}.jpg`;
-              item.append(img);
-            }
-          </script>
-
-          <p>
-            The template has likely saved a great deal of time and money for
-            research labs and
-            <a href="https://cu-dbmi.github.io/set-website">other groups</a>.
-            This work reflects not just a powerful tool, but an evolving
-            community resource that effectively meets the needs of its users.
-          </p>
-
-          <p>
             The
             <a
               href="https://github.com/greenelab/lab-website-template/issues/278"
               >next evolution of this template</a
             >
-            will seek to offer even more convenience, simplicity, robustness,
-            and flexibility. We will need to build it with a more modern and
-            maintained site generator with type safety, as we have already
-            stretched the limits of what is possible in Jekyll. We will aim to
-            make upgrading a user's template version an automatic process, and
-            make citations even more seamless to include.
+            would focus on even more convenience, simplicity, robustness, and
+            flexibility, like using a modern framework with type-safety, making
+            template version upgrades automatic, and making citations even more
+            seamless.
           </p>
         </section>
+
+        <div class="gallery">
+          <img src="images/screenshot.png" />
+        </div>
       </div>
     </main>
 
     <footer>
       <figure>
         <a href="https://greene-lab.gitbook.io/lab-website-template-docs">
-          <img src="./images/docs-qr.svg" height="8rem" />
+          <img src="images/docs-qr.svg" height="8rem" />
         </a>
-        <figcaption>Template home</figcaption>
+        <figcaption>HOME</figcaption>
       </figure>
 
       <a href="https://us-rse.org/usrse25">For USRSE 2025</a>
 
       <figure>
         <a href="https://github.com/greenelab/lwt-poster">
-          <img src="./images/poster-qr.svg" height="8rem" />
+          <img src="images/poster-qr.svg" height="8rem" />
         </a>
-        <figcaption>Poster source</figcaption>
+        <figcaption>POSTER</figcaption>
       </figure>
     </footer>
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
   </body>
 </html>
