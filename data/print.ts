@@ -2,14 +2,11 @@ import { exec, execSync } from "child_process";
 import playwright from "playwright";
 import stripAnsi from "strip-ansi";
 
-
 /** pdf dpi */
 const dpi = 96;
 /** dimensions, in inches */
 const width = 48 * dpi;
 const height = 36 * dpi;
-/** print font size */
-const fontSize = "0.35in";
 
 /** set up browser instance, page, etc */
 const browser = await playwright.chromium.launch({ headless: false });
@@ -38,12 +35,6 @@ await page.goto(url + "/poster");
 /** set page styles */
 await page.emulateMedia({ media: "print" });
 await page.setViewportSize({ width, height });
-await page
-  .locator("html")
-  .evaluate(
-    (element, fontSize) => (element.style.fontSize = fontSize),
-    fontSize
-  );
 
 /** wait for app to fully load and render */
 await page.waitForTimeout(3 * 1000);

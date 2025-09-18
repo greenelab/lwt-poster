@@ -136,88 +136,124 @@
             research software as well.
           </p>
         </section>
+
+        <section>
+          <h2>Tech Stack</h2>
+
+          <p>
+            <span class="stack">
+              <img src="images/jekyll.svg" />
+              <img src="images/github.svg" />
+              <img src="images/markdown.svg" />
+              <img src="images/ruby.svg" />
+              <img src="images/python.svg" />
+              <img src="images/docker.svg" />
+            </span>
+            We use the veteran static-site generator
+            <a href="https://jekyllrb.com/">Jekyll</a>. We target the GitHub
+            platform, using Pages for hosting and Actions for automation. Users
+            write content in Markdown and
+            <a href="https://shopify.github.io/liquid/">Liquid syntax</a>. The
+            cite process uses Python for researchers to modify more easily. For
+            users who like to run things locally, a Docker container provides
+            cross-platform consistency and single installation.
+          </p>
+        </section>
       </div>
 
-      <section>
-        <h2>Methods</h2>
+      <div class="section-group">
+        <section>
+          <h2>Citations</h2>
 
-        <h3>Citations</h3>
-
-        <div class="cols">
-          <div class="code-block">
-            <div><code>orcid.yaml</code></div>
-            <code>
-              <pre>
+          <div class="cols">
+            <div class="code-block">
+              <div><code>orcid.yaml</code></div>
+              <code>
+                <pre>
 - <span class="key">orcid</span>: <span class="value">0000-1111-2222-3333</span>
               </pre>
-            </code>
-          </div>
+              </code>
+            </div>
 
-          <p>
-            User inputs their "<b>meta-sources</b>" as a
-            <b>simple list of IDs</b>.
-          </p>
+            <p>
+              User inputs their "<b>meta-sources</b>" as a
+              <b>simple list of IDs</b>.
+            </p>
 
-          <div class="plugins">
-            <figure>
-              <img src="images/orcid.svg" height="3rem" />
-            </figure>
-            <figure>
-              <img src="images/google-scholar.svg" height="3rem" />
-            </figure>
-            <figure>
-              <img src="images/pubmed.svg" height="3rem" />
-            </figure>
-          </div>
+            <div class="plugins">
+              <figure>
+                <img src="images/orcid.svg" height="3rem" />
+              </figure>
+              <figure>
+                <img src="images/google-scholar.svg" height="3rem" />
+              </figure>
+              <figure>
+                <img src="images/pubmed.svg" height="3rem" />
+              </figure>
+            </div>
 
-          <p>
-            We automatically "<b>expand</b>" these into <b>full lists</b> of
-            sources from ORCID, Google Scholar, or PubMed APIs. A modular plugin
-            architecture lets power users add support for other meta sources.
-          </p>
+            <p>
+              We automatically "<b>expand</b>" these into <b>full lists</b> of
+              sources from ORCID, Google Scholar, or PubMed. Power users can
+              write plugins to support others.
+            </p>
 
-          <div class="code-block">
-            <div><code>sources.yaml</code></div>
-            <code>
-              <pre>
+            <div class="code-block">
+              <div><code>sources.yaml</code></div>
+              <code>
+                <pre>
 - <span class="key">id</span>: <span class="value">doi:12345</span>
   <span class="key">image</span>: <span class="value">thumbnail.jpg</span>
-- <span class="key">id</span>: <span class="value">pmid:12345</span>
   <span class="key">tags</span>: <span class="value">biology, data</span>
-
-<span class="comment"># ...another source</span>
               </pre>
-            </code>
+              </code>
+            </div>
+
+            <p>
+              User inputs their "<b>manual</b>", hand-picked <b>sources</b> as
+              <b>simple IDs</b> (<a
+                href="https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155"
+                >2,000+ types supported</a
+              >), along with additional rich details like images, tags, buttons,
+              and more.
+            </p>
+
+            <figure>
+              <img src="images/manubot.svg" height="5rem" />
+            </figure>
+
+            <p>
+              We use <a href="https://manubot.org"><b>Manubot</b></a> to
+              generate <b>full citations details</b> &ndash; title, authors,
+              date, publisher, etc. &ndash; for all sources.
+            </p>
+
+            <div class="code-block">
+              <div><code>research.md</code></div>
+              <code>
+                <pre>
+{%
+  <span class="key">include</span> <span class="value">list.html</span>
+  <span class="key">data</span>="<span class="value">citations</span>"
+  <span class="key">filter</span>="<span class="value">category == 'featured'</span>"
+%}
+              </pre>
+              </code>
+            </div>
+
+            <p>
+              User includes citations in their site wherever/however they like
+              with the <b>list component</b>, which can filter data with
+              <b>any Ruby expression</b> (more flexible and readable than Liquid
+              syntax).
+            </p>
           </div>
+        </section>
 
-          <p>
-            User inputs their "<b>manual</b>", hand-picked <b>sources</b> as
-            <b>simple IDs</b>, along with additional rich details like images,
-            tags, buttons, and more.
-          </p>
-
-          <figure>
-            <img src="images/manubot.svg" height="6rem" />
-            <figcaption>Manubot</figcaption>
-          </figure>
-
-          <p>
-            We use <a href="https://manubot.org"><b>Manubot</b></a> to generate
-            <b>full citations details</b> &ndash; title, authors, dates, etc.
-            &ndash; for all compiled sources.
-            <a
-              href="https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155"
-              >Hundreds of ID types are supported</a
-            >.
-          </p>
-        </div>
-
-        <hr />
-
-        <h3>Setup/Previews/Deployment/Etc.</h3>
-
-        <p>If users wish to preview their site <code>locally</code>,</p>
-      </section>
+        <section>
+          <h2>Setup/Previews/Deployment/Etc.</h2>
+        </section>
+      </div>
 
       <section>
         <h2>Outcome</h2>
@@ -253,8 +289,7 @@
         <script>
           /** create gallery images */
           const gallery = document.querySelector(".gallery");
-          const count = 21;
-          gallery.style.setProperty("--cols", Math.ceil(count / 3));
+          const count = 20;
           for (let index = 0; index < count; index++) {
             const item = document.createElement("div");
             item.className = "gallery-item";
@@ -268,9 +303,9 @@
         <p>
           The template has likely saved a great deal of time and money for
           research labs and
-          <a href="https://cu-dbmi.github.io/set-website">other groups alike</a
-          >. This work reflects not just a powerful tool, but an evolving
-          community resource that effectively meets the needs of its users.
+          <a href="https://cu-dbmi.github.io/set-website">other groups</a>. This
+          work reflects not just a powerful tool, but an evolving community
+          resource that effectively meets the needs of its users.
         </p>
 
         <p>
@@ -279,10 +314,11 @@
             >next evolution of this template</a
           >
           will seek to offer even more convenience, simplicity, robustness, and
-          flexibility. It will be built upon a more modern and maintained site
-          generator with type safety. We will aim to make upgrading a user's
-          template version an automatic process, and make citations even more
-          seamless to include.
+          flexibility. We will need to build it with a more modern and
+          maintained site generator with type safety, as we have already
+          stretched the limits of what is possible in Jekyll. We will aim to
+          make upgrading a user's template version an automatic process, and
+          make citations even more seamless to include.
         </p>
       </section>
     </main>

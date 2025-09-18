@@ -2,13 +2,7 @@
 
 ## methods
 
-auto cite process: plugin architecture, use of manubot, metasources
-
 complex flowchart of github actions workflows. deploy previews, custom actions
-
-stretching the limits of jekyll, like list component with filtering with ruby expressions, more flexible, terse, readable than liquid syntax
-
-dockerization for consistency across platforms
 
 # TOPICS
 
