@@ -41,15 +41,14 @@
           <h2>Introduction</h2>
 
           <p>
-            Research laboratories need a professional and up-to-date website to
-            showcase their work, attract collaborators, and establish a strong
-            online presence, but developing and maintaining such a website can
-            be challenging and time consuming. We present
-            <b>Lab Website Template</b>, an open-source tool designed for the
-            unique needs of labs. It <b>automates citation generation</b>,
-            <b>repo configuration</b>, and <b>anything else it can</b>, allowing
-            labs to focus more on research and less on web development and grunt
-            work.
+            Research labs need a professional and up-to-date website to showcase
+            their work, attract collaborators, and establish an online presence,
+            but developing and maintaining such a website can be challenging and
+            time consuming. <b>Lab Website Template</b> is an open-source tool
+            designed for the unique needs of labs. It
+            <b>automates citation generation</b>, <b>repo configuration</b>, and
+            <b>anything else it can</b>, allowing labs to focus more on research
+            and less on web development and grunt work.
           </p>
         </section>
 
@@ -81,7 +80,7 @@
             <li>
               <i data-lucide="refresh-ccw" style="color: var(--amber-500)"></i>
               Users want to see that software is <b>actively maintained</b>,
-              greatly comforted and sold by good support.
+              greatly comforted and sold good support.
             </li>
           </ul>
 
@@ -194,8 +193,8 @@
 
             <p>
               We automatically "<b>expand</b>" these into <b>full lists</b> of
-              sources from ORCID, Google Scholar, or PubMed. Power users can
-              write plugins to support others.
+              sources from ORCID, Google Scholar, or PubMed (extendable with
+              plugins)
             </p>
 
             <div class="code-block">
@@ -213,9 +212,8 @@
               User inputs their "<b>manual</b>", hand-picked <b>sources</b> as
               <b>simple IDs</b> (<a
                 href="https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155"
-                >2,000+ types supported</a
-              >), along with additional rich details like images, tags, buttons,
-              and more.
+                >2k+ supported types</a
+              >), along with extra rich details.
             </p>
 
             <figure>
@@ -242,10 +240,9 @@
             </div>
 
             <p>
-              User includes citations in their site wherever/however they like
-              with the <b>list component</b>, which can filter data with
-              <b>any Ruby expression</b> (more flexible and readable than Liquid
-              syntax).
+              User includes citations in their site however they want with the
+              <b>list component</b>, filtering with
+              <b>any Ruby expression</b> (more flexible/readable than Liquid).
             </p>
           </div>
         </section>
@@ -255,72 +252,77 @@
         </section>
       </div>
 
-      <section>
-        <h2>Outcome</h2>
+      <div class="section-group">
+        <section>
+          <h2>Outcome</h2>
 
-        <div class="cols">
-          <div id="popularity" class="chart"></div>
+          <div class="cols">
+            <div id="popularity" class="chart"></div>
 
-          <div id="support" class="chart"></div>
+            <div id="support" class="chart"></div>
 
-          <div id="activity" class="chart"></div>
+            <div id="activity" class="chart"></div>
 
-          <div class="stats">
-            <div>Median...</div>
-            <div>Response</div>
-            <div>Resolution</div>
-            <div>Issue</div>
-            <div><!-- formatHrs(data.issues.response.med) --></div>
-            <div><!-- formatHrs(data.issues.resolution.med) --></div>
-            <div>Discussion</div>
-            <div><!-- formatHrs(data.discussions.response.med) --></div>
-            <div><!-- formatHrs(data.discussions.resolution.med) --></div>
+            <div class="stats">
+              <div>Median...</div>
+              <div>Response</div>
+              <div>Resolution</div>
+              <div>Issue</div>
+              <div><!-- formatHrs(data.issues.response.med) --></div>
+              <div><!-- formatHrs(data.issues.resolution.med) --></div>
+              <div>Discussion</div>
+              <div><!-- formatHrs(data.discussions.response.med) --></div>
+              <div><!-- formatHrs(data.discussions.resolution.med) --></div>
+            </div>
           </div>
-        </div>
 
-        <p>
-          The success of this approach is evidenced by the template's widespread
-          adoption, with considerable activity on GitHub and a growing gallery
-          of active labs using it.
-        </p>
+          <p>
+            The success of this approach is evidenced by the template's
+            widespread adoption, with considerable activity on GitHub and a
+            growing gallery of active labs using it.
+          </p>
 
-        <div class="gallery"></div>
+          <div class="gallery">
+            <img src="images/screenshot.png" />
+          </div>
 
-        <script>
-          /** create gallery images */
-          const gallery = document.querySelector(".gallery");
-          const count = 20;
-          for (let index = 0; index < count; index++) {
-            const item = document.createElement("div");
-            item.className = "gallery-item";
-            gallery.append(item);
-            const img = document.createElement("img");
-            img.src = `images/labs/${index}.jpg`;
-            item.append(img);
-          }
-        </script>
+          <script>
+            /** create gallery images */
+            const gallery = document.querySelector(".gallery");
+            const count = 20;
+            for (let index = 0; index < count; index++) {
+              const item = document.createElement("div");
+              item.className = "gallery-item";
+              gallery.append(item);
+              const img = document.createElement("img");
+              img.src = `images/labs/${index}.jpg`;
+              item.append(img);
+            }
+          </script>
 
-        <p>
-          The template has likely saved a great deal of time and money for
-          research labs and
-          <a href="https://cu-dbmi.github.io/set-website">other groups</a>. This
-          work reflects not just a powerful tool, but an evolving community
-          resource that effectively meets the needs of its users.
-        </p>
+          <p>
+            The template has likely saved a great deal of time and money for
+            research labs and
+            <a href="https://cu-dbmi.github.io/set-website">other groups</a>.
+            This work reflects not just a powerful tool, but an evolving
+            community resource that effectively meets the needs of its users.
+          </p>
 
-        <p>
-          The
-          <a href="https://github.com/greenelab/lab-website-template/issues/278"
-            >next evolution of this template</a
-          >
-          will seek to offer even more convenience, simplicity, robustness, and
-          flexibility. We will need to build it with a more modern and
-          maintained site generator with type safety, as we have already
-          stretched the limits of what is possible in Jekyll. We will aim to
-          make upgrading a user's template version an automatic process, and
-          make citations even more seamless to include.
-        </p>
-      </section>
+          <p>
+            The
+            <a
+              href="https://github.com/greenelab/lab-website-template/issues/278"
+              >next evolution of this template</a
+            >
+            will seek to offer even more convenience, simplicity, robustness,
+            and flexibility. We will need to build it with a more modern and
+            maintained site generator with type safety, as we have already
+            stretched the limits of what is possible in Jekyll. We will aim to
+            make upgrading a user's template version an automatic process, and
+            make citations even more seamless to include.
+          </p>
+        </section>
+      </div>
     </main>
 
     <footer>

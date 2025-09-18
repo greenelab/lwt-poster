@@ -15,14 +15,14 @@ html {
   --spacing: 1.75;
 }
 
-/* @media print { */
-html {
-  width: 48in;
-  height: 36in;
-  border: solid 1px white;
-  font-size: 0.35in;
+@media print {
+  html {
+    width: 48in;
+    height: 36in;
+    border: solid 1px white;
+    font-size: 0.35in;
+  }
 }
-/* } */
 
 body {
   display: flex;
@@ -333,9 +333,15 @@ code:not(.code-block > code) {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-flow: dense;
   place-items: center;
   width: calc(100% - 2rem);
+}
+
+.gallery > :first-child {
+  grid-column: span 5;
+  grid-row: span 5;
 }
 
 .gallery-item {
