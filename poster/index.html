@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
     <title>Lab Website Template</title>
+    <base href="poster" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,100;1,400;1,500;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono&display=swap"
       rel="stylesheet"
     />
 
-    <base href="poster" />
-
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/refs/heads/main/packages/tailwindcss/preflight.css"
-    />
     <link rel="stylesheet" href="./styles.css" />
 
     <script type="module" src="./scripts/charts.js"></script>
@@ -62,7 +57,7 @@
           <h2>Approach</h2>
 
           <p>
-            We spent significant time in <i>pre-release</i> (< v1.0), where we
+            We spent significant time in <i>pre-release</i> (< v1.0) where we
             gathered observations and direct feedback that shaped our approach.
             <b>Some things we noticed</b>:
           </p>
@@ -70,10 +65,13 @@
           <ul>
             <li>
               <i data-lucide="box" style="color: var(--red-500)"></i>
-              The most <b>common pain points were about the same things</b> (<a
-                href="https://en.wikipedia.org/wiki/Zipf%27s_law"
-                ><i>Zipf's law</i></a
-              >), like repo setup and configuring key options.
+              The most
+              <b
+                >common pain points were about the same things
+                <a href="https://en.wikipedia.org/wiki/Zipf%27s_law"
+                  >same things</a
+                ></b
+              >, like repo setup and configuring key options.
             </li>
             <li>
               <i data-lucide="clock" style="color: var(--orange-500)"></i>
@@ -91,20 +89,20 @@
 
           <ul>
             <li>
-              <i data-lucide="sparkle" style="color: var(--green-500)"></i>
+              <i data-lucide="play" style="color: var(--green-500)"></i>
               <b>Doing is better than instructing</b>. Exhaustive
               experimentation with GitHub Actions and scripting showed we could
               automate much more setup/config/etc. than we thought.
             </li>
             <li>
               <i data-lucide="reply" style="color: var(--emerald-500)"></i>
-              <b>Don't let issues languish</b>. Respond quickly and discuss
+              <b>Don't let issues languish</b>. We respond quickly and discuss
               pros/cons of suggestions to make users feel heard, even if actual
               resolution takes longer.
             </li>
             <li>
               <i data-lucide="crosshair" style="color: var(--teal-500)"></i>
-              <b>Keep it simple and focused</b>. Diligently consider all
+              <b>Keep it simple and focused</b>. We diligently consider all
               feedback, but also don't accept every suggestion at face value to
               avoid feature/config bloat (<a
                 href="https://en.wikipedia.org/wiki/Inner-platform_effect"
@@ -114,16 +112,20 @@
             <li>
               <i data-lucide="book" style="color: var(--cyan-500)"></i>
               <b>Documentation is essential</b>. Code/comments are not enough.
-              Investing time in a full GitBook suite with examples, guides,
-              diagrams, search, etc. lets users help themselves for common
-              issues, saving us time for more novel work.
+              We invested in writing a full
+              <a href="https://greene-lab.gitbook.io/lab-website-template-docs"
+                >GitBook suite</a
+              >
+              with examples, guides, diagrams, search, etc., which lets users
+              help themselves for common issues and saves us time in the long
+              run.
             </li>
             <li>
               <i
                 data-lucide="layout-panel-top"
                 style="color: var(--sky-500)"
               ></i>
-              <b>Cleanly structure content</b>. Try to separate "under-the-hood
+              <b>Cleanly structure content</b>. We separate "under-the-hood
               content" from "user content" so users can focus on just what's
               important.
             </li>
@@ -138,6 +140,83 @@
 
       <section>
         <h2>Methods</h2>
+
+        <h3>Citations</h3>
+
+        <div class="cols">
+          <div class="code-block">
+            <div><code>orcid.yaml</code></div>
+            <code>
+              <pre>
+- <span class="key">orcid</span>: <span class="value">0000-1111-2222-3333</span>
+              </pre>
+            </code>
+          </div>
+
+          <p>
+            User inputs their "<b>meta-sources</b>" as a
+            <b>simple list of IDs</b>.
+          </p>
+
+          <div class="plugins">
+            <figure>
+              <img src="images/orcid.svg" height="3rem" />
+            </figure>
+            <figure>
+              <img src="images/google-scholar.svg" height="3rem" />
+            </figure>
+            <figure>
+              <img src="images/pubmed.svg" height="3rem" />
+            </figure>
+          </div>
+
+          <p>
+            We automatically "<b>expand</b>" these into <b>full lists</b> of
+            sources from ORCID, Google Scholar, or PubMed APIs. A modular plugin
+            architecture lets power users add support for other meta sources.
+          </p>
+
+          <div class="code-block">
+            <div><code>sources.yaml</code></div>
+            <code>
+              <pre>
+- <span class="key">id</span>: <span class="value">doi:12345</span>
+  <span class="key">image</span>: <span class="value">thumbnail.jpg</span>
+- <span class="key">id</span>: <span class="value">pmid:12345</span>
+  <span class="key">tags</span>: <span class="value">biology, data</span>
+
+<span class="comment"># ...another source</span>
+              </pre>
+            </code>
+          </div>
+
+          <p>
+            User inputs their "<b>manual</b>", hand-picked <b>sources</b> as
+            <b>simple IDs</b>, along with additional rich details like images,
+            tags, buttons, and more.
+          </p>
+
+          <figure>
+            <img src="images/manubot.svg" height="6rem" />
+            <figcaption>Manubot</figcaption>
+          </figure>
+
+          <p>
+            We use <a href="https://manubot.org"><b>Manubot</b></a> to generate
+            <b>full citations details</b> &ndash; title, authors, dates, etc.
+            &ndash; for all compiled sources.
+            <a
+              href="https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155"
+              >Hundreds of ID types are supported</a
+            >.
+          </p>
+        </div>
+
+        <hr />
+
+        <h3>Setup/Previews/Deployment/Etc.</h3>
+
+        <p>If users wish to preview their site <code>locally</code>,</p>
       </section>
 
       <section>
@@ -199,9 +278,9 @@
           <a href="https://github.com/greenelab/lab-website-template/issues/278"
             >next evolution of this template</a
           >
-          will seek to offer even more conveniences, simplicity, robustness, and
-          flexibility. We will build it with a more modern and maintained site
-          generator with type safety. We will aim to make upgrading your
+          will seek to offer even more convenience, simplicity, robustness, and
+          flexibility. It will be built upon a more modern and maintained site
+          generator with type safety. We will aim to make upgrading a user's
           template version an automatic process, and make citations even more
           seamless to include.
         </p>
@@ -209,20 +288,21 @@
     </main>
 
     <footer>
-      <div class="qr">
+      <figure>
         <a href="https://greene-lab.gitbook.io/lab-website-template-docs">
-          <img src="./images/docs-qr.svg" />
+          <img src="./images/docs-qr.svg" height="8rem" />
         </a>
-        Template home
-      </div>
+        <figcaption>Template home</figcaption>
+      </figure>
 
       <a href="https://us-rse.org/usrse25">For USRSE 2025</a>
 
-      <div class="qr">
+      <figure>
         <a href="https://github.com/greenelab/lwt-poster">
-          <img src="./images/poster-qr.svg" />
+          <img src="./images/poster-qr.svg" height="8rem" />
         </a>
-      </div>
+        <figcaption>Poster source</figcaption>
+      </figure>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>

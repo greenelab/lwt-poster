@@ -54,6 +54,7 @@ await page.pdf({
   width,
   height,
   printBackground: true,
+  pageRanges: "1",
 });
 
 /** close */

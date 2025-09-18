@@ -25,6 +25,12 @@ window.addEventListener("data", () => {
   }
 });
 
+/** trim code blocksw */
+window.addEventListener("load", () => {
+  const blocks = document.querySelectorAll(".code-block > code > pre");
+  for (const block of blocks) block.innerHTML = block.innerHTML.trim();
+});
+
 /** inline svgs */
 window.addEventListener("load", async () => {
   /** get all img tags with an svg src */
@@ -37,13 +43,10 @@ window.addEventListener("load", async () => {
     img.insertAdjacentHTML("beforebegin", content);
     /** get new node */
     const svg = img.previousElementSibling;
-    /** special behavior for icon */
-    const isIcon = img.src.includes("icon");
-    if (isIcon) svg.classList.add("icon");
-    /** transfer over attributes from img to svg */
-    for (const { name, value } of img.attributes) svg.setAttribute(name, value);
     /** remove certain attributes on svg */
     for (const attr of ["width", "height"]) svg.removeAttribute(attr);
+    /** transfer over attributes from img to svg */
+    for (const { name, value } of img.attributes) svg.setAttribute(name, value);
     /** delete img tag */
     img.remove();
   }

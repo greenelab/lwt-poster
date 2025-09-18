@@ -1,16 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   --dark: hsl(210, 50%, 25%);
   --mid: hsl(190, 50%, 85%);
   --light: hsl(45, 100%, 97%);
 
-  --bold: 500;
+  --sans: "Barlow", sans-serif;
+  --mono: "IBM Plex Mono", monospace;
+  --medium: 500;
+  --bold: 600;
   --spacing: 1.75;
 
   /* font-size: 0.35in; */
-}
-
-* {
-  font-family: "Barlow", sans-serif;
 }
 
 body {
@@ -22,6 +25,7 @@ body {
   padding: 2rem;
   gap: 1rem;
   background: var(--dark);
+  font-family: var(--sans);
 }
 
 header,
@@ -69,7 +73,7 @@ hr {
   height: 0.1rem;
   margin: 1rem 0;
   border: none;
-  background: var(--mid);
+  background: var(--gray-200);
 }
 
 h1,
@@ -81,7 +85,7 @@ h4 {
   justify-content: center;
   margin: 0;
   gap: 0.5rem;
-  font-weight: var(--bold);
+  font-weight: var(--medium);
 }
 
 h1 {
@@ -132,18 +136,46 @@ p {
   line-height: var(--spacing);
 }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+figcaption {
+  display: flex;
+  justify-content: center;
+  width: 0;
+  min-width: 100%;
+  text-align: center;
+}
+
 svg {
   overflow: visible;
 }
 
 text {
   font-size: 1rem;
+  font-family: var(--sans);
 }
 
 ul {
   margin: 0;
   padding-left: 2rem;
   line-height: var(--spacing);
+}
+
+code {
+  margin: 0;
+  font: inherit;
+  font-family: var(--mono);
+}
+
+pre {
+  margin: 0;
+  overflow-x: auto;
+  font: inherit;
 }
 
 .title,
@@ -183,6 +215,12 @@ ul {
   gap: 1rem 2rem;
 }
 
+.plugins {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .chart {
   aspect-ratio: 16 / 9;
 }
@@ -194,7 +232,7 @@ ul {
 }
 
 .stats > :where(:nth-child(2), :nth-child(3), :nth-child(4), :nth-child(7)) {
-  font-weight: var(--bold);
+  font-weight: var(--medium);
 }
 
 .stats > * {
@@ -218,17 +256,6 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.qr {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.8rem;
-}
-
-.qr svg {
-  height: 6rem;
 }
 
 .icon {
@@ -259,4 +286,42 @@ ul:has(.icon) li {
 li .icon {
   position: absolute;
   left: -2.5rem;
+}
+
+.code-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.code-block > :first-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.code-block pre {
+  padding: 0.5rem;
+  background: var(--gray-800);
+  color: var(--light);
+}
+
+code:not(.code-block > code) {
+  padding: 0.1rem 0.2rem;
+  background: var(--gray-200);
+  color: var(--gray-600);
+}
+
+.key {
+  color: var(--green-300);
+}
+
+.value {
+  color: var(--orange-300);
+}
+
+.comment {
+  color: var(--gray-500);
+  font-style: italic;
 }
