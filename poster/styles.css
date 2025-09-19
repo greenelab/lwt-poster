@@ -52,9 +52,10 @@ header {
 
 footer {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
   color: white;
 }
@@ -78,7 +79,6 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
   flex-grow: 1;
-  align-items: flex-start;
   gap: 1rem;
 }
 
@@ -193,6 +193,7 @@ text {
 }
 
 ul {
+  width: 100%;
   margin: 0;
   padding-left: 2rem;
   line-height: var(--spacing);
@@ -234,15 +235,22 @@ pre {
 
 .cols {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
-  align-items: center;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(50% - 1rem, min(15rem, 100%)), 1fr)
+  );
+  place-items: center;
   width: 100%;
   gap: 1rem 2rem;
 }
 
 .icon {
   height: 1em;
+  fill: none;
+  stroke: currentColor;
   stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   translate: 0 0.1rem;
 }
 
@@ -271,21 +279,56 @@ ul:has(.pill) li {
 
 ul .pill {
   position: absolute;
-  top: 0.15rem;
+  top: 0.125rem;
   left: -2rem;
 }
 
 .stack {
   display: grid;
-  grid-template-columns: repeat(2, 1.5rem auto auto);
+  grid-template-columns: repeat(2, 1.5rem max-content auto);
   align-items: center;
   width: 100%;
   gap: 1rem;
+  text-wrap: balance;
+}
+
+:has(> .stack) {
+  container-type: inline-size;
+}
+
+@container (max-width: 30rem) {
+  .stack {
+    grid-template-columns: 1.5rem max-content auto;
+  }
+}
+
+.step {
+  position: absolute;
+  top: calc(100% - 0.5rem);
+  left: calc(100% + 0.25rem);
+  color: var(--gray-300);
+  font-size: 2rem;
+}
+
+.step + * {
+  grid-column: 1;
+}
+
+:has(> .step) {
+  position: relative;
+}
+
+@media (max-width: 107.99rem) {
+  .step {
+    display: none;
+  }
 }
 
 .plugins {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-content: center;
+  place-items: center;
   gap: 1rem;
 }
 
@@ -329,6 +372,7 @@ code:not(.code-block > code) {
 
 .chart {
   aspect-ratio: 16 / 9;
+  width: 100%;
 }
 
 .stats {
@@ -343,7 +387,7 @@ code:not(.code-block > code) {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: 1fr;
   grid-auto-flow: dense;
   place-items: center;
@@ -356,9 +400,9 @@ code:not(.code-block > code) {
 }
 
 .gallery > :first-child {
-  grid-row: span 3;
-  grid-column: span 4;
-  aspect-ratio: 4 / 3;
+  grid-row: span 4;
+  grid-column: span 6;
+  aspect-ratio: 3 / 2;
 }
 
 .gallery > * > img {

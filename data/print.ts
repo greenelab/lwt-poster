@@ -29,12 +29,12 @@ const url = await new Promise<string>((resolve, reject) => {
   setTimeout(() => reject("Waiting for preview timed out"), 5 * 1000);
 });
 
-/** go to preview  */
-await page.goto(url + "/poster");
-
 /** set page styles */
 await page.emulateMedia({ media: "print" });
 await page.setViewportSize({ width, height });
+
+/** go to preview  */
+await page.goto(url + "/poster");
 
 /** wait for app to fully load and render */
 await page.waitForTimeout(3 * 1000);

@@ -1,3 +1,5 @@
+import * as Arrow from "https://cdn.jsdelivr.net/npm/arrow-line/dist/arrow-line.min.js";
+
 window.addEventListener("data", () => {
   /** walker to go through dom nodes */
   const walker = document.createTreeWalker(
@@ -26,13 +28,13 @@ window.addEventListener("data", () => {
 });
 
 /** trim code blocks */
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const blocks = document.querySelectorAll(".code-block > code > pre");
   for (const block of blocks) block.innerHTML = block.innerHTML.trim();
 });
 
 /** inline svgs */
-window.addEventListener("load", async () => {
+window.addEventListener("DOMContentLoaded", async () => {
   /** get all img tags with an svg src */
   const imgs = document.querySelectorAll("img[src*='.svg']");
 
@@ -48,14 +50,18 @@ window.addEventListener("load", async () => {
     /** handle icons */
     if (img.src.includes("icons")) svg.classList.add("icon");
     /** transfer over attributes from img to svg */
-    for (const { name, value } of img.attributes) svg.setAttribute(name, value);
+    for (const { name, value } of img.attributes) {
+      if (name === "class")
+        for (const _class of img.classList) svg.classList.add(_class);
+      else svg.setAttribute(name, value);
+    }
     /** delete img tag */
     img.remove();
   }
 });
 
 /** create gallery images */
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const gallery = document.querySelector(".gallery");
   const count = 20;
   for (let index = 0; index <= count; index++) {
@@ -75,7 +81,7 @@ const wrap = (element, wrapper) => {
 };
 
 /** set print styles */
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   if (
     window.matchMedia("print").matches ||
     new URL(window.location).searchParams.has("print")
