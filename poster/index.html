@@ -44,8 +44,7 @@
             Research labs need a professional and up-to-date website to showcase
             their work, attract collaborators, and establish an online presence,
             but developing and maintaining one can be challenging and time
-            consuming. <b>Lab Website Template</b> is an open-source tool
-            designed specifically for labs. It
+            consuming. <b>Lab Website Template</b> is an open-source tool that
             <b>automates citation generation</b>, <b>repo configuration</b>, and
             <b>anything else it can</b>, letting labs focus more on research and
             less on web development and grunt work.
@@ -97,9 +96,9 @@
               <span class="pill" style="color: var(--green-500)">
                 <img src="images/icons/play.svg" />
               </span>
-              <b>Doing is better than instructing</b>. With GitHub Actions and
-              scripting, we could automate much more setup/config/etc. than we
-              thought.
+              <b>Doing is better than instructing</b>. Aggressively
+              experimenting with GitHub Actions and scripting, we saw we could
+              automate much more setup/config/etc. than we thought.
             </li>
             <li>
               <span class="pill" style="color: var(--emerald-500)">
@@ -124,9 +123,10 @@
               <span class="pill" style="color: var(--cyan-500)">
                 <img src="images/icons/book.svg" />
               </span>
-              <b>Docs are essential</b>. Code/comments are not enough. We wrote
+              <b>Docs are essential</b>. Code/comments are not enough. We
+              invested in writing a
               <a href="https://greene-lab.gitbook.io/lab-website-template-docs"
-                >dedicated GitBook docs</a
+                >dedicated GitBook site</a
               >
               with examples, guides, diagrams, search, etc. that lets users help
               themselves for common things and saves us time in the long run.
@@ -143,37 +143,39 @@
         </section>
 
         <section>
-          <h2>Tech stack</h2>
+          <h2>Technologies</h2>
 
           <div class="stack">
             <img src="images/logos/jekyll.svg" />
             <b><a href="https://jekyllrb.com/">Jekyll</a></b>
-            <span>Static site generator, long/widely supported</span>
+            <span>Static site generator.<br />Long/widely supported.</span>
 
             <img src="images/logos/github.svg" />
             <b>GitHub</b>
-            <span>Pages for hosting and Actions for automation</span>
+            <span>Pages for hosting.<br />Actions for automation.</span>
 
             <img src="images/logos/markdown.svg" />
             <b>Markdown</b>
             <span>
-              For user content, along with
-              <a href="https://shopify.github.io/liquid/">Liquid syntax</a>
+              For user content.
+              <br />
+              <a href="https://shopify.github.io/liquid/">Liquid</a> for
+              templating.
             </span>
 
             <img src="images/logos/python.svg" />
             <b>Python</b>
-            <span>For cite-process, easy to modify for researchers</span>
+            <span>Cite-process scripts.<br />Familiar for researchers.</span>
 
             <img src="images/logos/docker.svg" />
             <b>Docker</b>
             <span>
-              Runs template locally, cross-platform and single install
+              Runs template locally.<br />Cross-platform.<br />Single install.
             </span>
 
             <img src="images/logos/ruby.svg" />
             <b>Ruby</b>
-            <span>Data filtering and other misc.</span>
+            <span>Data filtering.<br />Other misc.</span>
           </div>
         </section>
       </div>
@@ -182,23 +184,22 @@
         <section>
           <h2>Auto-cite process</h2>
 
-          <p>
-            Who wants to manually manage citations?<b>
-              Simple inputs
-              <img
-                src="images/icons/arrow-right.svg"
-                style="color: var(--gray-500)"
-              />
-              Automation magic
-              <img
-                src="images/icons/arrow-right.svg"
-                style="color: var(--gray-500)"
-              />
-              Rich outputs
-            </b>
-          </p>
-
           <div class="cols">
+            <b>Who wants to manually manage citations?</b>
+            <b>
+              Simple input
+              <img
+                src="images/icons/arrow-right.svg"
+                style="color: var(--gray-500)"
+              />
+              Automation
+              <img
+                src="images/icons/arrow-right.svg"
+                style="color: var(--gray-500)"
+              />
+              Rich output
+            </b>
+
             <div class="code-block">
               <div><code>orcid.yaml</code></div>
               <code>
@@ -243,7 +244,7 @@
               <b>simple IDs</b> (<a
                 href="https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155"
                 >2k+ supported types</a
-              >), along with extra, rich details.
+              >), along with extra rich details.
             </p>
 
             <figure>
@@ -252,8 +253,8 @@
 
             <p>
               We use <a href="https://manubot.org"><b>Manubot</b></a> to
-              <b>auto-generate full citation details</b> &ndash; title, authors,
-              date, publisher, etc. &ndash; for all sources.
+              <b>auto-generate full citations</b> &ndash; title, authors, date,
+              publisher, etc. &ndash; for all sources.
             </p>
 
             <div class="code-block">
@@ -271,8 +272,8 @@
 
             <p>
               User includes citations in their site however they want with the
-              <b>list component</b>, filtering with
-              <b>any Ruby expression</b> (more flexible/readable than Liquid).
+              <b>list component</b>, filtering using
+              <b>any Ruby expression</b> (much better than Liquid).
             </p>
           </div>
         </section>
@@ -287,16 +288,13 @@
           <h2>Outcome</h2>
 
           <p>
-            We believe <b>our approach lead to an effective tool</b>, evidenced
-            by the template's growing adoption on GitHub, direct positive
-            feedback, and gallery of active labs using it.
-          </p>
-
-          <p>
-            This work has likely saved time and money for research labs and
+            We believe
+            <b>our approach and design yielded an effective piece of software</b
+            >, evidenced by the template's growing adoption on GitHub, direct
+            positive feedback, and gallery of active labs using it. This work
+            has saved time and money for research labs and
             <a href="https://cu-dbmi.github.io/set-website">other groups</a>,
-            reflecting not just a powerful tool, but a community resource that
-            serves the needs of its users.
+            reflecting a community resource that serves the needs of its users.
           </p>
 
           <div class="cols">
@@ -325,10 +323,11 @@
               href="https://github.com/greenelab/lab-website-template/issues/278"
               >next evolution of this template</a
             >
-            would focus on even more convenience, simplicity, robustness, and
-            flexibility, like using a modern framework with type-safety, making
-            template version upgrades automatic, and making citations even more
-            seamless.
+            could focus on even more convenience, simplicity, robustness, and
+            flexibility, like using a
+            <a href="https://astro.build">modern site generator</a> with
+            type-safety, making template version upgrades automatic, and making
+            citations even more seamless.
           </p>
         </section>
 

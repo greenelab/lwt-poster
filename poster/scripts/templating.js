@@ -73,3 +73,12 @@ const wrap = (element, wrapper) => {
   wrapper.append(element);
   return wrapper;
 };
+
+/** set print styles */
+window.addEventListener("load", () => {
+  if (
+    window.matchMedia("print").matches ||
+    new URL(window.location).searchParams.has("print")
+  )
+    document.documentElement.classList.add("print");
+});
