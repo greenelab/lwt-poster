@@ -302,6 +302,17 @@ ul .pill {
   }
 }
 
+.comparison {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  gap: 1rem;
+}
+
+.comparison > :where(:nth-child(1), :nth-child(2)) {
+  font-weight: var(--medium);
+}
+
 .step {
   position: absolute;
   top: calc(100% - 0.5rem);
