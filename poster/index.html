@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Mono&display=swap"
       rel="stylesheet"
     />
 
@@ -67,7 +67,7 @@
 
           <ul>
             <li>
-              <span class="pill" style="color: var(--red-500)">
+              <span class="pill" style="color: var(--red)">
                 <img src="images/icons/box.svg" />
               </span>
               The most
@@ -82,18 +82,18 @@
               >.
             </li>
             <li>
-              <span class="pill" style="color: var(--orange-500)">
+              <span class="pill" style="color: var(--orange)">
                 <img src="images/icons/clock.svg" />
               </span>
               <b>Labs can't waste time</b> on basics or low-level details, but
               still need ways to customize things when needed.
             </li>
             <li>
-              <span class="pill" style="color: var(--amber-500)">
+              <span class="pill" style="color: var(--amber)">
                 <img src="images/icons/wrench.svg" />
               </span>
-              Labs want to see that software is <b>actively maintained</b>,
-              greatly sold by good support.
+              Labs want to see a tool is <b>actively maintained</b>, greatly
+              sold by good support.
             </li>
           </ul>
 
@@ -101,7 +101,7 @@
 
           <ul>
             <li>
-              <span class="pill" style="color: var(--green-500)">
+              <span class="pill" style="color: var(--green)">
                 <img src="images/icons/play.svg" />
               </span>
               <b>Doing > instructing</b>. Aggressively experimenting with GitHub
@@ -109,7 +109,7 @@
               setup/config/etc. than we thought.
             </li>
             <li>
-              <span class="pill" style="color: var(--emerald-500)">
+              <span class="pill" style="color: var(--emerald)">
                 <img src="images/icons/reply.svg" />
               </span>
               <b>Don't let issues languish</b>. We respond quickly and discuss
@@ -117,7 +117,7 @@
               takes longer.
             </li>
             <li>
-              <span class="pill" style="color: var(--teal-500)">
+              <span class="pill" style="color: var(--teal)">
                 <img src="images/icons/crosshair.svg" />
               </span>
               <b>Keep it simple and focused</b>. We earnestly consider all
@@ -128,24 +128,26 @@
               >).
             </li>
             <li>
-              <span class="pill" style="color: var(--cyan-500)">
+              <span class="pill" style="color: var(--cyan)">
                 <img src="images/icons/book.svg" />
               </span>
               <b>Docs are essential</b>. Code/comments are not enough. We
               invested in writing a
               <a href="https://greene-lab.gitbook.io/lab-website-template-docs"
-                >dedicated GitBook site</a
+                >full GitBook site</a
               >
-              with examples, guides, diagrams, search, etc. that lets labs help
-              themselves for common things and saves us time in the long run.
+              with examples, guides, diagrams, search, etc., which lets labs
+              help themselves for common things and saves us time for more novel
+              work.
             </li>
             <li>
-              <span class="pill" style="color: var(--sky-500)">
+              <span class="pill" style="color: var(--sky)">
                 <img src="images/icons/layout-panel-top.svg" />
               </span>
-              <b>Cleanly structure content</b>. We separate "under-the-hood
-              content" from "user content" so labs can focus on just what's
-              important.
+              <b>Cleanly structure content</b>. We separate
+              <i>template</i> content from <i>user</i> content so labs can focus
+              on just what's important to them, but still look "under the hood"
+              when they need to customize.
             </li>
           </ul>
         </section>
@@ -156,7 +158,7 @@
           <div class="stack">
             <img src="images/logos/jekyll.svg" />
             <b><a href="https://jekyllrb.com/">Jekyll</a></b>
-            <span> Static site generator.<wbr /> Long/widely supported. </span>
+            <span>Static site generator.<wbr /> Long-lived. Plugin-rich.</span>
 
             <img src="images/logos/github.svg" />
             <b>GitHub</b>
@@ -173,7 +175,7 @@
 
             <img src="images/logos/python.svg" />
             <b>Python</b>
-            <span>Cite-process scripts.<wbr /> Familiar for researchers.</span>
+            <span>For auto-cite scripts.<wbr /> Familiar for researchers.</span>
 
             <img src="images/logos/docker.svg" />
             <b>Docker</b>
@@ -193,21 +195,19 @@
           <h2>Citations</h2>
 
           <div class="cols">
-            <p><i>Who wants to manually manage citations?</i></p>
+            <p>Who wants to <b>manually manage</b> citations?</p>
             <p>
-              <b>
-                Simple input
-                <img
-                  src="images/icons/arrow-right.svg"
-                  style="color: var(--gray-500)"
-                />
-                Auto-magic
-                <img
-                  src="images/icons/arrow-right.svg"
-                  style="color: var(--gray-500)"
-                />
-                Rich output
-              </b>
+              <b>Simple</b> input
+              <img
+                src="images/icons/arrow-right.svg"
+                style="color: var(--gray)"
+              />
+              <b>Auto</b>-magic
+              <img
+                src="images/icons/arrow-right.svg"
+                style="color: var(--gray)"
+              />
+              <b>Rich</b> output
             </p>
 
             <span></span>
@@ -283,8 +283,8 @@
 
             <p>
               Include citations in your site however you want with the
-              <b>list component</b>, filtering using
-              <b>any Ruby expression</b> (much better than Liquid).
+              <b>list component</b>. Filter with <s>unwieldy Liquid</s>
+              <b>any Ruby expression</b>.
             </p>
           </div>
         </section>
@@ -293,77 +293,85 @@
           <h2>Automation</h2>
 
           <p>
-            Several other automatic processes handle the most confusing and
-            error-prone tasks for you, triggered by <b>events</b> and with
-            little or <b>no manual steps</b>.
+            Several other <b>automations</b> handle the most
+            <b>confusing</b> and <b>error-prone</b> tasks for you, triggered by
+            <b>events</b>, with little or <b>no manual steps</b>.
           </p>
 
           <div class="cols">
-            <p>
-              <span class="pill" style="color: var(--cyan-500)">
-                <img src="images/icons/square-dashed-mouse-pointer.svg" />
-              </span>
-              <b>Click some buttons</b>, wait a few, and your site's live and
-              ready to edit.
-            </p>
+            <ul>
+              <li>
+                <span class="pill" style="color: var(--cyan)">
+                  <img src="images/icons/square-dashed-mouse-pointer.svg" />
+                </span>
+                <b>Click some buttons</b>, wait a few, and your site's
+                <b>live and ready</b> to edit.
+              </li>
+            </ul>
 
             <div class="diagram-block">
-              <div>First time setup</div>
-              <p style="--color: var(--cyan-500)">
+              <b>First time setup</b>
+              <div style="--color: var(--cyan)">
                 Init branches<br />
                 Clean up/rename files<br />
-                <code>@org</code>/URL/etc. -> readme/home/etc.<br />
-              </p>
+                Personalize with <code>@username</code>/URL/etc.<br />
+              </div>
             </div>
 
-            <p>
-              <span class="pill" style="color: var(--sky-500)">
-                <img src="images/icons/pilcrow.svg" />
-              </span>
-              Edit your content, wait a few, and your <b>changes are live</b>.
-            </p>
+            <ul>
+              <li>
+                <span class="pill" style="color: var(--sky)">
+                  <img src="images/icons/pilcrow.svg" />
+                </span>
+                Edit your content, wait a few, and your <b>changes are live</b>.
+              </li>
+            </ul>
 
             <div class="diagram-block">
-              <div>On push to <code>main</code></div>
-              <p style="--color: var(--sky-500)">
+              <b>On push to <code>main</code></b>
+              <div style="--color: var(--sky)">
                 Run cite process<br />
                 Build site<br />
                 Host at main URL<br />
-              </p>
+              </div>
             </div>
 
-            <p>
-              <span class="pill" style="color: var(--blue-500)">
-                <img src="images/icons/eye.svg" />
-              </span>
-              Suggest changes and <b>preview</b> them <b>before publishing</b>.
-              No service like Netlify needed.
-            </p>
+            <ul>
+              <li>
+                <span class="pill" style="color: var(--blue)">
+                  <img src="images/icons/eye.svg" />
+                </span>
+                Suggest changes and <b>preview</b> them
+                <b>before publishing</b>. No service like Netlify needed.
+              </li>
+            </ul>
 
             <div class="diagram-block">
-              <div>On pull request</div>
-              <p style="--color: var(--blue-500)">
+              <b>On pull request</b>
+              <div style="--color: var(--blue)">
                 Run cite process<br />
                 Build site preview<br />
                 Host at <code>/pr-#</code> sub-URL<br />
                 Post PR comment w/ link
-              </p>
+              </div>
             </div>
 
-            <p>
-              <span class="pill" style="color: var(--violet-500)">
-                <img src="images/icons/refresh-ccw.svg" />
-              </span>
-              Review updates to your lab's CV regularly.
-            </p>
+            <ul>
+              <li>
+                <span class="pill" style="color: var(--violet)">
+                  <img src="images/icons/refresh-ccw.svg" />
+                </span>
+                Keep your lab's CV <b>up-to-date</b>.
+              </li>
+            </ul>
 
             <div class="diagram-block">
-              <div>On schedule (weekly)</div>
-              <p style="--color: var(--violet-500)">
+              <div><b>On schedule</b> (weekly by default)</div>
+              <div style="--color: var(--violet)">
                 Run cite process<br />
                 ORCID/etc. may have updates<br />
                 Open PR if any changes
-              </p>
+              </div>
             </div>
           </div>
         </section>
@@ -378,7 +386,7 @@
             <b>our approach and design lead to an effective piece of software</b
             >, evidenced by the template's growing adoption on GitHub, direct
             positive feedback, and gallery of active labs using it. This work
-            has saved time and money for research labs and
+            has likely saved time and money for research labs and
             <a href="https://cu-dbmi.github.io/set-website">other groups</a>,
             reflecting a community resource that serves the needs of its users.
           </p>
@@ -407,11 +415,11 @@
             The
             <a
               href="https://github.com/greenelab/lab-website-template/issues/278"
-              >next evolution
+              ><b>next evolution</b>
             </a>
             could focus on even more convenience, simplicity, robustness, and
             flexibility, like using a
-            <a href="https://astro.build">modern site generator</a> with
+            <a href="https://astro.build"><b>modern site generator</b></a> with
             type-safety, making template version upgrades automatic, and making
             citations even more seamless.
           </p>

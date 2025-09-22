@@ -10,7 +10,6 @@ import {
   stars,
 } from "./data.js";
 import { fit } from "./util.js";
-import { colors } from "./colors.js";
 
 /** re-create chart whenever needed */
 const overTimeChart = (plot, series) => {
@@ -192,17 +191,17 @@ overTimeChart("popularity", [
   {
     data: generated.overTime,
     name: "Generated",
-    color: colors.red["500"],
+    color: "var(--red)",
   },
   {
     data: stars.overTime,
     name: "Stars",
-    color: colors.orange["500"],
+    color: "var(--orange)",
   },
   {
     data: forks.overTime,
     name: "Forks",
-    color: colors.amber["500"],
+    color: "var(--amber)",
   },
 ]);
 
@@ -210,12 +209,12 @@ overTimeChart("support", [
   {
     data: issues.overTime,
     name: `Issues (${data.issues.total})`,
-    color: colors.emerald["500"],
+    color: "var(--emerald)",
   },
   {
     data: discussions.overTime,
     name: `Discussions (${data.discussions.total})`,
-    color: colors.lime["500"],
+    color: "var(--lime)",
   },
 ]);
 
@@ -223,11 +222,11 @@ overTimeChart("activity", [
   {
     data: commits.overTime,
     name: "Commits",
-    color: colors.cyan["500"],
+    color: "var(--cyan)",
   },
   {
     data: pullRequests.overTime,
     name: "PRs",
-    color: colors.blue["500"],
+    color: "var(--blue)",
   },
 ]);
