@@ -76,8 +76,9 @@ header {
 
 footer {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   gap: 2rem;
   color: white;
@@ -260,10 +261,6 @@ pre {
   text-wrap: balance;
 }
 
-.grow {
-  flex-grow: 1;
-}
-
 .cols {
   display: grid;
   grid-template-columns: repeat(
@@ -417,7 +414,7 @@ ul .pill {
 }
 
 .chart {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 1;
   width: 100%;
 }
 
@@ -433,13 +430,9 @@ ul .pill {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: 1fr;
-  grid-auto-flow: dense;
   place-items: center;
 }
 
 .gallery > * {
-  aspect-ratio: 1 / 1;
-  width: 100%;
+  max-width: 100%;
 }
