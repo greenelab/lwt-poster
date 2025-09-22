@@ -1,9 +1,3 @@
-# VINCE
-
-## methods
-
-complex flowchart of github actions workflows. deploy previews, custom actions
-
 # TOPICS
 
 - Code: Share your software with the community
