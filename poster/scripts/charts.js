@@ -206,19 +206,6 @@ overTimeChart("popularity", [
   },
 ]);
 
-overTimeChart("activity", [
-  {
-    data: commits.overTime,
-    name: "Commits",
-    color: colors.cyan["500"],
-  },
-  {
-    data: pullRequests.overTime,
-    name: "PRs",
-    color: colors.blue["500"],
-  },
-]);
-
 overTimeChart("support", [
   {
     data: issues.overTime,
@@ -229,5 +216,18 @@ overTimeChart("support", [
     data: discussions.overTime,
     name: `Discussions (${data.discussions.total})`,
     color: colors.lime["500"],
+  },
+]);
+
+overTimeChart("activity", [
+  {
+    data: commits.overTime,
+    name: "Commits",
+    color: colors.cyan["500"],
+  },
+  {
+    data: pullRequests.overTime,
+    name: "PRs",
+    color: colors.blue["500"],
   },
 ]);

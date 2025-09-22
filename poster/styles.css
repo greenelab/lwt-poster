@@ -54,8 +54,8 @@ footer {
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   gap: 2rem;
   color: white;
 }
@@ -250,10 +250,10 @@ pre {
   height: 1em;
   fill: none;
   stroke: currentColor;
-  stroke-width: 2.5;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  translate: 0 0.1rem;
+  translate: 0 0.125rem;
 }
 
 .pill {
@@ -261,13 +261,14 @@ pre {
   place-items: center;
   width: 1.5rem;
   height: 1.5rem;
+  translate: 0 0.125rem;
   border-radius: 999px;
-  background: currentColor;
+  background: color-mix(in oklab, currentColor, white 75%);
 }
 
 .pill .icon {
   translate: 0 0;
-  color: var(--light);
+  color: color-mix(in oklab, currentColor, black 25%);
 }
 
 ul:has(.pill) {
@@ -281,7 +282,6 @@ ul:has(.pill) li {
 
 ul .pill {
   position: absolute;
-  top: 0.125rem;
   left: -2rem;
 }
 
@@ -381,8 +381,9 @@ ul .pill {
   font-weight: var(--medium);
 }
 
-.diagram-block > :not(:first-child) {
+.diagram-block > :last-child {
   padding: 0.25rem 0.5rem;
+  background: color-mix(in oklab, var(--color), white 75%);
 }
 
 .chart {

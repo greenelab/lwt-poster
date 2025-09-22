@@ -67,7 +67,7 @@
 
           <ul>
             <li>
-              <span class="pill" style="color: var(--red-400)">
+              <span class="pill" style="color: var(--red-500)">
                 <img src="images/icons/box.svg" />
               </span>
               The most
@@ -82,15 +82,15 @@
               >.
             </li>
             <li>
-              <span class="pill" style="color: var(--orange-400)">
+              <span class="pill" style="color: var(--orange-500)">
                 <img src="images/icons/clock.svg" />
               </span>
               <b>Labs can't waste time</b> on basics or low-level details, but
               still need ways to customize things when needed.
             </li>
             <li>
-              <span class="pill" style="color: var(--amber-400)">
-                <img src="images/icons/refresh-ccw.svg" />
+              <span class="pill" style="color: var(--amber-500)">
+                <img src="images/icons/wrench.svg" />
               </span>
               Labs want to see that software is <b>actively maintained</b>,
               greatly sold by good support.
@@ -101,7 +101,7 @@
 
           <ul>
             <li>
-              <span class="pill" style="color: var(--green-400)">
+              <span class="pill" style="color: var(--green-500)">
                 <img src="images/icons/play.svg" />
               </span>
               <b>Doing > instructing</b>. Aggressively experimenting with GitHub
@@ -109,7 +109,7 @@
               setup/config/etc. than we thought.
             </li>
             <li>
-              <span class="pill" style="color: var(--emerald-400)">
+              <span class="pill" style="color: var(--emerald-500)">
                 <img src="images/icons/reply.svg" />
               </span>
               <b>Don't let issues languish</b>. We respond quickly and discuss
@@ -117,7 +117,7 @@
               takes longer.
             </li>
             <li>
-              <span class="pill" style="color: var(--teal-400)">
+              <span class="pill" style="color: var(--teal-500)">
                 <img src="images/icons/crosshair.svg" />
               </span>
               <b>Keep it simple and focused</b>. We earnestly consider all
@@ -128,7 +128,7 @@
               >).
             </li>
             <li>
-              <span class="pill" style="color: var(--cyan-400)">
+              <span class="pill" style="color: var(--cyan-500)">
                 <img src="images/icons/book.svg" />
               </span>
               <b>Docs are essential</b>. Code/comments are not enough. We
@@ -140,7 +140,7 @@
               themselves for common things and saves us time in the long run.
             </li>
             <li>
-              <span class="pill" style="color: var(--sky-400)">
+              <span class="pill" style="color: var(--sky-500)">
                 <img src="images/icons/layout-panel-top.svg" />
               </span>
               <b>Cleanly structure content</b>. We separate "under-the-hood
@@ -156,10 +156,7 @@
           <div class="stack">
             <img src="images/logos/jekyll.svg" />
             <b><a href="https://jekyllrb.com/">Jekyll</a></b>
-            <span>
-              Static site generator.<wbr /> Long/widely supported.<wbr />
-              &nbsp;Plugin-rich.
-            </span>
+            <span> Static site generator.<wbr /> Long/widely supported. </span>
 
             <img src="images/logos/github.svg" />
             <b>GitHub</b>
@@ -181,8 +178,7 @@
             <img src="images/logos/docker.svg" />
             <b>Docker</b>
             <span>
-              Runs template locally.<wbr /> Cross-platform.<wbr /> Single
-              install.
+              For running locally.<wbr /> Cross-platform.<wbr /> Single install.
             </span>
 
             <img src="images/logos/ruby.svg" />
@@ -298,30 +294,38 @@
 
           <p>
             Several other automatic processes handle the most confusing and
-            error-prone tasks for you, triggered by <b>events</b> with little to
-            <b>no user input</b>.
+            error-prone tasks for you, triggered by <b>events</b> and with
+            little or <b>no manual steps</b>.
           </p>
 
           <div class="cols">
             <p>
-              Click some buttons, wait a few, and your site's live and ready to
-              edit.
+              <span class="pill" style="color: var(--cyan-500)">
+                <img src="images/icons/square-dashed-mouse-pointer.svg" />
+              </span>
+              <b>Click some buttons</b>, wait a few, and your site's live and
+              ready to edit.
             </p>
 
             <div class="diagram-block">
               <div>First time setup</div>
-              <p style="background: var(--blue-100)">
+              <p style="--color: var(--cyan-500)">
                 Init branches<br />
                 Clean up/rename files<br />
                 <code>@org</code>/URL/etc. -> readme/home/etc.<br />
               </p>
             </div>
 
-            <p>Edit your content, wait a few, and your changes are live.</p>
+            <p>
+              <span class="pill" style="color: var(--sky-500)">
+                <img src="images/icons/pilcrow.svg" />
+              </span>
+              Edit your content, wait a few, and your <b>changes are live</b>.
+            </p>
 
             <div class="diagram-block">
               <div>On push to <code>main</code></div>
-              <p style="background: var(--purple-100)">
+              <p style="--color: var(--sky-500)">
                 Run cite process<br />
                 Build site<br />
                 Host at main URL<br />
@@ -329,13 +333,16 @@
             </div>
 
             <p>
-              Preview your changes before publishing. No service like Netlify
-              needed.
+              <span class="pill" style="color: var(--blue-500)">
+                <img src="images/icons/eye.svg" />
+              </span>
+              Suggest changes and <b>preview</b> them <b>before publishing</b>.
+              No service like Netlify needed.
             </p>
 
             <div class="diagram-block">
               <div>On pull request</div>
-              <p style="background: var(--red-100)">
+              <p style="--color: var(--blue-500)">
                 Run cite process<br />
                 Build site preview<br />
                 Host at <code>/pr-#</code> sub-URL<br />
@@ -343,11 +350,16 @@
               </p>
             </div>
 
-            <p>Keep your lab's CV up-to-date.</p>
+            <p>
+              <span class="pill" style="color: var(--violet-500)">
+                <img src="images/icons/refresh-ccw.svg" />
+              </span>
+              Review updates to your lab's CV regularly.
+            </p>
 
             <div class="diagram-block">
               <div>On schedule (weekly)</div>
-              <p style="background: var(--green-100)">
+              <p style="--color: var(--violet-500)">
                 Run cite process<br />
                 ORCID/etc. may have updates<br />
                 Open PR if any changes
@@ -395,8 +407,8 @@
             The
             <a
               href="https://github.com/greenelab/lab-website-template/issues/278"
-              >next evolution of this template</a
-            >
+              >next evolution
+            </a>
             could focus on even more convenience, simplicity, robustness, and
             flexibility, like using a
             <a href="https://astro.build">modern site generator</a> with
