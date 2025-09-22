@@ -60,19 +60,6 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-/** create gallery images */
-window.addEventListener("DOMContentLoaded", () => {
-  const gallery = document.querySelector(".gallery");
-  const count = 20;
-  for (let index = 0; index <= count; index++) {
-    const item = document.createElement("div");
-    gallery.append(item);
-    const img = document.createElement("img");
-    img.src = `images/labs/${index}.jpg`;
-    item.append(img);
-  }
-});
-
 /** wrap element in wrapper element */
 const wrap = (element, wrapper) => {
   element.parentNode.insertBefore(wrapper, element);
