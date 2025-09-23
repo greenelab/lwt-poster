@@ -18,11 +18,11 @@ window.addEventListener("data", () => {
   const overTimeChart = (plot, series) => {
     const chart = d3.select(`#${plot}`);
     const make = () => makeOverTimeChart(chart, series);
-    make()
+    make();
     new ResizeObserver(debounce(make)).observe(chart.node());
   };
 
-  const makeOverTimeChart = async (chart, series) => {
+  const makeOverTimeChart = (chart, series) => {
     /** empty node contents */
     chart.node().innerHTML = "";
 

@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
 /** inline svgs */
 window.addEventListener("DOMContentLoaded", async () => {
   /** get all img tags with an svg src */
-  const imgs = document.querySelectorAll("img[src*='.svg']");
+  const imgs = document.querySelectorAll("img[src$='.svg']");
 
   for (const img of imgs) {
     /** fetch raw svg file text content */
@@ -68,3 +68,22 @@ window.addEventListener("DOMContentLoaded", () =>
     .querySelectorAll("a")
     .forEach((link) => link.setAttribute("target", "_blank"))
 );
+
+/** intercept print */
+window.addEventListener("keydown", async (event) => {
+  /** only handle keyboard shortcut print */
+  if ((event.ctrlKey || event.metaKey) && event.key === "p") {
+    /** prevent regular print dialog */
+    event.preventDefault();
+    /** set document size to poster size */
+    document.documentElement.style.width = "var(--width)";
+    document.documentElement.style.height = "var(--height)";
+    /** wait for resize handlers to execute */
+    await window.sleep(10);
+    /** trigger print */
+    window.print();
+    /** reset styles */
+    document.documentElement.style.width = "";
+    document.documentElement.style.height = "";
+  }
+});

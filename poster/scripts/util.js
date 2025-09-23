@@ -20,10 +20,13 @@ window.fit = (svg) => {
 };
 
 /** make debounced function */
-window.debounce = (func, delay = 100) => {
+window.debounce = (func, delay = 0) => {
   let timer;
   return (...args) => {
     window.clearTimeout(timer);
     timer = window.setTimeout(() => func(...args), delay);
   };
 };
+
+/** sleep */
+window.sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
