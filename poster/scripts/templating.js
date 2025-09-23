@@ -61,3 +61,10 @@ window.addEventListener("DOMContentLoaded", async () => {
     img.remove();
   }
 });
+
+/** make all links open in new tab */
+window.addEventListener("DOMContentLoaded", () =>
+  document
+    .querySelectorAll("a")
+    .forEach((link) => link.setAttribute("target", "_blank"))
+);
