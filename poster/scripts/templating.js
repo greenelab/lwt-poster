@@ -1,5 +1,4 @@
-import * as Arrow from "https://cdn.jsdelivr.net/npm/arrow-line/dist/arrow-line.min.js";
-
+/** execute comments as javascript and replace with result */
 window.addEventListener("data", () => {
   /** walker to go through dom nodes */
   const walker = document.createTreeWalker(
@@ -15,14 +14,17 @@ window.addEventListener("data", () => {
   /** for each comment */
   for (const comment of comments) {
     try {
-      const content = comment.nodeValue.trim();
+      let content = comment.nodeValue.trim();
+      /** only execute comments starting with $ */
+      if (!content.startsWith("$")) continue;
+      content = content.replace(/^\$/, "");
       /** evaluate comment as javascript */
       const result = eval(content);
       /** replace comment node with text node of eval result */
       const text = document.createTextNode(String(result));
       comment.parentNode.replaceChild(text, comment);
     } catch (error) {
-      // console.error(error);
+      console.error(error);
     }
   }
 });
@@ -59,13 +61,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     img.remove();
   }
 });
-
-/** wrap element in wrapper element */
-const wrap = (element, wrapper) => {
-  element.parentNode.insertBefore(wrapper, element);
-  wrapper.append(element);
-  return wrapper;
-};
 
 /** set print styles */
 window.addEventListener("DOMContentLoaded", () => {

@@ -16,8 +16,10 @@
 
     <link rel="stylesheet" href="./styles.css" />
 
+    <script type="module" src="scripts/util.js"></script>
     <script type="module" src="scripts/charts.js"></script>
     <script type="module" src="scripts/templating.js"></script>
+    <script type="module" src="scripts/data.js"></script>
   </head>
 
   <body>
@@ -192,14 +194,14 @@
         <footer>
           <figure>
             <a href="https://greene-lab.gitbook.io/lab-website-template-docs">
-              <img src="images/docs-qr.svg" height="6rem" />
+              <img src="images/docs-qr.svg" style="height: 6rem" />
             </a>
             <figcaption>TEMPLATE</figcaption>
           </figure>
 
           <figure>
             <a href="https://github.com/greenelab/lwt-poster">
-              <img src="images/poster-qr.svg" height="6rem" />
+              <img src="images/poster-qr.svg" style="height: 6rem" />
             </a>
             <figcaption>POSTER</figcaption>
           </figure>
@@ -242,9 +244,9 @@
             <p>Input your "<b>meta-sources</b>" as <b>simple IDs</b>.</p>
 
             <div class="plugins">
-              <img src="images/logos/google-scholar.svg" height="3rem" />
-              <img src="images/logos/orcid.svg" height="3rem" />
-              <img src="images/logos/pubmed.svg" height="3rem" />
+              <img src="images/logos/google-scholar.svg" style="height: 3rem" />
+              <img src="images/logos/orcid.svg" style="height: 3rem" />
+              <img src="images/logos/pubmed.svg" style="height: 3rem" />
               <img src="images/icons/arrow-down.svg" class="step" />
             </div>
 
@@ -274,7 +276,7 @@
             </p>
 
             <div>
-              <img src="images/logos/manubot.svg" height="5rem" />
+              <img src="images/logos/manubot.svg" style="height: 5rem" />
               <img src="images/icons/arrow-down.svg" class="step" />
             </div>
 
@@ -459,11 +461,11 @@
               <div>Response</div>
               <div>Resolution</div>
               <div>Issue</div>
-              <div><!-- formatHrs(data.issues.response.med) --></div>
-              <div><!-- formatHrs(data.issues.resolution.med) --></div>
+              <div><!-- $formatHrs(data.issues.response.med) --></div>
+              <div><!-- $formatHrs(data.issues.resolution.med) --></div>
               <div>Discussion</div>
-              <div><!-- formatHrs(data.discussions.response.med) --></div>
-              <div><!-- formatHrs(data.discussions.resolution.med) --></div>
+              <div><!-- $formatHrs(data.discussions.response.med) --></div>
+              <div><!-- $formatHrs(data.discussions.resolution.med) --></div>
             </div>
           </div>
 

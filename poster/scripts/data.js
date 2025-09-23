@@ -3,25 +3,15 @@ const load = async (name) =>
   await (await fetch(`../data/output/${name}.json`)).json();
 
 /** import all data */
-export const generated = await load("generated");
-export const stars = await load("stars");
-export const forks = await load("forks");
-export const issues = await load("issues");
-export const discussions = await load("discussions");
-export const commits = await load("commits");
-export const pullRequests = await load("pull-requests");
-export const releases = await load("releases");
-
-/** make globally available */
 window.data = {
-  generated,
-  stars,
-  forks,
-  issues,
-  discussions,
-  commits,
-  pullRequests,
-  releases,
+  generated: await load("generated"),
+  stars: await load("stars"),
+  forks: await load("forks"),
+  issues: await load("issues"),
+  discussions: await load("discussions"),
+  commits: await load("commits"),
+  pullRequests: await load("pull-requests"),
+  releases: await load("releases"),
 };
 
 window.dispatchEvent(new CustomEvent("data"));

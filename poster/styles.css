@@ -117,14 +117,6 @@ section {
   background: var(--light);
 }
 
-hr {
-  width: 100%;
-  height: 0.1rem;
-  margin: 1rem 0;
-  border: none;
-  background: var(--off-white);
-}
-
 h1,
 h2,
 h3,
@@ -198,8 +190,6 @@ figure {
 figcaption {
   display: flex;
   justify-content: center;
-  width: 0;
-  min-width: 100%;
   text-align: center;
 }
 
@@ -334,12 +324,16 @@ ul .pill {
   }
 }
 
+.stack svg {
+  width: 100%;
+}
+
 .step {
   position: absolute;
   top: calc(100% - 0.5rem);
   left: calc(100% + 0.25rem);
   color: var(--light-gray);
-  font-size: 2rem;
+  height: 2rem;
 }
 
 .step + * {
@@ -418,6 +412,10 @@ ul .pill {
   width: 100%;
 }
 
+.chart svg {
+  width: 100%;
+}
+
 .stats {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -434,5 +432,5 @@ ul .pill {
 }
 
 .gallery > * {
-  max-width: 100%;
+  width: 100%;
 }
