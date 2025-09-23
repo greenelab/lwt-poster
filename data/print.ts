@@ -2,12 +2,6 @@ import { exec, execSync } from "child_process";
 import playwright from "playwright";
 import stripAnsi from "strip-ansi";
 
-/** pdf dpi */
-const dpi = 96;
-/** dimensions, in inches */
-const width = 48 * dpi;
-const height = 36 * dpi;
-
 /** set up browser instance, page, etc */
 const browser = await playwright.chromium.launch({ headless: false });
 const context = await browser.newContext();
@@ -29,21 +23,19 @@ const url = await new Promise<string>((resolve, reject) => {
   setTimeout(() => reject("Waiting for preview timed out"), 5 * 1000);
 });
 
-/** set page styles */
-await page.emulateMedia({ media: "print" });
-await page.setViewportSize({ width, height });
-
 /** go to preview  */
 await page.goto(url + "/poster");
 
+/** set page styles */
+await page.emulateMedia({ media: "print" });
+
 /** wait for app to fully load and render */
-await page.waitForTimeout(3 * 1000);
+await page.waitForTimeout(1 * 1000);
 
 /** print pdf */
 await page.pdf({
   path: "poster.pdf",
-  width,
-  height,
+  preferCSSPageSize: true,
   printBackground: true,
   pageRanges: "1",
 });

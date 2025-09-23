@@ -61,12 +61,3 @@ window.addEventListener("DOMContentLoaded", async () => {
     img.remove();
   }
 });
-
-/** set print styles */
-window.addEventListener("DOMContentLoaded", () => {
-  if (
-    window.matchMedia("print").matches ||
-    new URL(window.location).searchParams.has("print")
-  )
-    document.documentElement.classList.add("print");
-});
