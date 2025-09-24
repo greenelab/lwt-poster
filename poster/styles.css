@@ -317,7 +317,6 @@ ul .pill {
   width: 100%;
   gap: 0.25rem 1rem;
   line-height: var(--spacing);
-  text-wrap: balance;
 }
 
 .stack svg {

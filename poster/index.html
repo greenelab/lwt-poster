@@ -99,14 +99,14 @@
               <img src="images/icons/clock.svg" />
             </span>
             <b>Labs can't waste time</b> on basics or low-level details, but
-            still need ways to customize things when needed.
+            still need ways to customize things.
           </li>
           <li>
             <span class="pill" style="color: var(--amber)">
               <img src="images/icons/wrench.svg" />
             </span>
-            Labs want to see a tool is <b>actively maintained</b>, greatly sold
-            by good support.
+            Labs want to see that a tool is <b>actively maintained</b>, strongly
+            sold by good support.
           </li>
         </ul>
 
@@ -144,23 +144,22 @@
             <span class="pill" style="color: var(--cyan)">
               <img src="images/icons/book.svg" />
             </span>
-            <b>Docs are essential</b>. Code/comments are not enough. We invested
-            in writing a
+            <b>Code/comments aren't enough</b>. We wrote a
             <a href="https://greene-lab.gitbook.io/lab-website-template-docs"
-              >full GitBook site</a
+              >full GitBook docs site</a
             >
-            with examples, FAQs, guides, diagrams, search, etc., which lets labs
-            help themselves for common things and saves us time for more novel
+            with examples, FAQs, guides, diagrams, search, etc. Labs can help
+            themselves for common things, which saves us time for more novel
             work.
           </li>
           <li>
             <span class="pill" style="color: var(--sky)">
               <img src="images/icons/layout-panel-top.svg" />
             </span>
-            <b>Cleanly structure content</b>. We try to separate
+            <b>Cleanly structure content</b>. We separate
             <i>template</i> content from <i>user</i> content so labs can focus
             on just what's important to them, but still look "under the hood"
-            when they need to customize.
+            when needed.
           </li>
         </ul>
       </section>
@@ -180,14 +179,14 @@
           <img src="images/logos/markdown.svg" />
           <b>Markdown</b>
           <span>
-            Content.
+            For content.
             <a href="https://shopify.github.io/liquid/">Liquid</a> for
             templating.
           </span>
 
           <img src="images/logos/python.svg" />
           <b>Python</b>
-          <span>Auto-cite scripts. Familiar for researchers.</span>
+          <span>For auto-cite scripts. Familiar for researchers.</span>
 
           <img src="images/logos/docker.svg" />
           <b>Docker</b>
@@ -195,7 +194,7 @@
 
           <img src="images/logos/ruby.svg" />
           <b>Ruby</b>
-          <span>Data filtering. Other misc.</span>
+          <span>For data filtering. Other misc.</span>
         </div>
       </section>
 
@@ -226,7 +225,12 @@
               src="images/icons/arrow-right.svg"
               style="color: var(--gray)"
             />
-            <b>Auto</b>-magic
+            <span class="pill" style="color: var(--sky)">
+              <img src="images/icons/cog.svg" />
+            </span>
+            <span class="pill" style="color: var(--green)">
+              <img src="images/icons/wand-sparkles.svg" />
+            </span>
             <img
               src="images/icons/arrow-right.svg"
               style="color: var(--gray)"
@@ -256,8 +260,8 @@
           </div>
 
           <p>
-            We <b>auto-expand</b> these into <b>full lists</b> of sources from
-            ORCID, Google Scholar, or PubMed (extendable with plugins).
+            We <b>auto-expand</b> these into full lists of sources from
+            <b>ORCID</b>, Google Scholar, or PubMed (extensible via plugins).
           </p>
 
           <div class="code-block">
@@ -273,11 +277,10 @@
           </div>
 
           <p>
-            Input your "<b>manual</b>", hand-picked <b>sources</b> as
-            <b>simple IDs</b> (<a
+            Input your hand-picked <b>sources</b> as <b>simple IDs</b> (<a
               href="https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155"
               >2k+ supported types</a
-            >), along with extra rich details.
+            >), and extra rich details.
           </p>
 
           <div>
@@ -286,9 +289,11 @@
           </div>
 
           <p>
-            We use <a href="https://manubot.org"><b>Manubot</b></a> to
+            We
             <b>auto-generate full citations</b> &ndash; title, authors, date,
-            publisher, etc. &ndash; for all sources.
+            publisher, etc. &ndash; with
+            <a href="https://manubot.org"><b>Manubot</b></a
+            >.
           </p>
 
           <div class="code-block">
@@ -316,7 +321,7 @@
         <h2>More Automation</h2>
 
         <p>
-          Several other <b>automations</b> handle the most <b>confusing</b> and
+          Several other automations handle the most <b>confusing</b> and
           <b>error-prone</b> tasks for you, triggered by <b>events</b>, with
           little or <b>no manual steps</b>.
         </p>
@@ -327,7 +332,7 @@
               <span class="pill" style="color: var(--cyan)">
                 <img src="images/icons/square-dashed-mouse-pointer.svg" />
               </span>
-              <b>Click some buttons</b>, wait a few, and your site's
+              <b>Click some buttons</b>, wait a few, and your site is
               <b>live and ready</b> to edit.
             </li>
           </ul>
@@ -365,7 +370,7 @@
                 <img src="images/icons/eye.svg" />
               </span>
               Suggest changes and <b>preview</b> them <b>before publishing</b>.
-              No service like Netlify needed.
+              No Netlify needed.
             </li>
           </ul>
 
@@ -444,12 +449,16 @@
 
         <p>
           We believe
-          <b>our approach and design lead to an effective piece of software</b>,
-          evidenced by the template's growing adoption on GitHub, direct
-          positive feedback, and gallery of active labs using it. This work has
-          likely saved time and money for research labs and
-          <a href="https://cu-dbmi.github.io/set-website">other groups</a>,
-          reflecting a community resource that serves the needs of its users.
+          <b>our approach and design lead to a valuable piece of software</b>,
+          evidenced by the template's growing adoption on GitHub, positive
+          feedback, and
+          <a href="https://github.com/greenelab/lab-website-template/issues/97"
+            >gallery</a
+          >
+          of active labs using it. This work has likely saved researchers and
+          <a href="https://cu-dbmi.github.io/set-website">others</a> significant
+          time and money, reflecting a community resource that effectively
+          serves the needs of its users.
         </p>
 
         <div class="cols">
