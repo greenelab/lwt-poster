@@ -16,10 +16,10 @@ html {
 
   /** https://github.com/tailwindlabs/tailwindcss.com/blob/dc9e786350555a361f2a569ce2c5dc5be9c0c42a/src/components/color.tsx */
 
-  --off-white: #e5e7eb;
-  --light-gray: #d1d5db;
-  --gray: #6b7280;
-  --dark-gray: #1f2937;
+  --off-white: #f1f5f9;
+  --light-gray: #e2e8f0;
+  --gray: #94a3b8;
+  --dark-gray: #1e293b;
 
   --red: #ef4444;
   --orange: #f97316;
@@ -211,6 +211,14 @@ text {
   font-family: var(--sans);
 }
 
+img[src$=".svg"] {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
 ul {
   display: flex;
   flex-direction: column;
@@ -224,7 +232,7 @@ ul {
 code {
   margin: 0;
   padding: 0.1rem 0.2rem;
-  background: var(--off-white);
+  background: var(--light-gray);
   font: inherit;
   font-size: 0.9em;
   font-family: var(--mono);
@@ -233,10 +241,6 @@ code {
 pre {
   margin: 0;
   overflow-x: auto;
-}
-
-img[src$=".svg"] {
-  display: none;
 }
 
 .title {
@@ -328,7 +332,7 @@ ul .pill {
   top: calc(100% - 0.5rem);
   left: calc(100% + 0.25rem);
   height: 2rem;
-  color: var(--light-gray);
+  color: var(--gray);
 }
 
 :has(> .step) {

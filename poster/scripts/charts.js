@@ -74,8 +74,7 @@ window.addEventListener("data", () => {
         .attr("y1", 0)
         .attr("y2", height)
         .attr("stroke", "black")
-        .attr("stroke-width", "0.05rem")
-        .attr("stroke-dasharray", major ? "" : "1 2")
+        .attr("stroke-width", major ? "0.075rem" : "0.01rem")
         .attr("stroke-opacity", 0.25)
         .attr("pointer-events", "none");
       if (major && !name.startsWith("v1.1"))
