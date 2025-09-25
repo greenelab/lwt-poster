@@ -69,7 +69,13 @@ body {
   background: var(--dark);
 }
 
-@media (max-width: 50rem) {
+@media screen and (max-width: 100rem) {
+  body {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 50rem) {
   body {
     padding: 1rem;
   }
@@ -88,18 +94,25 @@ header {
 @media screen and (max-width: 100rem) {
   header {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  header {
+    gap: 1rem;
   }
 }
 
 footer {
   display: flex;
-  flex-wrap: wrap;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
   align-items: center;
   justify-content: center;
-  padding-top: 1rem;
   gap: 2rem;
   color: white;
-  break-inside: avoid-column;
 }
 
 @media screen {
@@ -161,10 +174,22 @@ h2 {
 }
 
 h1 {
-  font-size: 2.25rem;
-  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 100rem) {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
 h2 {
@@ -174,7 +199,7 @@ h2 {
   padding: 0.5rem;
   background: var(--mid);
   font-size: 1.2rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -257,8 +282,20 @@ pre {
   text-decoration: none;
 }
 
+@media screen and (max-width: 100rem) {
+  .title {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
 .logo {
-  height: 4rem;
+  height: 2em;
 }
 
 .authors {
@@ -272,6 +309,8 @@ pre {
 }
 
 .cols {
+  container-name: cols;
+  container-type: inline-size;
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -334,6 +373,7 @@ ul .pill {
 }
 
 .step {
+  display: none;
   position: absolute;
   top: calc(100% - 0.5rem);
   left: calc(100% + 0.25rem);
@@ -345,9 +385,9 @@ ul .pill {
   position: relative;
 }
 
-@media screen and (max-width: 107.99rem) {
+@container cols (min-width: 32rem) {
   .step {
-    display: none;
+    display: unset;
   }
 }
 
