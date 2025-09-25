@@ -14,3 +14,7 @@ Source code and website for a poster about [Lab Website Template](https://greene
 - Run `bun compile` to gather data
 - Run `bun preview` to open poster in browser
 - Run `bun print` to print poster to PDF
+
+## Acknowledgements
+
+SVG Icons courtesy of [Lucide](https://lucide.dev)

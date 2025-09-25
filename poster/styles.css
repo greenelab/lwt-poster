@@ -249,7 +249,7 @@ img[src$=".svg"] {
 }
 
 img {
-  max-width: 100%;
+  max-width: min(100%, 40rem);
 }
 
 ul {
