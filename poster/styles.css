@@ -18,7 +18,7 @@ html {
 
   --light-gray: #eaeff5;
   --gray: #cbd5e1;
-  --dark-gray: #334155;
+  --dark-gray: #64748b;
 
   --red: #ef4444;
   --orange: #f97316;
@@ -366,7 +366,7 @@ ul .pill {
 
 .code-block pre {
   padding: 0.5rem;
-  background: var(--dark-gray);
+  background: var(--dark);
   color: var(--light);
 }
 
