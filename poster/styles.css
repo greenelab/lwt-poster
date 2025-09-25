@@ -69,6 +69,12 @@ body {
   background: var(--dark);
 }
 
+@media (max-width: 50rem) {
+  body {
+    padding: 1rem;
+  }
+}
+
 header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -202,6 +208,7 @@ figure {
 }
 
 svg {
+  flex-shrink: 0;
   overflow: visible;
 }
 
