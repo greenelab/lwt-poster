@@ -20,7 +20,7 @@ window.fit = (svg) => {
 };
 
 /** make debounced function */
-window.debounce = (func, delay = 0) => {
+window.debounce = (func, delay = 300) => {
   let timer;
   return (...args) => {
     window.clearTimeout(timer);

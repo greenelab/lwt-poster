@@ -79,7 +79,7 @@ window.addEventListener("keydown", async (event) => {
     document.documentElement.style.width = "var(--width)";
     document.documentElement.style.height = "var(--height)";
     /** wait for resize handlers to execute */
-    await window.sleep(10);
+    await window.sleep(500);
     /** trigger print */
     window.print();
     /** reset styles */
