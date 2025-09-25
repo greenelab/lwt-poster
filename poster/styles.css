@@ -16,10 +16,9 @@ html {
 
   /** https://github.com/tailwindlabs/tailwindcss.com/blob/dc9e786350555a361f2a569ce2c5dc5be9c0c42a/src/components/color.tsx */
 
-  --off-white: #f1f5f9;
-  --light-gray: #e2e8f0;
-  --gray: #94a3b8;
-  --dark-gray: #1e293b;
+  --light-gray: #eaeff5;
+  --gray: #cbd5e1;
+  --dark-gray: #334155;
 
   --red: #ef4444;
   --orange: #f97316;
@@ -381,11 +380,6 @@ ul .pill {
 
 .value {
   color: color-mix(in oklab, var(--orange), white 50%);
-}
-
-.comment {
-  color: var(--gray);
-  font-style: italic;
 }
 
 .diagram-block {

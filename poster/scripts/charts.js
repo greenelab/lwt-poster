@@ -74,7 +74,7 @@ window.addEventListener("data", () => {
         .attr("y1", 0)
         .attr("y2", height)
         .attr("stroke", "black")
-        .attr("stroke-width", major ? "0.075rem" : "0.01rem")
+        .attr("stroke-width", major ? "0.075em" : "0.01em")
         .attr("stroke-opacity", 0.25)
         .attr("pointer-events", "none");
       if (major && !name.startsWith("v1.1"))
@@ -85,8 +85,7 @@ window.addEventListener("data", () => {
           .text(name.replace(/(v\d+\.\d+)\.\d+/, "$1"))
           .attr("text-anchor", "middle")
           .attr("x", xScale(date))
-          .attr("y", 0)
-          .attr("dy", "-0.5em")
+          .attr("y", "-0.5em")
           .attr("pointer-events", "none");
     }
 
@@ -149,7 +148,7 @@ window.addEventListener("data", () => {
         .text(name)
         .attr("data-series", "")
         .attr("x", () => xScale(maxX))
-        .attr("dx", "-0.5rem")
+        .attr("dx", "-0.5em")
         .attr("y", () => yScale(maxY[index]))
         .attr("text-anchor", "end")
         .attr("dominant-baseline", "hanging")
@@ -168,11 +167,11 @@ window.addEventListener("data", () => {
       .attr("pointer-events", "none");
     const tooltipTextTop = tooltipGroup
       .append("text")
-      .attr("dy", "-0.5rem")
+      .attr("y", "-0.5em")
       .attr("text-anchor", "middle");
     const tooltipTextBottom = tooltipGroup
       .append("text")
-      .attr("dy", "0.5rem")
+      .attr("y", "0.5em")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "hanging");
     tooltipGroup
@@ -182,7 +181,7 @@ window.addEventListener("data", () => {
       .attr("r", 3)
       .attr("fill", "white")
       .attr("stroke", "black")
-      .attr("stroke-width", "0.1rem");
+      .attr("stroke-width", "0.1em");
 
     /** fit to contents */
     fit(svg);
