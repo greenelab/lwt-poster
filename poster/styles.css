@@ -144,6 +144,8 @@ main {
 }
 
 section {
+  container-name: section;
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -309,8 +311,6 @@ pre {
 }
 
 .cols {
-  container-name: cols;
-  container-type: inline-size;
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -385,7 +385,7 @@ ul .pill {
   position: relative;
 }
 
-@container cols (min-width: 32rem) {
+@container section (min-width: 32rem) {
   .step {
     display: unset;
   }
