@@ -42,6 +42,7 @@ I think this submission could greatly benefit researchers who need to display th
 - make header bigger
 - show screenshot of template
 - how does this make my life easier?
+- want to see components and what it looks like (this somewhat contradicts reviewer feedback, who say that lab templates are very common and they want to see what makes this one unique, which is auto-citations)
 - okay to brag/advertise the template
 - infomercial black/white before/after, this is your life before the template, here's after
 - do test print on US letter paper to test font sizes
