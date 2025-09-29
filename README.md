@@ -1,8 +1,8 @@
-# Lab Website Template
+![https://zenodo.org/badge/DOI/10.5281/zenodo.17227886.svg](https://zenodo.org/badge/DOI/10.5281/zenodo.17227886.svg)
 
-**An easy, automatic, flexible website template for labs**
+# Lab Website Template Poster
 
-Source code and website for a poster about [Lab Website Template](https://greene-lab.gitbook.io/lab-website-template-docs), intended for the [US-RSE 2025 conference](https://us-rse.org/usrse25/) in Philadelphia.
+Source code and website for a **poster about [Lab Website Template](https://greene-lab.gitbook.io/lab-website-template-docs)** – an easy, automatic, flexible website template for lab – intended for the [US-RSE 2025 conference](https://us-rse.org/usrse25/) in Philadelphia.
 
 **[🖥️ Poster website](https://greenelab.github.io/lwt-poster/poster)**  
 **[📄 Poster PDF](https://raw.githubusercontent.com/greenelab/lwt-poster/refs/heads/main/poster.pdf)**

@@ -1,0 +1,12 @@
+title: Lab Website Template Poster
+version: 1.0.0
+date-released: 2025-09-29
+url: "https://github.com/greenelab/lwt-poster"
+authors:
+  - given-names: Vincent
+    family-names: Rubinetti
+    orcid: "https://orcid.org/0000-0002-4655-3773"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.17227886
+cff-version: 1.2.0
