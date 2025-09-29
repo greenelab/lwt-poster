@@ -11,7 +11,7 @@ Source code and website for a poster about [Lab Website Template](https://greene
 
 - Install [Bun](https://bun.com/) v1.2+
 - Run `bun install` to install packages
-- Run `bun compile` to gather data
+- Run `bun compile` to gather data (delete `/data/raw` to clear cache)
 - Run `bun preview` to open poster in browser
 - Run `bun print` to print poster to PDF
 

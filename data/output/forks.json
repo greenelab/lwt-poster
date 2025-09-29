@@ -1,13 +1,113 @@
 {
-  "total": 318,
+  "total": 334,
   "repos": [
+    {
+      "owner": "PwkLab",
+      "repo": "lab-website-template",
+      "date": "2025-09-28T09:10:57Z"
+    },
+    {
+      "owner": "jiang-junyao",
+      "repo": "lab-website-template",
+      "date": "2025-09-28T07:09:38Z"
+    },
+    {
+      "owner": "Summertown-Lab",
+      "repo": "lab-website-template",
+      "date": "2025-09-27T13:18:59Z"
+    },
+    {
+      "owner": "ChristopherLu",
+      "repo": "group_website",
+      "date": "2025-09-24T16:39:36Z"
+    },
+    {
+      "owner": "SCOgroup",
+      "repo": "HMR",
+      "date": "2025-09-21T08:31:49Z"
+    },
+    {
+      "owner": "FAI-THU",
+      "repo": "FAITH-Website",
+      "date": "2025-09-12T12:31:09Z"
+    },
+    {
+      "owner": "Ezeki3lRchy",
+      "repo": "lab-website-template",
+      "date": "2025-09-11T22:14:05Z"
+    },
+    {
+      "owner": "MSU-Spark-Group",
+      "repo": "Spark-website",
+      "date": "2025-09-11T22:02:56Z"
+    },
+    {
+      "owner": "DCAI-Lab",
+      "repo": "DCAI-Lab",
+      "date": "2025-09-11T06:10:57Z"
+    },
+    {
+      "owner": "LJZYlinpr",
+      "repo": "AIgnite",
+      "date": "2025-09-10T13:54:39Z"
+    },
+    {
+      "owner": "BingWang-2025",
+      "repo": "Wanglab",
+      "date": "2025-09-09T05:38:20Z"
+    },
+    {
+      "owner": "kimANDlab",
+      "repo": "kimandlab.github.io",
+      "date": "2025-09-04T21:00:50Z"
+    },
+    {
+      "owner": "Mahdi-s",
+      "repo": "lab-website-template",
+      "date": "2025-08-30T03:03:31Z"
+    },
+    {
+      "owner": "almasudme",
+      "repo": "lab-website",
+      "date": "2025-08-27T10:13:43Z"
+    },
+    {
+      "owner": "MidnightJump",
+      "repo": "lab-website-template1",
+      "date": "2025-08-25T05:56:04Z"
+    },
+    {
+      "owner": "GuillaumeBroggi",
+      "repo": "lab-website-template",
+      "date": "2025-08-19T14:22:09Z"
+    },
+    {
+      "owner": "kidane-lab",
+      "repo": "lab-website-template",
+      "date": "2025-08-15T14:11:01Z"
+    },
+    {
+      "owner": "ShravyaRS",
+      "repo": "lab-website-template",
+      "date": "2025-08-11T10:00:17Z"
+    },
+    {
+      "owner": "criticalcarelab",
+      "repo": "criticalcarelab.github.io",
+      "date": "2025-08-08T05:56:46Z"
+    },
+    {
+      "owner": "HelgasonLab",
+      "repo": "HelgasonLab.github.io",
+      "date": "2025-08-06T15:47:38Z"
+    },
     {
       "owner": "HoangDangers",
       "repo": "hd123",
       "date": "2025-08-03T00:13:31Z"
     },
     {
-      "owner": "VVVpa3ck",
+      "owner": "zerunniu",
       "repo": "1",
       "date": "2025-08-01T04:24:32Z"
     },
@@ -55,16 +155,6 @@
       "owner": "primal-lab",
       "repo": "primal-lab-website",
       "date": "2025-07-09T17:24:02Z"
-    },
-    {
-      "owner": "Smart-Transit-Lab",
-      "repo": "lab-website",
-      "date": "2025-07-08T14:15:58Z"
-    },
-    {
-      "owner": "xkzhaohit",
-      "repo": "smart-transit.github.io",
-      "date": "2025-07-08T13:47:45Z"
     },
     {
       "owner": "arani89",
@@ -140,11 +230,6 @@
       "owner": "JusticeJoe0128",
       "repo": "justicejoe0128",
       "date": "2025-05-26T13:15:29Z"
-    },
-    {
-      "owner": "TiYooY",
-      "repo": "lab-website-template",
-      "date": "2025-05-22T18:42:42Z"
     },
     {
       "owner": "Furan2024",
@@ -400,11 +485,6 @@
       "owner": "256wangliu",
       "repo": "lab-website-template",
       "date": "2024-11-19T02:14:29Z"
-    },
-    {
-      "owner": "KH-Fan",
-      "repo": "FrankF_Lab",
-      "date": "2024-11-06T15:47:10Z"
     },
     {
       "owner": "osimlab",
@@ -1791,39 +1871,43 @@
     },
     {
       "date": "2024-12-01T05:00:00.000Z",
-      "count": 244
+      "count": 243
     },
     {
       "date": "2025-01-01T05:00:00.000Z",
-      "count": 248
+      "count": 247
     },
     {
       "date": "2025-02-01T05:00:00.000Z",
-      "count": 255
+      "count": 254
     },
     {
       "date": "2025-03-01T05:00:00.000Z",
-      "count": 265
+      "count": 264
     },
     {
       "date": "2025-04-01T04:00:00.000Z",
-      "count": 275
+      "count": 274
     },
     {
       "date": "2025-05-01T04:00:00.000Z",
-      "count": 283
+      "count": 282
     },
     {
       "date": "2025-06-01T04:00:00.000Z",
-      "count": 293
+      "count": 291
     },
     {
       "date": "2025-07-01T04:00:00.000Z",
-      "count": 303
+      "count": 301
     },
     {
       "date": "2025-08-01T04:00:00.000Z",
-      "count": 316
+      "count": 312
+    },
+    {
+      "date": "2025-09-01T04:00:00.000Z",
+      "count": 322
     }
   ]
 }
